@@ -1,6 +1,14 @@
-const Card = ({ logo, title, text, especial }) => {
+'use client'
+import useObserver from '@/hooks/useObserver'
+
+const Card = ({ logo, title, text, className }) => {
+  const [ref, inView] = useObserver({ threshold: 0.5 })
   return (
-    <section className={`flex flex-col text-center ${especial} w-full`}>
+    <section
+      ref={ref}
+      className={`flex w-2/3 flex-col ${className} w-full ${
+        inView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'
+      }`}>
       <h3 className='text-2xl font-medium  leading-5 text-orange-500'>
         {logo || ''}
       </h3>
