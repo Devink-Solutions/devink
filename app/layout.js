@@ -1,14 +1,14 @@
-import './globals.css'
-import { Red_Hat_Display as redHatDisplay } from 'next/font/google'
+import "./globals.css"
+import { Red_Hat_Display as redHatDisplay } from "next/font/google"
 
-const RedHatDisplay = redHatDisplay({ subsets: ['latin'] })
+const RedHatDisplay = redHatDisplay({ subsets: ["latin"] })
 
 export const metadata = {
-  title: 'Devink',
-  description: 'Soluciones IT para tu empresa'
+  title: "Devink",
+  description: "Soluciones IT para tu empresa",
 }
 
-export default function RootLayout ({ children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={RedHatDisplay.className}>{children}</body>
