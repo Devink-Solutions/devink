@@ -5,7 +5,7 @@ const RedHatDisplay = Red_Hat_Display({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Devink',
-  description: 'Soluciones IT para tu empresa',
+  description: 'Soluciones IT para tu empresa'
 }
 
 export default function RootLayout({ children }) {
