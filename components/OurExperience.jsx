@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const OurExperience = () => {
   return (
@@ -8,7 +9,9 @@ const OurExperience = () => {
     >
       <div className="flex w-full flex-col items-center justify-center xl:flex-row">
         <div className={`h-auto w-screen px-4 md:w-3/5 xl:mx-0 xl:w-2/5`}>
-          <img
+          <Image
+            width={736}
+            height={395.5}
             src="/example.png"
             alt="powerbiexample"
             className=" shadow-2xl shadow-slate-400 "

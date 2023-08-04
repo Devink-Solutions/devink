@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
 import OurExperience from "@/components/OurExperience"
 import OurServicesScreen from "@/components/OurServicesScreen"
@@ -10,6 +11,7 @@ export default function Home() {
       <Steps />
       <OurServicesScreen />
       <OurExperience />
+      <Footer />
     </main>
   )
 }
