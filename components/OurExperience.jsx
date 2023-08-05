@@ -2,9 +2,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import useObserver from "@/hooks/useObserver"
+import { useEffect, useState } from "react"
 
 const OurExperience = () => {
   const [ref, inView] = useObserver({ threshold: 0.7 })
+  const [isInView, setIsInView] = useState(false)
+  useEffect(() => {
+    if (inView) {
+      setIsInView(true)
+    }
+  }, [inView])
 
   return (
     <section
@@ -36,7 +43,7 @@ const OurExperience = () => {
             href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
             target="_blank"
             className={`w-120 self-center-mid1 mt-2 rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
-              inView ? "animate-shake animate-ease-in-out" : undefined
+              isInView ? "animate-shake animate-ease-in-out" : undefined
             }`}
           >
             Agendar una reunion
