@@ -25,8 +25,8 @@ const Steps = () => {
       <div className="absolute left-10 z-10">
         <GearColumn />
       </div>
-      <div className="flex w-11/12 items-center justify-between px-32 py-10">
-        <div className="flex w-4/5 flex-col items-start gap-4 pr-32">
+      <div className="flex w-11/12 items-center justify-between px-2 py-10 md:px-32">
+        <div className="w flex w-full flex-col items-start gap-4 md:pr-32 lg:w-4/5">
           <h3 className="w-fit text-xl font-medium text-cyan lg:text-2xl">
             Que pasos vamos a seguir?
           </h3>
@@ -40,7 +40,7 @@ const Steps = () => {
             />
           ))}
         </div>
-        <figure className="w-1/5">
+        <figure className="hidden w-1/5 lg:inline-flex">
           <img src="/Ai-development.png" alt="AI development" />
         </figure>
       </div>

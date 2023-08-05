@@ -8,15 +8,9 @@ const OurExperience = () => {
       className=" px-auto flex h-full w-full items-center justify-center pb-8 pt-12"
     >
       <div className="flex w-full flex-col items-center justify-center xl:flex-row">
-        <div className={`h-auto w-screen px-4 md:w-3/5 xl:mx-0 xl:w-2/5`}>
-          <Image
-            width={736}
-            height={395.5}
-            src="/example.png"
-            alt="powerbiexample"
-            className=" shadow-2xl shadow-slate-400 "
-          />
-        </div>
+        <figure className={`h-auto w-screen px-4 md:w-3/5 xl:mx-0 xl:w-1/5`}>
+          <img src="/Chatgpt.png" alt="" />
+        </figure>
         <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between px-3 text-center text-blue-dark md:w-3/5 xl:ml-8 xl:mt-0 xl:w-2/6 xl:text-left">
           <div>
             <h4 className="text-xl font-medium text-cyan-bright">

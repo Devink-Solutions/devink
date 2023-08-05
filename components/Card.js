@@ -13,14 +13,14 @@ const Card = ({ logo, title, text, className }) => {
   return (
     <section
       ref={ref}
-      className={`flex flex-col ${className} w-full ${
+      className={`flex w-full flex-col ${className} ${
         isInView ? "animate-fade-right animate-ease-in-out" : "opacity-0"
       }`}
     >
-      <h3 className="text-2xl font-medium  leading-5 text-cyan">
+      <h3 className="text-xl font-medium   leading-5  text-cyan md:text-2xl">
         {logo || ""} {title}
       </h3>
-      <p className="text-xl  text-blue-mid1  ">{text || ""}</p>
+      <p className="text-lg text-blue-mid1  md:text-xl  ">{text || ""}</p>
     </section>
   )
 }

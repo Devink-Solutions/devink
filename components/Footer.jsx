@@ -3,10 +3,10 @@ import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <footer className="flex w-full items-start bg-blue-dark px-20 py-10 font-medium text-white md:justify-between">
+    <footer className="flex w-full items-start justify-between bg-blue-dark px-20 py-10 font-medium text-white">
       <div className="flex flex-col space-y-4">
         <h3 className="mb-2 text-lg font-bold">Medios de contacto</h3>
-        <ul className="list-none space-y-3">
+        <ul className="list-none space-y-3 pl-4">
           <li className="flex items-center space-x-2">
             <FaEnvelope className="text-lg" />
             <a

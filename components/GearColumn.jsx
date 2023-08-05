@@ -16,6 +16,19 @@ const GearColumn = () => {
       <Gear />
       <Gear reverse={true} />
       <Gear />
+      <Gear reverse={true} />
+      <Gear />
+      <Gear reverse={true} />
+      <Gear />
+      <Gear reverse={true} />
+      <Gear />
+      <Gear reverse={true} />
+      <Gear />
+      <Gear reverse={true} />
+      <Gear />
+      <Gear reverse={true} />
+      <Gear />
+      <Gear reverse={true} />
     </section>
   )
 }
