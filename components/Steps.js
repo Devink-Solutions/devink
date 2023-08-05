@@ -21,23 +21,32 @@ const cards = [
 ]
 const Steps = () => {
   return (
-    <section className="relative flex w-full items-center  justify-between px-10 py-12">
-      <GearColumn />
-      <div className="flex w-full flex-col items-center gap-4 md:w-4/5">
-        <h3 className="w-fit border-b-2 border-orange-300 text-xl text-orange-500 lg:text-2xl">
-          Que pasos vamos a seguir?
-        </h3>
-        {cards.map((x) => (
-          <Card
-            logo={x.logo}
-            title={x.title}
-            text={x.text}
-            key={cards.indexOf(x)}
-            className={x.special}
-          />
-        ))}
+    <section className="relative flex w-full items-center justify-center bg-white">
+      <div className="absolute left-10 z-10">
+        <GearColumn />
       </div>
-      <GearColumn />
+      <div className="flex w-11/12 items-center justify-between px-32 py-10">
+        <div className="flex w-4/5 flex-col items-start gap-4 pr-32">
+          <h3 className="w-fit text-xl font-medium text-cyan lg:text-2xl">
+            Que pasos vamos a seguir?
+          </h3>
+          {cards.map((x) => (
+            <Card
+              logo={x.logo}
+              title={x.title}
+              text={x.text}
+              key={cards.indexOf(x)}
+              className={x.special}
+            />
+          ))}
+        </div>
+        <figure className="w-1/5">
+          <img src="/Ai-development.png" alt="AI development" />
+        </figure>
+      </div>
+      <div className="absolute right-10 z-10">
+        <GearColumn />
+      </div>
     </section>
   )
 }
