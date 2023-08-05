@@ -9,7 +9,7 @@ const OurExperience = () => {
     >
       <div className="flex w-full flex-col items-center justify-center xl:flex-row">
         <figure className={`h-auto w-screen px-4 md:w-3/5 xl:mx-0 xl:w-1/5`}>
-          <img src="/Chatgpt.png" alt="" />
+          <Image width={360} height={344} src="/Chatgpt.png" alt="" />
         </figure>
         <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between px-3 text-center text-blue-dark md:w-3/5 xl:ml-8 xl:mt-0 xl:w-2/6 xl:text-left">
           <div>

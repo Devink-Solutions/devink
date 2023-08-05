@@ -1,5 +1,7 @@
 import Card from "../components/Card"
 import GearColumn from "../components/GearColumn"
+import Image from "next/image"
+
 const cards = [
   {
     logo: "01.",
@@ -41,7 +43,12 @@ const Steps = () => {
           ))}
         </div>
         <figure className="hidden w-1/5 lg:inline-flex">
-          <img src="/Ai-development.png" alt="AI development" />
+          <Image
+            width={295}
+            height={255}
+            src="/Ai-development.png"
+            alt="AI development"
+          />
         </figure>
       </div>
       <div className="absolute right-10 z-10">
