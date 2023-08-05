@@ -18,6 +18,11 @@ background: #5BC0BE;
 .gear-reverse {
 	animation: spin-reverse 20s linear infinite 1.45s;
 }
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
 
 @keyframes spin-reverse {
 	0% {

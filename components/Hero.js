@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import { AiOutlineDown } from "react-icons/ai"
 
@@ -14,9 +15,12 @@ const Hero = () => {
         <h4 className="animate-fade-up text-xl animate-delay-75">
           Desarrollamos soluciones de IT para tu empresa.
         </h4>
-        <button className="animate-fade-up rounded-full border border-[#6fffe9] bg-[#0B132B] px-8 py-2 text-xl font-medium  text-[#6FFFE9] animate-delay-75">
+        <Link
+          href="#makeacall"
+          className="animate-fade-up rounded-full border border-[#6fffe9] bg-[#0B132B] px-8 py-2 text-xl font-medium  text-[#6FFFE9] animate-delay-75"
+        >
           Contáctanos
-        </button>
+        </Link>
         <figure className="absolute bottom-4">
           <AiOutlineDown color="#6fffe9" className="animate-bounce text-2xl" />
         </figure>

@@ -1,11 +1,16 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
+import useObserver from "@/hooks/useObserver"
 
 const OurExperience = () => {
+  const [ref, inView] = useObserver({ threshold: 0.7 })
+
   return (
     <section
-      id="experience"
+      id="makeacall"
       className=" px-auto flex h-full w-full items-center justify-center pb-8 pt-12"
+      ref={ref}
     >
       <div className="flex w-full flex-col items-center justify-center xl:flex-row">
         <figure className={`h-auto w-screen px-4 md:w-3/5 xl:mx-0 xl:w-1/5`}>
@@ -30,7 +35,9 @@ const OurExperience = () => {
           <Link
             href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
             target="_blank"
-            className="w-120 self-center-mid1 mt-2 rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start"
+            className={`w-120 self-center-mid1 mt-2 rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
+              inView ? "animate-shake animate-ease-in-out" : undefined
+            }`}
           >
             Agendar una reunion
           </Link>
