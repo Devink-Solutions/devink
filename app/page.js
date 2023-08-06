@@ -7,7 +7,7 @@ import Steps from "@/components/Steps"
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center scroll-smooth">
+    <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
       <Navbar />
       <Hero />
       <Steps />

@@ -4,9 +4,9 @@ import { AiOutlineDown } from "react-icons/ai"
 
 const Hero = () => {
   return (
-    <header className="z-20 flex h-[92vh] w-full flex-col items-center justify-center gap-4 bg-[#0B132B]   text-cyan-bright">
-      <section className="flex justify-between">
-        <div className="flex h-2/5 w-3/5 flex-col gap-2 text-left">
+    <header className="z-20 flex h-[93vh] w-full flex-col items-center justify-center gap-4 bg-[#0B132B]   text-cyan-bright">
+      <section className="flex justify-between px-12">
+        <div className="flex h-full flex-col gap-2 text-left md:w-3/5">
           <h3 className="animate-fade-up text-2xl font-medium animate-delay-75">
             En Devink
           </h3>
@@ -18,12 +18,12 @@ const Hero = () => {
           </h4>
           <Link
             href="#makeacall"
-            className="w-fit animate-fade-up rounded-full border border-[#6fffe9] bg-[#0B132B] px-8 py-2 text-xl font-medium  text-[#6FFFE9] animate-delay-75"
+            className="hidden w-fit animate-fade-up rounded-full border border-[#6fffe9] bg-[#0B132B] px-8 py-2 text-xl font-medium text-[#6FFFE9]  animate-delay-75 md:inline-flex"
           >
             Contáctanos
           </Link>
         </div>
-        <figure className="h-full">
+        <figure className="hidden h-full md:inline-flex">
           <img src="/logo-without-name.svg" className="h-full" alt="" />
         </figure>
       </section>
