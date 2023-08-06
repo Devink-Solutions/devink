@@ -20,10 +20,16 @@ const OurExperience = () => {
       ref={ref}
     >
       <div className="flex w-full flex-col items-center justify-center xl:flex-row">
-        <figure className={`h-auto w-screen px-4 md:w-3/5 xl:mx-0 xl:w-1/5`}>
-          <Image width={360} height={344} src="/Chatgpt.png" alt="" />
+        <figure className={`h-auto w-full  md:w-3/5 md:px-4 xl:mx-0 xl:w-1/5`}>
+          <Image
+            width={360}
+            height={344}
+            src="/Chatgpt.png"
+            alt=""
+            className="mx-auto object-contain object-center"
+          />
         </figure>
-        <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between px-3 text-center text-blue-dark md:w-3/5 xl:ml-8 xl:mt-0 xl:w-2/6 xl:text-left">
+        <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between p-2 text-center text-blue-dark md:w-3/5 md:px-3 xl:ml-8 xl:mt-0 xl:w-2/6 xl:text-left">
           <div>
             <h4 className="text-xl font-medium text-cyan-bright">
               Creativos, Energicos y Dedicados
@@ -42,7 +48,7 @@ const OurExperience = () => {
           <Link
             href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
             target="_blank"
-            className={`w-120 self-center-mid1 mt-2 rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
+            className={`md:w-120 mt-2 w-fit self-center rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
               isInView ? "animate-shake animate-ease-in-out" : undefined
             }`}
           >
