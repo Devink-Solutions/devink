@@ -17,25 +17,15 @@ const Navbar = () => {
       </figure>
       <ul className=" hidden gap-4 text-xl md:inline-flex">
         <li>
-          <a href="/">Inicio</a>
+          <Link href="#about">Nosotros</Link>
         </li>
         <li>
-          <a href="/about">Nosotros</a>
+          <Link href="#services">Servicios</Link>
         </li>
         <li>
-          <a href="/services">Servicios</a>
-        </li>
-        <li>
-          <a href="/contact">Contacto</a>
+          <Link href="#makeacall">Agenda una llamada</Link>
         </li>
       </ul>
-      <Link
-        className={`mt-2 rounded-xl bg-cyan-bright px-8 py-2 text-center text-xl font-medium text-blue-dark shadow-lg transition-colors duration-300 md:hidden`}
-        href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
-        target="_blank"
-      >
-        Contáctanos
-      </Link>
     </nav>
   )
 }

@@ -23,7 +23,10 @@ const cards = [
 ]
 const Steps = () => {
   return (
-    <section className="relative flex w-full items-center justify-center bg-white">
+    <section
+      id="about"
+      className="relative flex w-full items-center justify-center bg-white"
+    >
       <div className="absolute left-10 z-10">
         <GearColumn />
       </div>
