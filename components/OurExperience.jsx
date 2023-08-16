@@ -20,7 +20,7 @@ const OurExperience = () => {
       ref={ref}
     >
       <div className="flex w-full flex-col items-center justify-center xl:flex-row">
-        <figure className={`h-auto w-full  md:w-3/5 md:px-4 xl:mx-0 xl:w-1/5`}>
+        <figure className="w-[90%] sm:w-fit">
           <Image
             width={360}
             height={344}

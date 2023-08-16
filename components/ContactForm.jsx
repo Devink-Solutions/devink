@@ -88,7 +88,7 @@ const ContactForm = () => {
             </form>
           </div>
         </div>
-        <figure>
+        <figure className="w-[90%] sm:w-fit">
           <Image
             width={360}
             height={344}
