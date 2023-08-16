@@ -77,9 +77,7 @@ const ContactForm = () => {
                 ) : (
                   <button
                     type="submit"
-                    className={`md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
-                      false ? "animate-shake animate-ease-in-out" : undefined
-                    }`}
+                    className={`md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start `}
                   >
                     Enviar Mail
                   </button>
