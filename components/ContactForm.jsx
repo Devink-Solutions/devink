@@ -1,12 +1,14 @@
 "use client"
 import emailjs from "@emailjs/browser"
 import { useState } from "react"
+import Image from "next/image"
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [send, setSend] = useState(false)
 
   function sendEmail(e) {
     e.preventDefault()
+    console.log(e.target)
 
     emailjs
       .sendForm(
@@ -27,58 +29,77 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="h-[80vh] w-full bg-white ">
-      <form onSubmit={sendEmail} className="h-[100%] w-[100%] ">
-        <div className="mx-auto flex h-[100%]  w-[90%] flex-col items-center justify-center ">
-          <h3 className="font-goldman text-center text-4xl font-semibold ">
-            Contacto
-          </h3>
-          <p className="text-1xl m-1 text-center lg:text-2xl">
-            Envianos un mail y nuestro equipo se contactara con usted para
-            ayudarlo a resolver su problema lo antes posible.
-          </p>
+    <section className="mx-auto w-full bg-white py-20 ">
+      <div className="mx-auto flex h-[100%] w-[70%]  items-center justify-center gap-3 ">
+        <div className="w-[60%]">
+          <header className="mb-2 w-[90%] py-2">
+            <h3 className="text-xl font-medium md:pt-4 md:text-2xl">
+              Quiero que se comuniquen conmigo
+            </h3>
+            <p className=" text-lg font-light ">
+              Si nos das más información sobre tu problema, idea o proyecto,
+              podremos ayudarte de manera más efectiva.
+            </p>
+          </header>
           <div className="flex h-auto w-[100%] flex-col justify-center ">
-            <div className="flex w-[100%] ">
+            <form
+              onSubmit={sendEmail}
+              className="flex h-[100%] w-[90%] flex-col gap-4 "
+            >
               <input
-                className="mx-auto my-4 w-[90%] border-b-2 border-black px-3 py-1 text-[18px]  "
+                className="rounded-md border-2 border-blue-dark px-3 py-1 text-[18px] outline-2 transition-all duration-300 focus:outline-cyan-bright "
                 type="text"
                 placeholder="Nombre"
                 name="name"
               />
-            </div>
-            <div className="flex w-[100%] ">
               <input
-                className="mx-auto my-4 w-[90%] border-b-2 border-black px-3 py-1 text-[18px] "
+                className="rounded-md border-2 border-blue-dark px-3 py-1 text-[18px] outline-2 transition-all duration-300 focus:outline-cyan-bright "
                 type="email"
                 placeholder="Email"
                 name="email"
               />
-            </div>
-            <div className="flex w-[100%] ">
               <input
-                className="mx-auto my-4 w-[90%] border-b-2 border-black px-3 py-1 text-[18px] "
+                className="rounded-md border-2 border-blue-dark px-3 py-1 text-[18px] outline-2 transition-all duration-300 focus:outline-cyan-bright "
                 type="text"
                 placeholder="Asunto"
                 name="affair"
               />
-            </div>
-            <div className="flex w-[100%] ">
               <textarea
-                className="mx-auto my-4 w-[90%] border-b-2 border-black px-3 py-1 text-[18px] "
+                className="rounded-md border-2 border-blue-dark px-3 py-1 text-[18px] outline-2 transition-all duration-300 focus:outline-cyan-bright "
                 placeholder="Mensaje"
                 name="message"
               />
-            </div>
-            <div className="flex w-[100%] justify-center ">
-              {send ? (
-                <span className="text-[#05F100]">form sent successfully!</span>
-              ) : (
-                <input id="btn_enviar" type="submit" value="Enviar" />
-              )}
-            </div>
+              <div className="flex w-[100%] justify-center ">
+                {send ? (
+                  <span className="text-[#05F100]">
+                    form sent successfully!
+                  </span>
+                ) : (
+                  <button
+                    type="submit"
+                    className={`md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
+                      false ? "animate-shake animate-ease-in-out" : undefined
+                    }`}
+                  >
+                    Enviar Mail
+                  </button>
+                )}
+              </div>
+            </form>
           </div>
         </div>
-      </form>
+        <figure>
+          <Image
+            width={360}
+            height={344}
+            src="/Augmented-reality.png"
+            alt="form-image"
+            className="mx-auto object-contain object-center"
+          />
+        </figure>
+      </div>
     </section>
   )
 }
+
+export default ContactForm
