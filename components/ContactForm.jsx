@@ -30,9 +30,9 @@ const ContactForm = () => {
 
   return (
     <section className="mx-auto w-full bg-white py-20 ">
-      <div className="mx-auto flex h-[100%] w-[70%]  items-center justify-center gap-3 ">
-        <div className="w-[60%]">
-          <header className="mb-2 w-[90%] py-2">
+      <div className="mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center  gap-4 md:w-[70%] md:flex-row ">
+        <div className="w-[60%] w-[90%]">
+          <header className="mb-2 w-full py-2 md:w-[90%]">
             <h3 className="text-xl font-medium md:pt-4 md:text-2xl">
               Quiero que se comuniquen conmigo
             </h3>
@@ -44,7 +44,7 @@ const ContactForm = () => {
           <div className="flex h-auto w-[100%] flex-col justify-center ">
             <form
               onSubmit={sendEmail}
-              className="flex h-[100%] w-[90%] flex-col gap-4 "
+              className="flex h-[100%] w-full flex-col gap-4 md:w-[90%] "
             >
               <input
                 className="rounded-md border-2 border-blue-dark px-3 py-1 text-[18px] outline-2 transition-all duration-300 focus:outline-cyan-bright "
