@@ -29,7 +29,7 @@ const OurExperience = () => {
             className="mx-auto object-contain object-center"
           />
         </figure>
-        <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between p-2 text-center text-blue-dark md:w-3/5 md:px-3 xl:ml-8 xl:mt-0 xl:w-2/6 xl:text-left">
+        <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between p-2 text-center text-blue-dark md:w-3/5 md:px-3 xl:ml-8 xl:mt-0 xl:w-3/6 xl:text-left">
           <div>
             <h4 className="text-xl font-medium text-cyan-bright">
               Creativos, Energicos y Dedicados
