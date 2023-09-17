@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar"
 import "./globals.css"
 import { Red_Hat_Display as redHatDisplay } from "next/font/google"
-import Footer from "@/components/Footer"
+import Footer1 from "@/components/Footer1"
 
 const RedHatDisplay = redHatDisplay({ subsets: ["latin"] })
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={RedHatDisplay.className}>
         <Navbar />
         {children}
-        <Footer />
+        <Footer1 />
       </body>
     </html>
   )
