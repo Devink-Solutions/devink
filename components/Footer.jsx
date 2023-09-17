@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { FaLinkedin, FaEnvelope, FaPhoneAlt, FaGithub, FaWhatsapp } from "react-icons/fa"
+import Link from 'next/link'
+import { FaLinkedin, FaEnvelope, FaPhoneAlt, FaGithub, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
 
         <ul className="flex list-none gap-10">
           <li>
-            <Link 
+            <Link
               href="https://api.whatsapp.com/send/?phone=%2B543416366234"
               target="_blank"
               rel="noopener noreferrer"

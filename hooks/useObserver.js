@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
-export default function useObserver(options) {
+export default function useObserver (options) {
   const [ref, setRef] = useState(null)
   const [inView, setInView] = useState(false)
   useEffect(() => {

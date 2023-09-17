@@ -1,8 +1,8 @@
-"use client"
-import Link from "next/link"
-import Image from "next/image"
-import useObserver from "@/hooks/useObserver"
-import { useEffect, useState } from "react"
+'use client'
+import Link from 'next/link'
+import Image from 'next/image'
+import useObserver from '@/hooks/useObserver'
+import { useEffect, useState } from 'react'
 
 const OurExperience = () => {
   const [ref, inView] = useObserver({ threshold: 0.7 })
@@ -49,7 +49,7 @@ const OurExperience = () => {
             href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
             target="_blank"
             className={`md:w-120 mt-2 w-fit self-center rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
-              isInView ? "animate-shake animate-ease-in-out" : undefined
+              isInView ? 'animate-shake animate-ease-in-out' : undefined
             }`}
           >
             Agendar una reunion

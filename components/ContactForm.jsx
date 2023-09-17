@@ -1,21 +1,21 @@
-"use client"
-import emailjs from "@emailjs/browser"
-import { useState } from "react"
-import Image from "next/image"
+'use client'
+import emailjs from '@emailjs/browser'
+import { useState } from 'react'
+import Image from 'next/image'
 
 const ContactForm = () => {
   const [send, setSend] = useState(false)
 
-  function sendEmail(e) {
+  function sendEmail (e) {
     e.preventDefault()
     console.log(e.target)
 
     emailjs
       .sendForm(
-        "service_if4cb5g",
-        "template_uqmz0gp",
+        'service_if4cb5g',
+        'template_uqmz0gp',
         e.target,
-        "r5e0ULGMbZDfNqhQ3",
+        'r5e0ULGMbZDfNqhQ3'
       )
       .then(
         (result) => {
@@ -23,7 +23,7 @@ const ContactForm = () => {
         },
         (error) => {
           console.log(error.text)
-        },
+        }
       )
     e.target.reset()
   }
@@ -31,7 +31,7 @@ const ContactForm = () => {
   return (
     <section className="mx-auto w-full bg-white py-20 ">
       <div className="mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center  gap-4 md:w-[70%] md:flex-row ">
-        <div className="w-[60%] w-[90%]">
+        <div className="w-[60%]">
           <header className="mb-2 w-full py-2 md:w-[90%]">
             <h3 className="text-xl font-medium md:pt-4 md:text-2xl">
               Quiero que se comuniquen conmigo
@@ -70,18 +70,20 @@ const ContactForm = () => {
                 name="message"
               />
               <div className="flex w-[100%] justify-center ">
-                {send ? (
+                {send
+                  ? (
                   <span className="text-[#05F100]">
                     form sent successfully!
                   </span>
-                ) : (
+                    )
+                  : (
                   <button
                     type="submit"
-                    className={`md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start `}
+                    className={'md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start '}
                   >
                     Enviar Mail
                   </button>
-                )}
+                    )}
               </div>
             </form>
           </div>

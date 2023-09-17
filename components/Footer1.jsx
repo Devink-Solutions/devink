@@ -1,4 +1,4 @@
-import Link from "next/link"
+/* eslint-disable @next/next/no-img-element */
 import {
   FaLinkedin,
   FaEnvelope,
@@ -8,12 +8,12 @@ import {
   FaRocket,
   FaPinterest,
   FaTwitch,
-  FaYoutube,
-} from "react-icons/fa"
+  FaYoutube
+} from 'react-icons/fa'
 
 const Footer1 = () => {
   return (
-    <footer className="flex flex-col min-h-[250px] w-full flex-col items-center space-y-10 bg-blue-dark px-20 py-10 font-medium text-white">
+    <footer className="flex min-h-[250px] w-full flex-col items-center space-y-10 bg-blue-dark px-20 py-10 font-medium text-white">
       <div className="flex w-full flex-col md:flex-row md:justify-between space-y-5 md:space-y-0">
         <figure className="flex flex-col items-center">
           <img

@@ -1,6 +1,6 @@
-"use client"
-import useObserver from "@/hooks/useObserver"
-import { useEffect, useState } from "react"
+'use client'
+import useObserver from '@/hooks/useObserver'
+import { useEffect, useState } from 'react'
 
 const Card = ({ logo, title, text, className }) => {
   const [ref, inView] = useObserver({ threshold: 0.7 })
@@ -14,13 +14,13 @@ const Card = ({ logo, title, text, className }) => {
     <section
       ref={ref}
       className={`flex w-full flex-col ${className} ${
-        isInView ? "animate-fade-right animate-ease-in-out" : "opacity-0"
+        isInView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'
       }`}
     >
       <h3 className="text-xl font-medium   leading-5  text-cyan md:text-2xl">
-        {logo || ""} {title}
+        {logo || ''} {title}
       </h3>
-      <p className="text-lg text-blue-mid1  md:text-xl  ">{text || ""}</p>
+      <p className="text-lg text-blue-mid1  md:text-xl  ">{text || ''}</p>
     </section>
   )
 }
