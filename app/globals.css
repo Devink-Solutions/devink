@@ -32,3 +32,24 @@ background: #5BC0BE;
 		transform: rotate(-360deg);
 	}
 }
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.gradient-animated {
+  background-size: 200% 200%;
+  animation: gradientAnimation 3s linear infinite;
+}
+
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradientAnimation 3s linear infinite;
+}
