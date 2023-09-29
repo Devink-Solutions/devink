@@ -5,10 +5,7 @@ import {
   FaPhoneAlt,
   FaGithub,
   FaWhatsapp,
-  FaRocket,
-  FaPinterest,
-  FaTwitch,
-  FaYoutube
+  FaRocket
 } from 'react-icons/fa'
 
 const Footer1 = () => {
@@ -32,43 +29,38 @@ const Footer1 = () => {
               <FaPhoneAlt />
               <span>+5493415366234</span>
             </span>
-            <span className="flex items-center space-x-4">
+            <span className="flex items-center space-x-4 ml-4">
               <FaEnvelope />
               <a
-              className="hover:text-blue-400 transition-colors duration-200 font-semibold text-lg"
-              href="mailto:team@devink.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              team@devink.dev
-            </a>
+                className="hover:text-blue-400 transition-colors duration-200 font-semibold text-lg"
+                href="mailto:devinksolutions@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                devinksolutions@gmail.com
+              </a>
             </span>
           </div>
           <div className="mt-8 flex flex-row justify-evenly  gap-5">
             <span className="mb-2 block">Social Media</span>
-
             <FaLinkedin className="cursor-pointer hover:text-blue-400" />
             <FaGithub className="cursor-pointer hover:text-purple-500" />
             <FaWhatsapp className="cursor-pointer hover:text-green-400" />
-            <FaPinterest className="cursor-pointer hover:text-red-400" />
-            <FaTwitch className="cursor-pointer hover:text-purple-600" />
-            <FaYoutube className="cursor-pointer hover:text-red-600" />
           </div>
         </div>
       </div>
       <div className="my-4 w-full border-t border-slate-500" />
-      <div className="flex flex-col mt-4 w-full md:flex-row items-center justify-between">
-        <ul className="flex flex-row gap-8">
+      <div className="flex flex-col mt-4 w-full md:flex-row items-center justify-end">
+        {/* <ul className="flex flex-row gap-8">
           <li className="cursor-pointer hover:underline">About Us</li>
           <li className="cursor-pointer hover:underline">Services</li>
           <li className="cursor-pointer hover:underline">Contact Us</li>
           <li className="cursor-pointer hover:underline">
             Terms and Conditions
           </li>
-          <li className="cursor-pointer hover:underline">Privacy Policy</li>
-        </ul>
+        </ul> */}
         <span className="mt-8 md:mt-0">
-          &copy; {new Date().getFullYear()} Devink. All rights reserved.
+          &copy; {new Date().getFullYear()} Devink.
         </span>
       </div>
     </footer>
