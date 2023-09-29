@@ -1,5 +1,9 @@
 {
   "extends": ["next/core-web-vitals", "standard"],
     "rules": {
+      "@next/next/no-img-element": "off",
+      "no-unused-vars": "warn",
+      "quotes": "warn",
+      "no-trailing-spaces": "warn"
   }
 }

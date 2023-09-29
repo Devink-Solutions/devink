@@ -38,7 +38,7 @@ const OurExperience = () => {
               Venimos a cambiar el paradigma tecnologico de nuestros clientes!
             </h3>
             <p className="py-2 text-lg font-light md:py-4">
-              Somos una nueva empresa de IT formada por un equipo ded
+              Somos una nueva empresa de IT formada por un equipo de
               profesionales especializados en la creacion de software de alto
               rendimiento nuestras soluciones implementan toda la creatividad de
               nuestro equipo, junto con las ultimas tecnologias para satisfacer
@@ -48,9 +48,8 @@ const OurExperience = () => {
           <Link
             href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
             target="_blank"
-            className={`md:w-120 mt-2 w-fit self-center rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${
-              isInView ? 'animate-shake animate-ease-in-out' : undefined
-            }`}
+            className={`md:w-120 mt-2 w-fit self-center rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start ${isInView ? 'animate-shake animate-ease-in-out' : undefined
+              }`}
           >
             Agendar una reunion
           </Link>
