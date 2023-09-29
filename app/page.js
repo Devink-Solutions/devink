@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import OurExperience from '@/components/OurExperience'
 import OurServicesScreen from '@/components/OurServicesScreen'
 import Steps from '@/components/Steps'
+import ContactForm from '@/components/ContactForm'
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <Steps />
       <OurServicesScreen />
       <OurExperience />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </main>
   )
 }

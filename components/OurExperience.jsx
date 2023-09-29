@@ -19,8 +19,8 @@ const OurExperience = () => {
       className=" px-auto flex h-full w-full items-center justify-center pb-8 pt-12"
       ref={ref}
     >
-      <div className="flex w-full flex-col items-center justify-center xl:flex-row">
-        <figure className="w-[90%] sm:w-fit">
+      <div className="flex w-full flex-col items-center md:max-w-[70%] justify-center xl:ml-10 xl:flex-row">
+        <figure className="w-[60%] sm:w-fit">
           <Image
             width={360}
             height={344}
@@ -29,7 +29,7 @@ const OurExperience = () => {
             className="mx-auto object-contain object-center"
           />
         </figure>
-        <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between p-2 text-center text-blue-dark md:w-3/5 md:px-3 xl:ml-8 xl:mt-0 xl:w-3/6 xl:text-left">
+        <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between p-2 text-center text-blue-dark md:w-3/5 md:px-3 xl:ml-12 xl:mt-0 xl:w-4/6 xl:text-left">
           <div>
             <h4 className="text-xl font-medium text-cyan-bright">
               Creativos, Energicos y Dedicados
