@@ -17,12 +17,6 @@ const Navbar = () => {
       </figure>
       <ul className=" hidden gap-4 text-xl md:inline-flex">
         <li>
-          <Link href="#about">Nosotros</Link>
-        </li>
-        <li>
-          <Link href="#services">Servicios</Link>
-        </li>
-        <li>
           <Link href="#makeacall">Agenda una llamada</Link>
         </li>
       </ul>

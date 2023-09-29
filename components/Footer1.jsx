@@ -7,12 +7,13 @@ import {
   FaWhatsapp,
   FaRocket
 } from 'react-icons/fa'
+import Link from 'next/link'
 
 const Footer1 = () => {
   return (
-    <footer className="flex min-h-[250px] w-full flex-col items-center space-y-10 bg-blue-dark px-20 py-10 font-medium text-white">
+    <footer className="flex min-h-[250px] w-full flex-col items-center space-y-6  md:space-y-10 bg-blue-dark px-10 md:px-20 py-10 font-bold text-white">
       <div className="flex w-full flex-col md:flex-row md:justify-between space-y-5 md:space-y-0">
-        <figure className="flex flex-col items-center">
+        <figure className="hidden md:flex flex-col items-center">
           <img
             src="./logo-without-name.svg"
             alt="logo"
@@ -20,14 +21,15 @@ const Footer1 = () => {
           />
         </figure>
         <div>
-          <h2 className="flex items-center space-x-2 text-2xl">
-            <span>Devink desde la web para el mundo</span>
-            <FaRocket className="text-cyan" />
-          </h2>
-          <div className="mt-4 flex flex-row justify-around">
+          <div className='flex  flex-col md:flex-row w-full justify-center items-center pb-4'>
+            <h2 className="flex items-center space-x-2 text-2xl">Devink desde la web para el mundo</h2>
+            <FaRocket className="text-cyan text-2xl mt-4 md:ml-6 md:text-4xl" />
+
+          </div>
+          <div className="mt-4 flex flex-col gap-4 items-center md:flex-row justify-around">
             <span className="flex items-center space-x-4">
               <FaPhoneAlt />
-              <span>+5493415366234</span>
+              <span>+543513084848</span>
             </span>
             <span className="flex items-center space-x-4 ml-4">
               <FaEnvelope />
