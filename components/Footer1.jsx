@@ -7,7 +7,6 @@ import {
   FaWhatsapp,
   FaRocket
 } from 'react-icons/fa'
-import Link from 'next/link'
 
 const Footer1 = () => {
   return (
