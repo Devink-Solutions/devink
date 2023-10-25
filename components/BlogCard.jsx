@@ -15,7 +15,7 @@ const BlogCard = ({blog}) => {
         />
       </div>
       <h3 className='mt-4 text-lg leading-tight font-semibold text-gray-900'>{blog.attributes.title}</h3>
-      <p className='text-sm text-gray-700 mt-2'>{blog.attributes.description}</p>
+      <p className='text-sm text-gray-700 mt-2 min-h-[42px]'>{blog.attributes.description}</p>
     </div>
   </Link>
   )
