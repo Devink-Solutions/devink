@@ -5,7 +5,8 @@ import {
   FaPhoneAlt,
   FaGithub,
   FaWhatsapp,
-  FaRocket
+  FaRocket,
+  FaInstagram
 } from 'react-icons/fa'
 import Link from 'next/link'
 
@@ -54,12 +55,12 @@ const Footer1 = () => {
                 <FaLinkedin />
               </Link>
               <Link
-                href="https://github.com/Devink-Solutions"
-                className="hover:text-purple-400 transition-colors duration-200 font-semibold text-4xl"
+                href="https://www.instagram.com/devink_solutions/"
+                className="hover:text-[#C13584] transition-colors duration-200 font-semibold text-4xl"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub />
+                <FaInstagram />
               </Link>
               <Link
                 href="https://api.whatsapp.com/send/?phone=%2B543415883040"
