@@ -7,14 +7,15 @@ import {
   FaWhatsapp,
   FaRocket
 } from 'react-icons/fa'
+import Link from 'next/link'
 
 const Footer1 = () => {
   return (
-    <footer className="flex min-h-[250px] w-full flex-col items-center space-y-6  md:space-y-10 bg-blue-dark px-10 md:px-20 py-10 font-bold text-white">
+    <footer className="flex min-h-[250px] w-full flex-col items-center space-y-6  md:space-y-10 bg-blue-dark px-10 md:px-20 py-10  text-white">
       <div className="flex w-full flex-col md:flex-row md:justify-between space-y-5 md:space-y-0">
         <figure className="hidden md:flex flex-col items-center">
           <img
-            src="/logo-without-name.svg"
+            src="./logo-without-name.svg"
             alt="logo"
             className="ml-20 mt-4 w-32"
           />
@@ -28,12 +29,12 @@ const Footer1 = () => {
           <div className="mt-4 flex flex-col gap-4 items-center md:flex-row justify-around">
             <span className="flex items-center space-x-4">
               <FaPhoneAlt />
-              <span>+543513084848</span>
+              <span className='text-lg'>+543513084848</span>
             </span>
             <span className="flex items-center space-x-4 ml-4">
               <FaEnvelope />
               <a
-                className="hover:text-blue-400 transition-colors duration-200 font-semibold text-lg"
+                className="hover:text-blue-400 transition-colors duration-200  text-lg"
                 href="mailto:devinksolutions@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -42,26 +43,48 @@ const Footer1 = () => {
               </a>
             </span>
           </div>
-          <div className="mt-8 flex flex-row justify-evenly  gap-5">
-            <span className="mb-2 block">Social Media</span>
-            <FaLinkedin className="cursor-pointer hover:text-blue-400" />
-            <FaGithub className="cursor-pointer hover:text-purple-500" />
-            <FaWhatsapp className="cursor-pointer hover:text-green-400" />
+          <div className="mt-8 flex flex-row justify-evenly items-center  gap-5">
+            <span className="mb-2 text-xl block">Social Media</span>
+            <Link
+                href="https://www.linkedin.com/in/kevin-duhamel-hayes/"
+                className="hover:text-blue-400 transition-colors duration-200 font-semibold text-4xl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </Link>
+              <Link
+                href="https://github.com/kevinduhamelhayes"
+                className="hover:text-purple-400 transition-colors duration-200 font-semibold text-4xl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </Link>
+              <Link
+                href="https://api.whatsapp.com/send/?phone=%2B543415883040"
+                className="hover:text-green-400 transition-colors duration-200 font-semibold text-4xl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp />
+              </Link>
           </div>
         </div>
       </div>
       <div className="my-4 w-full border-t border-slate-500" />
       <div className="flex flex-col mt-4 w-full md:flex-row items-center justify-end">
-        {/* <ul className="flex flex-row gap-8">
-          <li className="cursor-pointer hover:underline">About Us</li>
-          <li className="cursor-pointer hover:underline">Services</li>
-          <li className="cursor-pointer hover:underline">Contact Us</li>
-          <li className="cursor-pointer hover:underline">
-            Terms and Conditions
-          </li>
-        </ul> */}
-        <span className="mt-8 md:mt-0">
-          &copy; {new Date().getFullYear()} Devink.
+
+      <span className="flex font-semibold flex-wrap mt-8 md:mt-0">
+          &copy; {new Date().getFullYear()} This website is made with ❤️ by{" "}
+          <Link
+            className="hover:text-cyan-400 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-500 animate-gradient-x ml-2"
+            href="https://www.devink.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Devink
+          </Link>
         </span>
       </div>
     </footer>
