@@ -17,10 +17,13 @@ module.exports = {
         "blue-dark": "#0B132B",
         "blue-mid1": "#1C2541",
         "blue-mid2": "#3A506B",
-        cyan: "#5BC0BE",
-        "cyan-bright": "#6FFFE9",
+        "cyan": "#5BC0BE",
+        "cyan-bright": "#65f2e1",
       },
     },
   },
-  plugins: [require("tailwindcss-animated")],
+  plugins: [
+    require("tailwindcss-animated"),
+    require("@tailwindcss/typography"),
+  ],
 };
