@@ -46,7 +46,7 @@ const Footer1 = () => {
           <div className="mt-8 flex flex-row justify-evenly items-center  gap-5">
             <span className="mb-2 text-xl block">Social Media</span>
             <Link
-                href="https://www.linkedin.com/in/kevin-duhamel-hayes/"
+                href="https://www.linkedin.com/company/devink-solutions/"
                 className="hover:text-blue-400 transition-colors duration-200 font-semibold text-4xl"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +54,7 @@ const Footer1 = () => {
                 <FaLinkedin />
               </Link>
               <Link
-                href="https://github.com/kevinduhamelhayes"
+                href="https://github.com/Devink-Solutions"
                 className="hover:text-purple-400 transition-colors duration-200 font-semibold text-4xl"
                 target="_blank"
                 rel="noopener noreferrer"
