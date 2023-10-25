@@ -20,8 +20,9 @@ background: #5BC0BE;
 }
 @layer base {
   html {
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
+  
 }
 
 @keyframes spin-reverse {
