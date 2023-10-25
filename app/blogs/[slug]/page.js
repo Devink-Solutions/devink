@@ -27,7 +27,7 @@ const page = async ({ params }) => {
                 />
             </figure>
             
-            <h1 className='text-xl md:text-3xl font-semibold m-4 md:m-6'>{blog.attributes.title}</h1>
+            <h3 className='text-xl md:text-3xl font-semibold m-4 md:m-6'>{blog.attributes.title}</h3>
             
             <article className='prose prose-sm md:prose-lg lg:prose-xl prose-headings:underline prose-a:text-blue-600 prose-h1:text-xl w-full'>
                 <Markdown>{blog.attributes.content}</Markdown>
