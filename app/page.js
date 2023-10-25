@@ -10,9 +10,9 @@ export default function Home () {
     <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
       <Hero />
       <Steps />
-      <OurServicesScreen />
-      <OurExperience />
       <Blogs />
+      <OurExperience />
+      <OurServicesScreen />
       <ContactForm />
     </main>
   )

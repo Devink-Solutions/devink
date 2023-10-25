@@ -14,8 +14,8 @@ const page = async ({ params }) => {
   const blog = blogData.data
 
   return (
-    <main className='h-full flex flex-col justify-center items-center bg-gray-100'>
-        <section className='w-full max-w-4xl mt-10 mb-10 flex flex-col items-center justify-center bg-white p-4 md:p-8 shadow-md'>
+    <main className='h-full flex flex-col justify-center items-center bg-white'>
+        <section className='w-full max-w-4xl   flex flex-col items-center justify-center bg-white p-4 md:p-8 shadow-md'>
             <figure className='flex flex-col w-full max-w-sm md:max-w-lg mb-4 overflow-hidden'>
                 <Image
                   src={blog.attributes.cover.data.attributes.formats.small.url}
