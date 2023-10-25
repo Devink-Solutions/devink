@@ -35,7 +35,7 @@ const OurServicesScreen = () => {
   return (
     <section
       id="services"
-      className=" relative z-20 grid w-full gap-5 bg-blue-mid1 px-6 py-8 sm:grid-cols-2 md:px-20 2xl:grid-cols-5 2xl:py-12 "
+      className=" relative z-20 grid w-full gap-5 bg-blue-dark px-6 py-8 sm:grid-cols-2 md:px-20 2xl:grid-cols-5 2xl:py-12 "
     >
       {cards.map((x) => (
         <ServicesCard
