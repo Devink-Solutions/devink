@@ -13,6 +13,10 @@ const page = async ({ params }) => {
   const blogData = await fetchData(slug)
   const blog = blogData.data
 
+  if (!blog) {
+    throw new Error('Blog not found')
+  }
+
   return (
     <main className='h-full flex flex-col justify-center items-center bg-white'>
         <section className='w-full max-w-4xl   flex flex-col items-center justify-center bg-white p-4 md:p-8 shadow-md'>
