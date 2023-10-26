@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Markdown from 'react-markdown'
 
 const fetchData = async (slug) => {
-  const response = await fetch(`https://devink-cms.onrender.com/api/blogs/${slug}?populate=cover`, {cache: 'no-cache'})
+  const response = await fetch(`https://devink-cms.onrender.com/api/blogs/${slug}?populate=cover`, {next: { revalidate: 86400 }})
   const data = response.json()
   return data
 }

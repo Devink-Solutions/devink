@@ -1,7 +1,7 @@
 import BlogCard from "./BlogCard"
 
 const fetchData = async () => {
-  const response = await fetch('https://devink-cms.onrender.com/api/blogs?populate=cover', {cache: 'no-cache'})
+  const response = await fetch('https://devink-cms.onrender.com/api/blogs?populate=cover', {next: { revalidate: 86400 }})
   const data = response.json()
   return data
 }
