@@ -1,5 +1,4 @@
-import React from 'react'
-
+"use client"
 const error = () => {
   return (
     <main className='h-full flex flex-col justify-center items-center bg-white'>

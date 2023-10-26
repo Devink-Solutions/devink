@@ -16,7 +16,8 @@ const OurExperience = () => {
   return (
     <section
       id="makeacall"
-      className=" px-auto flex h-full w-full items-center justify-center pb-8 pt-12"
+      style={{scrollMarginTop: '80px'}}
+      className=" px-auto flex h-full w-full items-center justify-center pb-8 pt-12 "
       ref={ref}
     >
       <div className="flex w-full flex-col items-center md:max-w-[70%] justify-center xl:ml-10 xl:flex-row">
