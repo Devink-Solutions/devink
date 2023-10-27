@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Markdown from 'react-markdown'
 
 const fetchData = async (slug) => {
-  const response = await fetch(`https://devink-cms.onrender.com/api/blogs/${slug}?populate=cover`, {next: { revalidate: 86400 }})
+  const response = await fetch(`https://devink-cms.onrender.com/api/blogs/${slug}?populate=cover`, { next: { revalidate: 86400 } })
   const data = response.json()
   return data
 }
@@ -18,28 +18,27 @@ const page = async ({ params }) => {
   }
 
   return (
-    <main className='h-full flex flex-col justify-center items-center bg-white'>
-        <section className='w-full max-w-4xl   flex flex-col items-center justify-center bg-white p-4 md:p-8 shadow-md'>
-            <figure className='flex flex-col w-full max-w-sm md:max-w-lg mb-4 overflow-hidden'>
-                <Image
-                  src={blog.attributes.cover.data.attributes.formats.small.url}
-                  alt="Descripción de la imagen"
-                  layout='intrinsic'
-                  height={500}
-                  width={500}
-                  className='object-cover w-full m-4'
-                />
-            </figure>
-            
-            <h3 className='text-xl md:text-3xl font-semibold m-4 md:m-6'>{blog.attributes.title}</h3>
-            
-            <article className='prose prose-sm md:prose-lg lg:prose-xl prose-headings:underline prose-a:text-blue-600 prose-h1:text-xl w-full'>
-                <Markdown>{blog.attributes.content}</Markdown>
-            </article>
-        </section>
+    <main className="flex h-full flex-col items-center justify-center bg-white">
+      <section className="flex w-full   max-w-4xl flex-col items-center justify-center bg-white p-4 shadow-md md:p-8">
+        <figure className="mb-4 flex w-full max-w-sm flex-col overflow-hidden md:max-w-lg">
+          <Image
+            src={blog.attributes.cover.data.attributes.formats.small.url}
+            alt="Descripción de la imagen"
+            layout="intrinsic"
+            height={500}
+            width={500}
+            className="m-4 w-full object-cover"
+          />
+        </figure>
+
+        <h3 className="m-4 text-xl font-semibold md:m-6 md:text-3xl">{blog.attributes.title}</h3>
+
+        <article className="prose prose-sm w-full md:prose-lg lg:prose-xl prose-headings:underline prose-h1:text-xl prose-a:text-blue-600">
+          <Markdown>{blog.attributes.content}</Markdown>
+        </article>
+      </section>
     </main>
-)
+  )
 }
 
 export default page
-
