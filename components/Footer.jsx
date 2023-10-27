@@ -1,67 +1,98 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+/* eslint-disable @next/next/no-img-element */
+import {
+  FaLinkedin,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaRocket,
+  FaInstagram,
+} from 'react-icons/fa'
 import Link from 'next/link'
-import { FaLinkedin, FaEnvelope, FaPhoneAlt, FaGithub, FaWhatsapp } from 'react-icons/fa'
 
-const Footer = () => {
-  return (
-    <footer className="flex flex-col  md:flex-row w-full items-center md:items-start justify-between bg-blue-dark px-20 py-10 font-medium text-white">
-      <div className="flex flex-col justify-center items-center gap-4">
-        <h3 className="text-2xl font-bold">Medios de contacto</h3>
-        <ul className="list-none flex flex-col gap-4">
-          <li className="flex items-center space-x-4">
-            <FaEnvelope className="text-2xl" />
+const Footer1 = () => (
+  <footer className="flex min-h-[250px] w-full flex-col items-center space-y-6  bg-blue-dark p-10 text-white md:space-y-10 md:px-20">
+    <div className="flex w-full flex-col space-y-5 md:flex-row md:justify-between md:space-y-0">
+      <figure className="hidden flex-col items-center md:flex">
+        <img
+          src="./logo-without-name.svg"
+          alt="logo"
+          className="ml-20 mt-4 w-32"
+        />
+      </figure>
+      <div>
+        <div className="flex  w-full flex-col items-center justify-center pb-4 md:flex-row">
+          <h2 className="flex items-center space-x-2 text-2xl">Devink desde la web para el mundo</h2>
+          <FaRocket className="mt-4 text-2xl text-cyan md:ml-6 md:text-4xl" />
+
+        </div>
+        <div className="mt-4 flex flex-col items-center justify-around gap-4 md:flex-row">
+          <span className="flex items-center space-x-4">
+            <FaPhoneAlt />
+            <span className="text-lg">+543513084848</span>
+          </span>
+          <span className="ml-4 flex items-center space-x-4">
+            <FaEnvelope />
             <a
-              className="hover:text-blue-400 transition-colors duration-200 font-semibold text-lg"
-              href="mailto:team@devink.dev"
+              className="text-lg transition-colors duration-200  hover:text-blue-400"
+              href="mailto:devinksolutions@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              team@devink.dev
+              devinksolutions@gmail.com
             </a>
-          </li>
-          <li className="flex items-center space-x-4">
-            <FaPhoneAlt className="text-2xl" />
-            <span className="font-semibold text-lg">Cel: +54 9 341 6366234</span>
-          </li>
-        </ul>
+          </span>
+        </div>
+        <div className="mt-8 flex flex-row items-center justify-evenly  gap-5">
+          <span className="mb-2 block text-xl">Social Media</span>
+          <Link
+            href="https://www.linkedin.com/company/devink-solutions/"
+            className="text-4xl font-semibold transition-colors duration-200 hover:text-blue-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </Link>
+          <Link
+            href="https://www.instagram.com/devink_solutions/"
+            className="text-4xl font-semibold transition-colors duration-200 hover:text-[#C13584]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </Link>
+          <Link
+            href="https://api.whatsapp.com/send/?phone=%2B543415883040"
+            className="text-4xl font-semibold transition-colors duration-200 hover:text-green-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp />
+          </Link>
+        </div>
       </div>
-      <div className="mt-10 items-center justify-center flex flex-col gap-4 md:mt-0">
-        <h3 className="mb-2 text-2xl font-bold">Links útiles</h3>
+    </div>
+    <div className="my-4 w-full border-t border-slate-500" />
+    <div className="mt-4 flex w-full flex-col items-center justify-end md:flex-row">
 
-        <ul className="flex list-none gap-10">
-          <li>
-            <Link
-              href="https://api.whatsapp.com/send/?phone=%2B543416366234"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-400 hover:text-green-600 transition-colors duration-200"
-            >
-              <FaWhatsapp size="3em" />
-              </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.linkedin.com/company/devink-solutions/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-600 transition-colors duration-200"
-            >
-              <FaLinkedin size="3em" />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://github.com/orgs/Devink-Solutions"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-500 hover:text-purple-600 transition-colors duration-200"
-            >
-            <FaGithub size="3em" />
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  )
-}
+      <span className="mt-8 flex flex-wrap font-semibold md:mt-0">
+        &copy;
+        {' '}
+        {new Date().getFullYear()}
+        {' '}
+        This website is made with ❤️ by
+        {' '}
+        <Link
+          className="hover:text-cyan-400 animate-gradient-x ml-2 bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent"
+          href="https://www.devink.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Devink
+        </Link>
+      </span>
+    </div>
+  </footer>
+)
 
-export default Footer
+export default Footer1

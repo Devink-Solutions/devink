@@ -1,8 +1,11 @@
 'use client'
-import useObserver from '@/hooks/useObserver'
-import { useEffect, useState } from 'react'
 
-const Card = ({ logo, title, text, className }) => {
+import { useEffect, useState } from 'react'
+import useObserver from '@/hooks/useObserver'
+
+const Card = ({
+  logo, title, text, className,
+}) => {
   const [ref, inView] = useObserver({ threshold: 0.7 })
   const [isInView, setIsInView] = useState(false)
   useEffect(() => {
@@ -18,7 +21,9 @@ const Card = ({ logo, title, text, className }) => {
       }`}
     >
       <h3 className="text-xl font-medium   leading-5  text-cyan md:text-2xl">
-        {logo || ''} {title}
+        {logo || ''}
+        {' '}
+        {title}
       </h3>
       <p className="text-lg text-blue-mid1  md:text-xl  ">{text || ''}</p>
     </section>
