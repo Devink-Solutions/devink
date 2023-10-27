@@ -1,12 +1,16 @@
+/* eslint-disable max-len */
+
 'use client'
+
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
 import Image from 'next/image'
+import GearColumn from './GearColumn'
 
 const ContactForm = () => {
   const [send, setSend] = useState(false)
 
-  function sendEmail (e) {
+  function sendEmail(e) {
     e.preventDefault()
     console.log(e.target)
 
@@ -15,22 +19,29 @@ const ContactForm = () => {
         'service_if4cb5g',
         'template_uqmz0gp',
         e.target,
-        'r5e0ULGMbZDfNqhQ3'
+        'r5e0ULGMbZDfNqhQ3',
       )
       .then(
-        (result) => {
+        () => {
           setSend(true)
         },
         (error) => {
           console.log(error.text)
-        }
+        },
       )
     e.target.reset()
   }
 
   return (
-    <section className="mx-auto w-full bg-white py-20 ">
+    <section className="relative mx-auto w-full overflow-hidden bg-white py-20 ">
+      <div className="absolute -top-20 left-10 z-10">
+        <GearColumn />
+      </div>
+      <div className="absolute -top-20 right-10 z-10">
+        <GearColumn />
+      </div>
       <div className="mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center  gap-4 md:w-[70%] md:flex-row ">
+
         <div className="w-[60%]">
           <header className="mb-2 w-full py-2 md:w-[90%]">
             <h3 className="text-xl font-medium md:pt-4 md:text-2xl">
@@ -72,18 +83,18 @@ const ContactForm = () => {
               <div className="flex w-[100%] justify-center ">
                 {send
                   ? (
-                  <span className="text-[#05F100]">
-                    form sent successfully!
-                  </span>
-                    )
+                    <span className="text-[#05F100]">
+                      form sent successfully!
+                    </span>
+                  )
                   : (
-                  <button
-                    type="submit"
-                    className={'md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start '}
-                  >
-                    Enviar Mail
-                  </button>
-                    )}
+                    <button
+                      type="submit"
+                      className="md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start "
+                    >
+                      Enviar Mail
+                    </button>
+                  )}
               </div>
             </form>
           </div>
@@ -98,6 +109,7 @@ const ContactForm = () => {
           />
         </figure>
       </div>
+
     </section>
   )
 }
