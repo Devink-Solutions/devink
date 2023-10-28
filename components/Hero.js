@@ -3,7 +3,7 @@ import React from 'react'
 import { AiOutlineDown } from 'react-icons/ai'
 
 const Hero = () => (
-  <header className="z-20 flex h-[92vh] w-full flex-col items-center justify-center gap-4 bg-[#0B132B]   text-cyan-bright">
+  <header className="z-20 flex h-[92vh] w-full flex-col items-center justify-center gap-4 bg-[#0B132B] px-10 text-cyan-bright">
     <section className="mx-auto mb-14 flex justify-between">
       <div className="flex h-full flex-col gap-2 text-left md:w-3/5">
         <h3 className="animate-fade-up text-2xl font-medium animate-delay-75">

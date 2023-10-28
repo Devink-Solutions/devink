@@ -43,32 +43,34 @@ const Footer1 = () => (
             </a>
           </span>
         </div>
-        <div className="mt-8 flex flex-row items-center justify-evenly  gap-5">
-          <span className="mb-2 block text-xl">Social Media</span>
-          <Link
-            href="https://www.linkedin.com/company/devink-solutions/"
-            className="text-4xl font-semibold transition-colors duration-200 hover:text-blue-400"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </Link>
-          <Link
-            href="https://www.instagram.com/devink_solutions/"
-            className="text-4xl font-semibold transition-colors duration-200 hover:text-[#C13584]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </Link>
-          <Link
-            href="https://api.whatsapp.com/send/?phone=%2B543415883040"
-            className="text-4xl font-semibold transition-colors duration-200 hover:text-green-400"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp />
-          </Link>
+        <div className="mt-8 flex flex-col items-center justify-evenly gap-5  md:flex-row">
+          <span className="mb-2 block text-xl">Social Media:</span>
+          <div className="flex gap-5  ">
+            <Link
+              href="https://www.linkedin.com/company/devink-solutions/"
+              className="text-4xl font-semibold transition-colors duration-200 hover:text-blue-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              href="https://www.instagram.com/devink_solutions/"
+              className="text-4xl font-semibold transition-colors duration-200 hover:text-[#C13584]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </Link>
+            <Link
+              href="https://api.whatsapp.com/send/?phone=%2B543415883040"
+              className="text-4xl font-semibold transition-colors duration-200 hover:text-green-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
