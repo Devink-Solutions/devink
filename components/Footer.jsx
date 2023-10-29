@@ -22,7 +22,7 @@ const Footer1 = () => (
       </figure>
       <div>
         <div className="flex  w-full flex-col items-center justify-center pb-4 md:flex-row">
-          <h2 className="flex items-center space-x-2 text-2xl">Devink desde la web para el mundo</h2>
+          <h2 className="flex items-center space-x-2 text-center text-2xl sm:text-left">Devink desde la web para el mundo</h2>
           <FaRocket className="mt-4 text-2xl text-cyan md:ml-6 md:text-4xl" />
 
         </div>
@@ -77,7 +77,7 @@ const Footer1 = () => (
     <div className="my-4 w-full border-t border-slate-500" />
     <div className="mt-4 flex w-full flex-col items-center justify-end md:flex-row">
 
-      <span className="mt-8 flex flex-wrap font-semibold md:mt-0">
+      <span className="mt-8 font-semibold md:mt-0">
         &copy;
         {' '}
         {new Date().getFullYear()}
@@ -85,7 +85,7 @@ const Footer1 = () => (
         This website is made with ❤️ by
         {' '}
         <Link
-          className="hover:text-cyan-400 animate-gradient-x ml-2 bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent"
+          className="hover:text-cyan-400 animate-gradient-x inline-flex bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent"
           href="https://www.devink.dev/"
           target="_blank"
           rel="noopener noreferrer"
