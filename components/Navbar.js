@@ -20,10 +20,10 @@ const Navbar = () => (
 
     <ul className=" hidden gap-10 text-xl md:inline-flex">
       <li>
-        <Link href="#Blogs">Blogs</Link>
+        <Link href="/blogs">Blogs</Link>
       </li>
       <li>
-        <Link href="#makeacall">Agenda una llamada</Link>
+        <Link href="/contact">Agenda una llamada</Link>
       </li>
     </ul>
   </nav>

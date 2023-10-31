@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import GearColumn from './GearColumn'
 
-const ContactForm = () => {
+const ContactForm = ({ className, isAvailbleAnimation = true }) => {
   const [send, setSend] = useState(false)
 
   function sendEmail(e) {
@@ -33,14 +33,18 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="relative mx-auto w-full overflow-hidden bg-white py-20 ">
-      <div className="absolute -top-20 left-10 z-10">
-        <GearColumn />
-      </div>
-      <div className="absolute -top-20 right-10 z-10">
-        <GearColumn />
-      </div>
-      <div className="mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center  gap-4 md:w-[70%] md:flex-row ">
+    <section className={`relative mx-auto w-full overflow-hidden bg-white py-20 ${className} `}>
+      {isAvailbleAnimation ? (
+        <>
+          <div className="absolute -top-20 left-10 z-10">
+            <GearColumn />
+          </div>
+          <div className="absolute -top-20 right-10 z-10">
+            <GearColumn />
+          </div>
+        </>
+      ) : null}
+      <div className={`mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center gap-4 ${isAvailbleAnimation ? 'md:w-[70%] ' : 'md:w-full '} md:flex-row `}>
 
         <div className="w-[60%]">
           <header className="mb-2 w-full py-2 md:w-[90%]">
