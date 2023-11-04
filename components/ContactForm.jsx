@@ -46,7 +46,7 @@ const ContactForm = ({ className, isAvailbleAnimation = true }) => {
       ) : null}
       <div className={`mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center gap-4 ${isAvailbleAnimation ? 'md:w-[70%] ' : 'md:w-full '} md:flex-row `}>
 
-        <div className="w-[60%]">
+        <div className="w-[90%] sm:w-[60%]">
           <header className="mb-2 w-full py-2 md:w-[90%]">
             <h3 className="text-xl font-medium md:pt-4 md:text-2xl">
               Quiero que se comuniquen conmigo

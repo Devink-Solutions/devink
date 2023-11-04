@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const BlogCard = ({ blog }) => (
   <Link key={blog.id} href={`/blogs/${blog.id}`} className="relative">
-    <div className="m-4 rounded-lg bg-white p-4 shadow-md transition-all duration-200 hover:scale-[1.01] hover:shadow-lg">
+    <div className="h-full min-h-[430px] rounded-lg bg-white p-4 shadow-md transition-all duration-200 hover:scale-[1.01] hover:shadow-lg">
       <div className="relative h-60 w-full">
         <Image
           src={blog.attributes.cover.data.attributes.formats.small.url}
@@ -14,7 +14,7 @@ const BlogCard = ({ blog }) => (
         />
       </div>
       <h3 className="mt-4 text-lg font-semibold leading-tight text-gray-900">{blog.attributes.title}</h3>
-      <p className="mt-2 min-h-[42px] text-sm text-gray-700">{blog.attributes.description}</p>
+      <p className="mt-2 text-sm text-gray-700">{blog.attributes.description}</p>
     </div>
   </Link>
 )

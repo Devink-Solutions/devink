@@ -9,7 +9,7 @@ const Navbar = () => (
       </figure>
     </Link>
     <Link href="/">
-      <figure className="inline-flex w-[80px] cursor-pointer pt-2 md:hidden">
+      <figure className="inline-flex w-[60px] cursor-pointer pt-2 md:hidden">
         <img
           src="/logo-without-name.svg"
           alt="logo"
@@ -18,12 +18,12 @@ const Navbar = () => (
       </figure>
     </Link>
 
-    <ul className=" hidden gap-10 text-xl md:inline-flex">
+    <ul className="flex w-full grow items-center justify-end gap-10 text-xl">
       <li>
         <Link href="/blogs">Blogs</Link>
       </li>
       <li>
-        <Link href="/contact">Agenda una llamada</Link>
+        <Link href="#contact">Contacto</Link>
       </li>
     </ul>
   </nav>

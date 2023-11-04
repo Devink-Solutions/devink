@@ -17,9 +17,9 @@ const OurExperience = () => {
 
   return (
     <section
-      id="makeacall"
+      id="contact"
       style={{ scrollMarginTop: '80px' }}
-      className=" relative flex h-full w-full items-center justify-center pb-8 pt-12 "
+      className=" relative flex h-full w-full items-center justify-center pb-8 sm:pt-12 "
       ref={ref}
     >
       <div className="absolute -top-20 left-10 z-10">
@@ -29,7 +29,7 @@ const OurExperience = () => {
         <GearColumn />
       </div>
       <div className="flex w-full flex-col items-center justify-center md:max-w-[70%] xl:ml-10 xl:flex-row">
-        <figure className="w-[60%] sm:w-fit">
+        <figure className="hidden w-fit lg:inline-flex">
           <Image
             width={360}
             height={344}
@@ -38,8 +38,8 @@ const OurExperience = () => {
             className="mx-auto object-contain object-center"
           />
         </figure>
-        <div className="relative mt-8 flex h-2/3 w-screen flex-col justify-between p-2 text-center
-         text-blue-dark md:w-3/5 md:px-3 xl:ml-12 xl:mt-0 xl:w-4/6 xl:text-left"
+        <div className="relative mt-8 flex h-2/3 w-[90%] flex-col justify-between p-2
+         text-center text-blue-dark md:px-3 lg:w-3/5 xl:ml-12 xl:mt-0 xl:w-4/6 xl:text-left"
         >
           <div className="px-10 md:px-0">
             <h4 className="text-xl font-medium text-cyan-bright">
