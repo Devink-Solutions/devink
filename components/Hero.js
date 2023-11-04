@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { AiOutlineDown } from 'react-icons/ai'
+import Image from 'next/image'
 
 const Hero = () => (
   <header className="z-20 flex h-[92vh] w-full flex-col items-center justify-center gap-4 bg-[#0B132B] px-10 text-cyan-bright">
@@ -24,7 +25,13 @@ const Hero = () => (
         </Link>
       </div>
       <figure className="hidden h-full md:inline-flex">
-        <img src="/logo-without-name.svg" className="h-full" alt="" />
+        <Image
+          src="/logo-without-name.svg"
+          width={50}
+          height={50}
+          className="h-full"
+          alt=""
+        />
       </figure>
     </section>
     <figure className="absolute bottom-4">
