@@ -27,8 +27,8 @@ const Hero = () => (
       <figure className="hidden h-full md:inline-flex">
         <Image
           src="/logo-without-name.svg"
-          width={50}
-          height={50}
+          width={250}
+          height={250}
           className="h-full"
           alt=""
         />

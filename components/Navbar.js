@@ -10,8 +10,8 @@ const Navbar = () => (
           src="/logo.svg"
           alt="logo"
           className="object-contain"
-          width={50}
-          height={50}
+          width={200}
+          height={100}
         />
       </figure>
     </Link>
@@ -20,7 +20,7 @@ const Navbar = () => (
         <Image
           src="/logo-without-name.svg"
           alt="logo"
-          width={50}
+          width={120}
           height={50}
           className="object-contain"
         />

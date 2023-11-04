@@ -31,12 +31,11 @@ export async function Blogs() {
   }
 
   return (
-    <div className="z-20 flex w-full flex-col  items-center justify-center bg-blue-dark px-2 py-12 md:px-6">
+    <div className="z-20 flex w-full flex-col  items-center justify-center bg-blue-dark px-2 py-8 md:px-6">
       <h3 className="py-6 text-2xl font-bold text-cyan-bright">Nuestros Blogs</h3>
-      <section className="mb-10 flex  h-[550px] w-full items-center overflow-hidden">
+      <section className=" flex  h-[550px] w-full items-center overflow-hidden">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-
           breakpoints={{
             450: {
               slidesPerView: 1,
@@ -55,14 +54,13 @@ export async function Blogs() {
               spaceBetween: 10,
             },
           }}
-          className="flex h-[550px] w-full flex-row "
+          className="flex h-[550px] w-full flex-row"
           navigation
-          pagination={{ clickable: true }}
           autoplay={{
+
             delay: 7500,
             disableOnInteraction: false,
           }}
-          scrollbar={{ draggable: true }}
         >
 
           {blogsData.data?.map((blog) => (
@@ -70,7 +68,6 @@ export async function Blogs() {
               <BlogCard blog={blog} key={blog.id} />
             </SwiperSlide>
           ))}
-
         </Swiper>
       </section>
     </div>
