@@ -1,0 +1,312 @@
+{
+"data": [
+{
+"id": 2,
+"attributes": {
+"title": "Custom Hooks en React: Flexibilidad y Reutilización al Máximo",
+"content": "*¡Saludos, desarrolladores! A medida que continuamos nuestro viaje en las profundidades de JavaScript y sus frameworks, hoy exploraremos una característica única y poderosa de React: los Hooks Personalizados 😎. Este concepto central redefine la forma en que gestionamos el estado y los efectos secundarios, optimizando nuestro código y mejorando la reutilización a través de los componentes.*\n\n## Más Allá de los Hooks Incorporados\n\nLos Customs Hooks en React nos permiten extraer y encapsular lógica de los componentes funcionales, facilitando el compartir y reutilizar código en múltiples componentes. Esto conduce a un código más limpio y mantenible que se adhiere al principio DRY (No te repitas 🔁).\n\nSupongamos que a menudo necesitamos obtener datos de una API y usarlos en nuestros componentes. En lugar de escribir repetidamente `useEffect` y `useState` en cada componente, podemos crear un hook personalizado:\n\n```jsx\nconst useFetch = (url) => {\n  const [data, setData] = useState(null);\n  useEffect(() => {\n    fetch(url)\n      .then(response => response.json())\n      .then(data => setData(data));\n  }, [url]);\n  return data;\n}\n```\nEste Hook Personalizado useFetch toma una URL como argumento, realiza la operación de obtención de datos y devuelve los datos obtenidos.\n\nNuestros componentes se vuelven más concisos a medida que utilizamos nuestros hooks personalizados:\n\n```jsx\nconst Component = () => {\n  const data = useFetch('<https://api.example.com/data>')\n  return <div>{data}</div>\n}\n```\n\nEsta implementación no solo es limpia y simple, sino que también nos permite reutilizar la misma lógica de obtención de datos en otros componentes simplemente invocando el hook useFetch.\n\n# **Incrementando la Flexibilidad con Hooks Personalizados**\n\nLos Hooks Personalizados son flexibles. Pueden manejar cualquier lógica que los hooks incorporados pueden: lógica con estado, efectos secundarios, contexto, reductores y más. Por ejemplo, puedes crear un hook personalizado para gestionar entradas de formulario:\n\n\n```jsx\nconst useFormInput = (initialValue) => {\n  const [value, setValue] = useState(initialValue)\n  const handleChange = (event) => {\n    setValue(event.target.value)\n  }\n  return [value, handleChange]\n}\n```\n\nAhora, cualquier elemento de formulario en tu aplicación puede beneficiarse de este hook:\n\n```jsx\nconst FormComponent = () => {\n  const [name, handleNameChange] = useFormInput('');\n  const [email, handleEmailChange] = useFormInput('');\n  return (\n    <form>\n      <input type=\"text\" value={name} onChange={handleNameChange} />\n      <input type=\"text\" value={email} onChange={handleEmailChange} />\n    </form>\n  );\n}\n```\n\nEsta flexibilidad, combinada con su capacidad para ser combinados, hace que los hooks personalizados sean una herramienta poderosa en la caja de herramientas de React.\n\n# **Extendiendo Hooks Personalizados: Abstrayendo Bibliotecas**\n\nLos Hooks Personalizados pueden abstraer y compartir instancias de bibliotecas en diferentes componentes. Pueden encapsular no solo la lógica de estado o los efectos secundarios, sino también la lógica relacionada con el uso de bibliotecas externas.\n\nConsidera el caso en el que varios componentes en nuestra aplicación están aprovechando el poder de Amplitude, un robusto recurso de análisis de productos que he desglosado anteriormente en una publicación previa. Profundicemos en un ejemplo tangible que desmitifica cómo podemos optimizar este proceso aplicando un Hook Personalizado que encarna la funcionalidad de Amplitude.\n\n# **El escenario**\n\n```jsx\nimport * as amplitude from '@amplitude/analytics-browser'\n\nconst ButtonA = () => {\n  return (\n    <button onClick={()=> amplitude.track('BUTTON_A_USED')}>\n      Press me!\n    </button>\n    )\n }\n// en otro lugar tu tienes:\nimport * as amplitude from 'amplitude-analytics'\n\nconst ButtonB = () => {\n  return (\n    <button onClick={()=> amplitude.track('BUTTON_B_USED')}>\n      Press me!\n    </button>\n    )\n}\n```\n\nEn este enfoque, tanto los componentes BotonA como BotonB están interactuando de forma independiente con una instancia de Amplitude, lo que lleva a la repetición de código.\n\n# **Refactorizando con un Hook Personalizado**\n\nEn lugar de duplicar el código en los componentes, podemos introducir un Hook Personalizado que abstraiga la funcionalidad de Amplitude, facilitando una gestión centralizada:\n\n```jsx\nimport * as amplitude from '@amplitude/analytics-browser';\n//  Un detalle es que esto también reduce significativamente el número de importaciones\n\nconst useAmplitudeTracker = () => {\n  const trackEventA = () => amplitude.track('BUTTON_A_USED')\n  const trackEventB = () => amplitude.track('BUTTON_B_USED')\n  return {\n    trackEventA,\n    trackEventB,\n    //y esto es extensible para todas tus necesidades\n    }\n};\n\nexport default useAmplitudeTracker\n```\n\nAhora podemos refactorizar nuestros componentes BotonA y BotonB para aprovechar este hook:\n\n```jsx\nimport useAmplitudeTracker from './your/route/for/hooks'\n\nconst ButtonA = () => {\n  const { trackEventA } = useAmplitudeTracker()\n    return (\n      <button onClick={()=> trackEventA()}>\n        Presioname!\n      </button>\n      )\n}\nimport useAmplitudeTracker from './your/route/for/hooks'\n\nconst ButtonB = () => {\n  const { trackEventB } = useAmplitudeTracker()\n    return (\n      <button onClick={()=> trackEventB()}>\n        Presioname!\n      </button>\n      )\n}\n```\nNuestros componentes son mucho más limpios ahora. Cualquier lógica compartida para el uso de Amplitude se mantiene en un solo lugar: el hook `useAmplitudeTracker` .\n\n# **Beneficios y Conclusión**\n\nLos Hooks Personalizados se presentan como una fuerza transformadora en el desarrollo con React. Reconfiguran nuestro código en formas más flexibles, mantenibles y elegantes, mejorando la reutilización y defendiendo el principio DRY (No Te Repitas), es gracioso porque lo estoy repitiendo, pero es importante cuidar ese principio 😆.\n\nEmbarcarse en el viaje de crear tus Hooks Personalizados te empodera para encapsular cualquier tipo de lógica. Entonces, ¿por qué no sumergirse, crear tus propios hooks y desbloquear el inmenso potencial que ofrecen?\n\nComo desarrollador de JavaScript en un ecosistema de startups en constante evolución, compartiré más de mis experiencias y percepciones. Mantente actualizado y acompáñame en este emocionante viaje:\n\n- Conéctate conmigo en **[LinkedIn](https://www.linkedin.com/in/ian-duhamel/)**\n- Explora mis proyectos en **[GitHub](https://github.com/Ianduha13)**\n\nSumérjamonos juntos en el vasto universo de la programación. ¡Feliz codificación! 😃",
+"description": "Los Customs Hooks en React nos permiten extraer y encapsular lógica de los componentes funcionales, facilitando el compartir y reutilizar código en múltiples componentes.",
+"creationdate": "2023-07-12T15:30:00.000Z",
+"createdAt": "2023-10-23T06:57:42.492Z",
+"updatedAt": "2023-11-04T06:33:33.519Z",
+"publishedAt": "2023-10-23T06:58:00.964Z",
+"slug": "custom-hooks-en-react-flexibilidad-y-reutilizaci-n-al-m-ximo",
+"cover": {
+"data": {
+"id": 2,
+"attributes": {
+"name": "DALL·E 2023-10-23 03.52.32 - Photo of a metallic badge where the React logo and the Amplitude logo are fused together. The React atom orbits around the peaks and troughs of the Am.png",
+"alternativeText": null,
+"caption": null,
+"width": 1024,
+"height": 1024,
+"formats": {
+"large": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698044220/large_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c.png",
+"hash": "large_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"mime": "image/png",
+"name": "large_DALL·E 2023-10-23 03.52.32 - Photo of a metallic badge where the React logo and the Amplitude logo are fused together. The React atom orbits around the peaks and troughs of the Am.png",
+"path": null,
+"size": 1206.95,
+"width": 1000,
+"height": 1000,
+"provider_metadata": {
+"public_id": "large_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"resource_type": "image"
+}
+},
+"small": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698044220/small_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c.png",
+"hash": "small_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"mime": "image/png",
+"name": "small_DALL·E 2023-10-23 03.52.32 - Photo of a metallic badge where the React logo and the Amplitude logo are fused together. The React atom orbits around the peaks and troughs of the Am.png",
+"path": null,
+"size": 329.26,
+"width": 500,
+"height": 500,
+"provider_metadata": {
+"public_id": "small_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"resource_type": "image"
+}
+},
+"medium": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698044220/medium_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c.png",
+"hash": "medium_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"mime": "image/png",
+"name": "medium_DALL·E 2023-10-23 03.52.32 - Photo of a metallic badge where the React logo and the Amplitude logo are fused together. The React atom orbits around the peaks and troughs of the Am.png",
+"path": null,
+"size": 726.03,
+"width": 750,
+"height": 750,
+"provider_metadata": {
+"public_id": "medium_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"resource_type": "image"
+}
+},
+"thumbnail": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698044215/thumbnail_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c.png",
+"hash": "thumbnail_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"mime": "image/png",
+"name": "thumbnail_DALL·E 2023-10-23 03.52.32 - Photo of a metallic badge where the React logo and the Amplitude logo are fused together. The React atom orbits around the peaks and troughs of the Am.png",
+"path": null,
+"size": 38.07,
+"width": 156,
+"height": 156,
+"provider_metadata": {
+"public_id": "thumbnail_DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"resource_type": "image"
+}
+}
+},
+"hash": "DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"ext": ".png",
+"mime": "image/png",
+"size": 367.02,
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698044214/DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c.png",
+"previewUrl": null,
+"provider": "cloudinary",
+"provider_metadata": {
+"public_id": "DALL_E_2023_10_23_03_52_32_Photo_of_a_metallic_badge_where_the_React_logo_and_the_Amplitude_logo_are_fused_together_The_React_atom_orbits_around_the_peaks_and_troughs_of_the_Am_887710f06c",
+"resource_type": "image"
+},
+"createdAt": "2023-10-23T06:57:00.864Z",
+"updatedAt": "2023-10-23T06:57:00.864Z"
+}
+}
+}
+}
+},
+{
+"id": 1,
+"attributes": {
+"title": "Implementa Amplitude en tu app de Next en 3 pasos",
+"content": "*En esta era impulsada por los datos, las herramientas de análisis como Amplitude Analytics son esenciales para las startups. Amplitude emplea un método de análisis basado en eventos, que te permite comprender a fondo las interacciones de los usuarios. Esto es fundamental en las etapas de crecimiento de un producto, ayudando en la evaluación de la eficacia de cada feature ni bien son liberadas a produccion, asi permite experimentar con diversas estrategias de UI/UX e identificando áreas problemáticas. Todo esto se puede traducir en una experiencia de usuario que se ajuste perfectamente al publico de tu producto, lo que lleva en un punto final a un indiscutible aumento en la retención de usuarios.*\n\n## Disclaimer\n\nEl proceso que voy a detallar para implementar Amplitude dentro de Next.js es un enfoque básico y algo subjetivo, basado en mi experiencia y los desafíos que enfrenté al configurarlo para la aplicación de mi trabajo. Si tienes alguna duda, consulta la documentación oficial de Amplitude en este enlace: **[https://www.docs.developers.amplitude.com/](https://www.docs.developers.amplitude.com/)**\n\nVoy a asumir que ya has creado una cuenta y obtenido un código API de Amplitude. Si necesitas ayuda, no dudes en preguntar en los comentarios o a través de Github Discussions.\n\n### Enlaces interesantes:\n\n- Repo del ejemplo 😺 : [https://github.com/Ianduha13/next-amplitude-blog](https://github.com/Ianduha13/next-amplitude-blog)\n- Demo online 👾 : [https://next-amplitude.vercel.app/](https://next-amplitude.vercel.app/)\n\n# Paso 1: Setup general del proyecto\n\nPrimero, crea una nueva aplicación Next.js e instala la librería de Amplitude con los siguientes comandos:\n\n```\nyarn create-next-app@latest mi-app\nyarn add @amplitude/analytics-browser\n```\n\nTambién puedes clonar el repositorioque he hecho para explicar este blog:\n\n```\ngit clone git@github.com:Ianduha13/next-amplitude-blog.git\n```\n\nLuego, genera un nuevo archivo llamado `.env` en el directorio raíz de tu proyecto y agrega tu clave API de Amplitude:\n\n```\nNEXT_PUBLIC_AMPLITUDE_API_KEY=Tu_API_KEY_de_Amplitude\n```\n\n# Paso 2: Setear el hook de inicialización\n\nPara incorporar Amplitude en tu aplicación, necesitas incluir ciertas funciones en tu código. Estas implican inicializar Amplitude y configurar un `ClickHandler` para trackear eventos específicos.\n\nPrimero que nada, te voy a recomendar extraer la lógica de instancia a un custom hook.\n\n```\nimport { useEffect } from \"react\"\n\nexport let amplitude\nconst AMPLITUDE_API_KEY = process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY\n\nconst useAmplitudeInit = () => {\n  useEffect(() => {\n    const initAmplitude = async () => {\n      amplitude = await import(\"@amplitude/analytics-browser\")\n      amplitude.init(AMPLITUDE_API_KEY, undefined, {\n        logLevel: amplitude.Types.LogLevel.Warn,\n        defaultTracking: {\n          sessions: true,\n          formInteractions: true,\n        },\n      })\n    }\n    initAmplitude()\n  }, [])\n}\n\nexport default useAmplitudeInit\n```\n\n# Paso 3: Usar el hook en un componente y aclaraciones finales\n\nLuego, en tu `_app.js` (o `page.js` si estás usando Next.js 13) importa el hook personalizado y utilízalo en tu componente de aplicación.\n\n```\nimport useAmplitudeInit from \"@/app/hooks/useAmplitudeInit\"\n\nexport default function Home() {\n  useAmplitudeInit()\n  ...\n}\n```\n\nConstruye un `clickHandler`, para trackear los eventos de clic:\n\n```\nimport { amplitude } from \"@/app/hooks/useAmplitudeInit\"\n\n...\n\nconst clickHandler = () => {\n  amplitude.track(\"click\", {\n    text: \"Cada clic es un nuevo evento, y cada estrella o 'like' me apoya.\"\n  })\n}\n```\n\nEl metodo `.track` de amplitude recibe como primer parametro el nombre del evento con el cual se va a identificar dentro de amplitude y como segundo parametro un objeto con las propiedades del evento (esto se ve claramente en la siguiente seccion). En la documentacion de amplitude vas a encontrar muchas posibilidades para customizar estos eventos, distintos metodos y propiedades que despues facilitan la extraccion de data y analisis de esta misma.\n\nEs increible el mundo de posibilidades que nos abre como desarrolladores trabajar con event-driven analytics ademas de que amplitude es enormemente personalizable.\n\n## Felicitaciones! Ya podes visualizar tus primeros eventos **en Amplitude** 🚀\n\nPara ver los eventos trackeados, ve a tu panel de Amplitude y a User-Lookup en tu barra de navegación. Deberías ver algo así:\n\n![https://miro.medium.com/v2/resize:fit:700/1*q40RVtRaDmZiIHhPSZXxHw.png](https://miro.medium.com/v2/resize:fit:700/1*q40RVtRaDmZiIHhPSZXxHw.png)\n\nSi quieres ver el \"user stream\" hecho para un usuario, puedes seleccionar el userID proporcionado en esa lista.\n\nLo que mostrará la siguiente tarjeta de perfil, aqui podras visualizar muchos datos muy interesantes y customizables que te pueden ser de mucha ayuda a la hora de evaluar el engagement de cierta feature:\n\n![https://miro.medium.com/v2/resize:fit:700/1*XF7JKid9Q4MRbu6fMCHDZw.png](https://miro.medium.com/v2/resize:fit:700/1*XF7JKid9Q4MRbu6fMCHDZw.png)\n\n<aside>\n💡 Aquí te dejo una fuente oficial para practicar con datos de muestra en un ambiente premium: **[https://analytics.amplitude.com/demo/home](https://analytics.amplitude.com/demo/home)**\n\n</aside>\n\n## **Bonus Track**\n\nAquí está la página que desarrollamos a lo largo de este tutorial, ¿complicada, no? 🤣\n\n![https://miro.medium.com/v2/resize:fit:700/1*myhQxz72GLEENXc6tVxaYA.png](https://miro.medium.com/v2/resize:fit:700/1*myhQxz72GLEENXc6tVxaYA.png)\n\nBromas aparte, aquí tienes un enlace a la demo en línea: **[https://next-amplitude.vercel.app/](https://next-amplitude.vercel.app/)**\n\nSi visitas el enlace y presionas el botón, verás un cambio en tiempo real en el gráfico dentro del enlace público de Amplitude proporcionado en el segundo botón. Verás algo así:\n\n![https://miro.medium.com/v2/resize:fit:700/1*eRCIY_BTgSS-c2e65EDp1A.png](https://miro.medium.com/v2/resize:fit:700/1*eRCIY_BTgSS-c2e65EDp1A.png)\n\nMis disculpas si el gráfico está algo condensado, pero los gráficos no pueden ser compartidos con enlaces de acceso completo como editores en el plan gratuito de Amplitude.\n\n## **Conclusión y Agradecimiento**\n\n¡Gracias por leer mi artículo! Fue una gran experiencia para mí, y espero que lo hayas encontrado valioso.\n\nComo desarrollador de JavaScript en una startup en fase de semilla, compartiré más percepciones y actualizaciones sobre mi jornada. Si estás interesado en mantenerte actualizado con mis futuros posts, puedes seguirme en los siguientes enlaces:\n\n- **[LinkedIn](https://www.linkedin.com/in/ian-duhamel/)**\n- **[GitHub](https://github.com/Ianduha13)**\n- [**Medium**](https://medium.com/@ianduhamelhayes)\n\nPor último, quiero agradecerte por tomar el tiempo para leer este post. Si te fue de ayuda, te invito a que lo compartas con otros. Asimismo, cualquier feedback es siempre bienvenido y estaré encantado de responder cualquier pregunta que puedas tener.\n\n¡Saludos y éxitos a todos en sus proyectos! ¡Hasta la próxima!",
+"description": "Amplitude emplea un método de análisis basado en eventos, que te permite comprender a fondo las interacciones de los usuarios.",
+"creationdate": "2023-10-21T21:00:00.000Z",
+"createdAt": "2023-10-23T02:20:10.669Z",
+"updatedAt": "2023-11-04T06:34:05.632Z",
+"publishedAt": "2023-10-23T02:20:15.654Z",
+"slug": "implementa-amplitude-en-tu-app-de-next-en-3-pasos",
+"cover": {
+"data": {
+"id": 1,
+"attributes": {
+"name": "woodcuts_1.jpg",
+"alternativeText": null,
+"caption": null,
+"width": 1500,
+"height": 1014,
+"formats": {
+"large": {
+"ext": ".jpg",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698027551/large_woodcuts_1_0092d7f150.jpg",
+"hash": "large_woodcuts_1_0092d7f150",
+"mime": "image/jpeg",
+"name": "large_woodcuts_1.jpg",
+"path": null,
+"size": 189.11,
+"width": 1000,
+"height": 676,
+"provider_metadata": {
+"public_id": "large_woodcuts_1_0092d7f150",
+"resource_type": "image"
+}
+},
+"small": {
+"ext": ".jpg",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698027551/small_woodcuts_1_0092d7f150.jpg",
+"hash": "small_woodcuts_1_0092d7f150",
+"mime": "image/jpeg",
+"name": "small_woodcuts_1.jpg",
+"path": null,
+"size": 49.54,
+"width": 500,
+"height": 338,
+"provider_metadata": {
+"public_id": "small_woodcuts_1_0092d7f150",
+"resource_type": "image"
+}
+},
+"medium": {
+"ext": ".jpg",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698027551/medium_woodcuts_1_0092d7f150.jpg",
+"hash": "medium_woodcuts_1_0092d7f150",
+"mime": "image/jpeg",
+"name": "medium_woodcuts_1.jpg",
+"path": null,
+"size": 108.05,
+"width": 750,
+"height": 507,
+"provider_metadata": {
+"public_id": "medium_woodcuts_1_0092d7f150",
+"resource_type": "image"
+}
+},
+"thumbnail": {
+"ext": ".jpg",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698027549/thumbnail_woodcuts_1_0092d7f150.jpg",
+"hash": "thumbnail_woodcuts_1_0092d7f150",
+"mime": "image/jpeg",
+"name": "thumbnail_woodcuts_1.jpg",
+"path": null,
+"size": 11.45,
+"width": 231,
+"height": 156,
+"provider_metadata": {
+"public_id": "thumbnail_woodcuts_1_0092d7f150",
+"resource_type": "image"
+}
+}
+},
+"hash": "woodcuts_1_0092d7f150",
+"ext": ".jpg",
+"mime": "image/jpeg",
+"size": 401.17,
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698027549/woodcuts_1_0092d7f150.jpg",
+"previewUrl": null,
+"provider": "cloudinary",
+"provider_metadata": {
+"public_id": "woodcuts_1_0092d7f150",
+"resource_type": "image"
+},
+"createdAt": "2023-10-23T02:19:11.904Z",
+"updatedAt": "2023-10-23T02:19:11.904Z"
+}
+}
+}
+}
+},
+{
+"id": 3,
+"attributes": {
+"title": "Mejore su JavaScript con funciones de orden superior",
+"content": "*¡Saludos, desarrolladores! En nuestro mundo de JavaScript en constante evolución, una cosa que permanece constante es la necesidad de manipular y utilizar arrays de manera efectiva. Afortunadamente, JavaScript nos ofrece una gran cantidad de funciones de orden superior que simplifican esta tarea. Hoy, nos sumergiremos profundamente en este tema, explorando el poder de map, filter, find, sort y la estrella del espectáculo: reduce.*\n\n### La magia de las funciones de orden superior\n\nAntes de entrar en detalles, establezcamos una comprensión común de lo que queremos decir con **funciones de orden superior** . Estas son funciones que toman una o más funciones como argumentos o devuelven una función como resultado. Gracias a que JavaScript trata las funciones como ciudadanos de primera clase, podemos asignarlas a variables, usarlas como propiedades de objetos o pasarlas como argumentos a otras funciones. Esto permite formas poderosas y flexibles de manejar datos en nuestras aplicaciones. Veamos un ejemplo:\n\n```\nfunction greet(name) {\n    return `Hello, ${name}!`\n}\n\nfunction loudGreeting(greeting, name) {\n    return greeting(name).toUpperCase() + '!!!'\n}\n\nconsole.log(loudGreeting(greet, 'Readers'))\n// Outputs: \"HELLO, READERS!!!!\"\n```\n\nEn este ejemplo, `loudGreeting` es una función de orden superior porque toma otra función  (`greet`) como argumento.\n\nLa función `greet` es responsable de crear un simple mensaje de saludo. La función `loudGreeting` toma esta función `greet`, la aplica y modifica aún más la salida para hacer el saludo fuerte (convirtiendo el mensaje a mayúsculas y añadiéndole '!!!').\n\nLas funciones de orden superior ofrecen una manera poderosa de abstraer funcionalidades y crear piezas de código reutilizables y componibles.\n\n### map(): Transformando elementos, uno por uno\n\nEl método `map()` acude al rescate cuando necesitas crear un nuevo array aplicando una función a cada elemento de uno existente.\n\n```\nconst numbers = [1, 2, 3, 4, 5]\nconst squares = numbers.map(num => num ** 2)\nconsole.log(squares)// [1, 4, 9, 16, 25]\n```\n\nEn este ejemplo,  `map()` aplica la función de elevar al cuadrado a cada elemento del array `numbers` y resulta en un nuevo array `squares`. El array original permanece inalterado.\n\n### filter(): Seleccionando los elementos que necesitas\n\nCuando necesitas tamizar un array y seleccionar ciertos elementos que cumplen una condición específica, `filter()` es el método que quieres.\n\nAsí es como puedes usar `filter()`:\n\n```\nconst numbers = [1, 2, 3, 4, 5]\nconst evens = numbers.filter(num => num % 2 === 0)\nconsole.log(evens) // [2, 4]\n```\n\nEn este caso,  `filter()` recorre cada elemento del array `numbers` y forma un nuevo array `evens` con elementos que pasan la condición especificada (números que son pares).\n\n### find(): Buscando la primera coincidencia\n\nCuando necesitas encontrar el primer elemento en un array que coincide con una condición específica, recurre a  `find():`\n\n```\nconst numbers = [1, 2, 3, 4, 5]\nconst firstEven = numbers.find(num => num % 2 === 0)\nconsole.log(firstEven) // 2\n```\n\nEn este ejemplo,  `find()` devuelve el primer elemento del array `numbers` que satisface la condición.\n\n### sort(): Poniendo todo en orden\n\nCuando se trata de organizar los elementos de un array en un orden específico, la función  `sort()` es tu mejor amiga.\n\n```\nconst numbers = [5, 2, 1, 4, 3]\nnumbers.sort()\nconsole.log(numbers) // [1, 2, 3, 4, 5]\n```\n\nPara ordenar números en orden descendente, puedes pasar una función de comparación a  `sort()`:\n\n```\nconst numbers = [5, 2, 1, 4, 3]\nnumbers.sort((a, b) => b - a)\nconsole.log(numbers) // [5, 4, 3, 2, 1]\n```\n\nCada una de estas funciones de orden superior juega un papel crucial en la programación diaria de JavaScript. Sin embargo, hay una función más que, aunque un poco más compleja, ofrece un nivel de flexibilidad y potencia que la hace destacar: la función  `reduce()` ¡Vamos a profundizar en esto a continuación!\n\n### reduce(): La joya de las HOF\n\nCon su capacidad para tomar un array y ‘reducirlo’ a un solo valor, la función `reduce()` ocupa una posición única y potente entre las funciones de orden superior de JavaScript.\n\nAquí es donde encontramos un concepto importante: el acumulador. Un acumulador es esencialmente un valor que se recuerda a través de las iteraciones. Con cada paso a través de nuestro array, la función  `reduce()`  toma el elemento actual del array y lo combina con el acumulador de la manera que definimos, resultando finalmente en un único valor de salida 'acumulado'.\n\n¿Suena bastante complicado, verdad? Pero con algunos ejemplos te va a encantar 😆:\n\n```\nconst numbers = [1, 2, 3, 4, 5]\nconst sum = numbers.reduce((accumulator, currentValue) => accumulator +\ncurrentValue, 0)\nconsole.log(sum) // 15\n```\n\nEn este caso, la función `reduce()` está tomando un array de números y 'reduciéndolo' a su suma. Con cada iteración, el elemento actual del array (el `currentValue`)  se suma al  `accumulator` (que comienza en `0`,como hemos especificado).\n\nLa belleza de `reduce()` es su flexibilidad. No está limitada a operaciones numéricas. Supongamos que tenemos un array de cadenas y queremos concatenarlas en una sola cadena:\n\n```\nconst words = ['JavaScript', 'is', 'awesome']\nconst sentence = words.reduce((accumulator, currentWord) => accumulator + ' ' + currentWord, '');\nconsole.log(sentence)// 'JavaScript is awesome'\n```\n\nAl usar `reduce()`, somos capaces de 'reducir' nuestro array de palabras a una sola cadena.\n\nEl poder de `reduce()` va más allá de simples operaciones matemáticas y concatenación. Nos permite diseñar escenarios más complejos, como transformar nuestro array en una estructura de datos más sofisticada, como un objeto:\n\n```\nconst pets = ['cat', 'dog', 'fish', 'cat', 'dog', 'dog']\nconst petCount = pets.reduce((count, pet) => {\n  count[pet] = (count[pet] || 0) + 1\n  return count\n}, {})\nconsole.log(petCount) // { cat: 2, dog: 3, fish: 1 }\n```\n\nEn este ejemplo, estamos reduciendo nuestro array de `pets` a un objeto donde las claves son los nombres de las mascotas y los valores son la cantidad de cada mascota en el array. El acumulador (`count`) es un objeto vacío `{}`,  y con cada iteración, estamos incrementando el recuento de la mascota correspondiente o inicializándolo en  `1` si aún no existe.\n\nY puedo continuar todo el día dando más y más ejemplos de diferentes usos de reduce 🤯\n\n### El Acumulador: El Corazón de Reduce\n\nUna de las claves para entender `reduce()` es prestar especial atención al concepto del  **acumulador**. No es solo una variable, sino el verdadero corazón de  `reduce()`.  El acumulador recuerda su valor a través de cada iteración en el array, sirviendo como el valor acumulativo hasta el punto actual.\n\nInicialmente, el acumulador es el valor que proporcionas como segundo argumento de  `reduce()`. Luego, para cada elemento en el array, el acumulador toma el valor devuelto por tu función de callback. Al final de la iteración, el acumulador se convierte en el único valor resultante.\n\nEsto hace que`reduce()` sea increíblemente versátil. Y ni siquiera puedes imaginar la cantidad de líneas de código que nos ahorra 😏\n\nTe animo a que practiques con estos métodos, juegues con ellos y desbloquees el inmenso potencial que ofrecen.\n\nComo siempre, seguiré compartiendo más percepciones y experiencias en el emocionante mundo de JavaScript. Para unirte a mí en este viaje:\n\n- Conéctate conmigo en **[LinkedIn](https://www.linkedin.com/in/ian-duhamel/)**\n- Explora mis proyectos en **[GitHub](https://github.com/Ianduha13)**\n\nSigamos explorando juntos el vasto universo de la codificación. ¡Feliz codificación! 😃",
+"description": "Hoy, nos sumergiremos profundamente en este tema, explorando el poder de map, filter, find, sort y la estrella del espectáculo: reduce.",
+"creationdate": "2023-08-10T15:45:00.000Z",
+"createdAt": "2023-10-23T08:01:25.142Z",
+"updatedAt": "2023-11-04T06:34:39.252Z",
+"publishedAt": "2023-10-23T08:01:29.120Z",
+"slug": "mejore-su-javascript-con-funciones-de-orden-superior",
+"cover": {
+"data": {
+"id": 3,
+"attributes": {
+"name": "DALL·E 2023-10-23 04.57.24 - Render of a 3D translucent globe with continents highlighted in React's signature blue. Orbiting around the globe is a luminous React logo, casting a .png",
+"alternativeText": null,
+"caption": null,
+"width": 1024,
+"height": 1024,
+"formats": {
+"large": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698048057/large_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99.png",
+"hash": "large_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"mime": "image/png",
+"name": "large_DALL·E 2023-10-23 04.57.24 - Render of a 3D translucent globe with continents highlighted in React's signature blue. Orbiting around the globe is a luminous React logo, casting a .png",
+"path": null,
+"size": 1461.43,
+"width": 1000,
+"height": 1000,
+"provider_metadata": {
+"public_id": "large_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"resource_type": "image"
+}
+},
+"small": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698048057/small_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99.png",
+"hash": "small_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"mime": "image/png",
+"name": "small_DALL·E 2023-10-23 04.57.24 - Render of a 3D translucent globe with continents highlighted in React's signature blue. Orbiting around the globe is a luminous React logo, casting a .png",
+"path": null,
+"size": 402.82,
+"width": 500,
+"height": 500,
+"provider_metadata": {
+"public_id": "small_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"resource_type": "image"
+}
+},
+"medium": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698048057/medium_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99.png",
+"hash": "medium_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"mime": "image/png",
+"name": "medium_DALL·E 2023-10-23 04.57.24 - Render of a 3D translucent globe with continents highlighted in React's signature blue. Orbiting around the globe is a luminous React logo, casting a .png",
+"path": null,
+"size": 885.27,
+"width": 750,
+"height": 750,
+"provider_metadata": {
+"public_id": "medium_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"resource_type": "image"
+}
+},
+"thumbnail": {
+"ext": ".png",
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698048052/thumbnail_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99.png",
+"hash": "thumbnail_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"mime": "image/png",
+"name": "thumbnail_DALL·E 2023-10-23 04.57.24 - Render of a 3D translucent globe with continents highlighted in React's signature blue. Orbiting around the globe is a luminous React logo, casting a .png",
+"path": null,
+"size": 52.84,
+"width": 156,
+"height": 156,
+"provider_metadata": {
+"public_id": "thumbnail_DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"resource_type": "image"
+}
+}
+},
+"hash": "DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"ext": ".png",
+"mime": "image/png",
+"size": 333.68,
+"url": "https://res.cloudinary.com/dvkc3pdje/image/upload/v1698048051/DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99.png",
+"previewUrl": null,
+"provider": "cloudinary",
+"provider_metadata": {
+"public_id": "DALL_E_2023_10_23_04_57_24_Render_of_a_3_D_translucent_globe_with_continents_highlighted_in_React_s_signature_blue_Orbiting_around_the_globe_is_a_luminous_React_logo_casting_a_93bb0eae99",
+"resource_type": "image"
+},
+"createdAt": "2023-10-23T08:00:58.388Z",
+"updatedAt": "2023-10-23T08:00:58.388Z"
+}
+}
+}
+}
+}
+],
+"meta": {
+"pagination": {
+"page": 1,
+"pageSize": 25,
+"pageCount": 1,
+"total": 3
+}
+}
+}

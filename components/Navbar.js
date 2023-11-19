@@ -27,12 +27,12 @@ const Navbar = () => (
       </figure>
     </Link>
 
-    <ul className=" hidden gap-10 text-xl md:inline-flex">
+    <ul className="flex w-full grow items-center justify-end gap-10 text-xl">
       <li>
-        <Link href="#Blogs">Blogs</Link>
+        <Link href="/blogs">Blogs</Link>
       </li>
       <li>
-        <Link href="#makeacall">Agenda una llamada</Link>
+        <Link href="#contact">Contacto</Link>
       </li>
     </ul>
   </nav>

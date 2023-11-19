@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-
 'use client'
 
 import {
@@ -15,20 +14,16 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/effect-fade'
 import 'swiper/css/zoom'
+import BlogsData from '@/public/Blogs.json'
 
-const fetchData = async () => {
-  const response = await fetch('https://devink-cms.onrender.com/api/blogs?populate=cover', { next: { revalidate: 86400 } })
-  const data = response.json()
-  return data
-}
-
-export async function Blogs() {
-  const blogsData = await fetchData()
+export function Blogs() {
+  const blogsData = BlogsData
 
   // Si no hay blogs, retornar null
   if (!blogsData.data || blogsData.data.length === 0) {
     return null
   }
+
 
   return (
     <div className="z-20 flex w-full flex-col  items-center justify-center bg-blue-dark px-2 py-8 md:px-6">
