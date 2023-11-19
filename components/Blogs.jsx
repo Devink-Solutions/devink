@@ -59,8 +59,8 @@ export function Blogs() {
         >
 
           {blogsData.data?.map((blog) => (
-            <SwiperSlide>
-              <BlogCard blog={blog} key={blog.id} />
+            <SwiperSlide key={blog.id}>
+              <BlogCard blog={blog} />
             </SwiperSlide>
           ))}
         </Swiper>
