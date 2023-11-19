@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+
 'use client'
 
 import {
@@ -23,7 +24,6 @@ export function Blogs() {
   if (!blogsData.data || blogsData.data.length === 0) {
     return null
   }
-
 
   return (
     <div className="z-20 flex w-full flex-col  items-center justify-center bg-blue-dark px-2 py-8 md:px-6">
