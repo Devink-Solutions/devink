@@ -1,8 +1,10 @@
+'use client'
+
 import Image from 'next/image'
 import BlogCard from '../../components/BlogCard'
 import Blogs from '@/public/Blogs.json'
 
-const page = async () => {
+const page = () => {
   const blogsData = Blogs
   return (
     <main className="flex min-h-screen flex-col items-center overflow-x-hidden scroll-smooth ">

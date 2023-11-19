@@ -2,7 +2,7 @@
 import BlogCard from './BlogCard'
 import BlogsData from '@/public/Blogs.json'
 
-export async function Blogs() {
+export function Blogs() {
   const blogsData = BlogsData
 
   // Si no hay blogs, retornar null

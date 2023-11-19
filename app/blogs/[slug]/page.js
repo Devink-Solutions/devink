@@ -1,11 +1,13 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Markdown from 'react-markdown'
 import Blogs from '@/public/Blogs.json'
 
-const page = async ({ params }) => {
-  const blog = Blogs.data.filter((x) => x.id === params.slug)
-  console.log(blog)
+const page = ({ params }) => {
+  const { slug } = params
+  const blog = Blogs.data.find((x) => x.id === Number(slug))
 
   return (
     <main className="flex h-full flex-col items-center justify-center bg-white">

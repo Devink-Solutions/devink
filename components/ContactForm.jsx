@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser'
 import { useState } from 'react'
 import Image from 'next/image'
 import GearColumn from './GearColumn'
+import { trackAmplitudeEvent } from '../utils/AmplitudeTrackers'
 
 const ContactForm = ({ className, isAvailbleAnimation = true }) => {
   const [send, setSend] = useState(false)
@@ -24,6 +25,7 @@ const ContactForm = ({ className, isAvailbleAnimation = true }) => {
       .then(
         () => {
           setSend(true)
+          trackAmplitudeEvent('email-sent')
         },
         (error) => {
           console.log(error.text)
