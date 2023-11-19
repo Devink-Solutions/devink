@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${RedHatDisplay.className}flex`}>
+      <body className={`${RedHatDisplay.className}flex bg-blue-dark`}>
         <Navbar />
         {children}
         <Footer />

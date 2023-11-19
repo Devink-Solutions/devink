@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import Image from 'next/image'
 import BlogCard from './BlogCard'
 
 const fetchData = async () => {
@@ -19,13 +20,25 @@ export async function Blogs() {
     <div
       id="Blogs"
       style={{ scrollMarginTop: '80px' }}
-      className="z-20 flex h-full w-full flex-col items-center justify-center bg-blue-dark px-2 py-8 md:px-6"
+      className="relative z-20 flex h-full w-full flex-col items-center justify-center bg-blue-dark "
     >
-      <h3 className="mb-4 text-2xl font-semibold text-cyan-bright">Nuestros Blogs</h3>
-      <div className="grid max-w-[1300px] grid-cols-1 gap-2 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
-        {blogsData.data?.map((blog) => (
-          <BlogCard blog={blog} key={blog.id} />
-        ))}
+      <figure className="max-h-[70vh] overflow-hidden ">
+        <Image
+          src="/HERO8.jpg"
+          alt="Combria Logo"
+          width={2000}
+          height={400}
+          className=" "
+        />
+        <div className="absolute inset-0 bg-[#0B132B] opacity-60" />
+      </figure>
+      <div className="absolute inset-0  z-10 flex flex-col items-center justify-center  text-center">
+        <h3 className=" mb-12 text-6xl font-semibold text-cyan-bright">Nuestros Blogs</h3>
+        <div className="grid max-w-[1300px] animate-fade-up grid-cols-1 gap-2 animate-delay-75 md:grid-cols-2 md:gap-10 lg:grid-cols-3 ">
+          {blogsData.data?.map((blog) => (
+            <BlogCard blog={blog} key={blog.id} />
+          ))}
+        </div>
       </div>
     </div>
   )

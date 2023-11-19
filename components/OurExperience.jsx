@@ -19,7 +19,7 @@ const OurExperience = () => {
     <section
       id="contact"
       style={{ scrollMarginTop: '80px' }}
-      className=" relative flex h-full w-full items-center justify-center pb-8 sm:pt-12 "
+      className=" relative flex h-full w-full items-center justify-center bg-white pb-8 sm:pt-12 "
       ref={ref}
     >
       <div className="absolute -top-20 left-10 z-10">
@@ -59,8 +59,8 @@ const OurExperience = () => {
           <Link
             href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
             target="_blank"
-            className={`mt-2 w-fit self-center rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium 
-            text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark md:w-[180px] xl:self-start 
+            className={`mt-2 flex w-full rounded-full  border-2 border-cyan-bright bg-blue-dark px-12 py-2 text-center text-xl font-medium 
+            text-cyan-bright md:w-[300px]  
             ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
           >
             Agendar una reunion
