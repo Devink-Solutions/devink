@@ -1,14 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import BlogCard from './BlogCard'
-
-const fetchData = async () => {
-  const response = await fetch('https://devink-cms.onrender.com/api/blogs?populate=cover', { next: { revalidate: 86400 } })
-  const data = response.json()
-  return data
-}
+import BlogsData from '@/public/Blogs.json'
 
 export async function Blogs() {
-  const blogsData = await fetchData()
+  const blogsData = BlogsData
 
   // Si no hay blogs, retornar null
   if (!blogsData.data || blogsData.data.length === 0) {

@@ -1,22 +1,9 @@
 import Image from 'next/image'
 import BlogCard from '../../components/BlogCard'
+import Blogs from '@/public/Blogs.json'
 
 const page = async () => {
-  const fetchData = async () => {
-    const response = await fetch(
-      'https://devink-cms.onrender.com/api/blogs?populate=cover',
-      { next: { revalidate: 86400 } },
-    )
-    const data = response.json()
-    return data
-  }
-
-  const blogsData = await fetchData()
-
-  if (!blogsData.data || blogsData.data.length === 0) {
-    return null
-  }
-
+  const blogsData = Blogs
   return (
     <main className="flex min-h-screen flex-col items-center overflow-x-hidden scroll-smooth ">
       <header className="mx-auto mt-5 flex w-[90%] max-w-[1300px] flex-col justify-start">

@@ -1,21 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Markdown from 'react-markdown'
-
-const fetchData = async (slug) => {
-  const response = await fetch(`https://devink-cms.onrender.com/api/blogs/${slug}?populate=cover`, { next: { revalidate: 86400 } })
-  const data = response.json()
-  return data
-}
+import Blogs from '@/public/Blogs.json'
 
 const page = async ({ params }) => {
-  const { slug } = params
-  const blogData = await fetchData(slug)
-  const blog = blogData.data
-
-  if (!blog) {
-    throw new Error('Blog not found')
-  }
+  const blog = Blogs.data.filter((x) => x.id === params.slug)
+  console.log(blog)
 
   return (
     <main className="flex h-full flex-col items-center justify-center bg-white">
