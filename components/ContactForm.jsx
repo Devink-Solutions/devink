@@ -96,7 +96,7 @@ const ContactForm = ({ className, isAvailbleAnimation = true }) => {
                   : (
                     <button
                       type="submit"
-                      className="md:w-120 mt-2 w-full  rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark xl:self-start "
+                      className="mt-2 w-full rounded-xl  bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark md:w-[120px] xl:self-start "
                     >
                       Enviar Mail
                     </button>

@@ -16,7 +16,7 @@ const Card = ({
   return (
     <section
       ref={ref}
-      className={`flex w-full flex-col ${className} ${
+      className={`flex w-full flex-col  ${className} ${
         isInView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'
       }`}
     >
