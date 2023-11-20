@@ -1,5 +1,6 @@
 'use client'
 
+/* eslint-disable max-len */
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -60,13 +61,11 @@ const OurExperience = () => {
               los requerimientos de nuestros clientes.
             </p>
           </div>
-          <button type="button" className=" xl:self-start mt-8 xl:mt-4" onClick={handlePress}>
+          <button type="button" className=" mt-8 xl:mt-4 xl:self-start" onClick={handlePress}>
             <Link
               href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
               target="_blank"
-              className={`  w-fit self-center rounded-full border-2 border-cyan-bright bg-blue-dark px-10 py-3 text-center text-xl font-medium text-cyan-bright 
-            shadow-lg transition-colors duration-300 md:w-[180px]   xl:mt-2 xl:self-start 
-            ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
+              className={`w-fit self-center rounded-full border-2 border-cyan-bright bg-blue-dark px-10 py-3 text-center text-xl font-medium text-cyan-bright shadow-lg transition-colors duration-300 md:w-[180px] xl:mt-2 xl:self-start ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
             >
               Agendar una reunion
             </Link>
