@@ -8,13 +8,13 @@ const Hero = () => (
     <section className="mx-auto mb-14 flex justify-between">
       <div className="flex h-full flex-col gap-2 text-left md:w-3/5">
         <h3 className="animate-fade-up text-2xl font-medium animate-delay-75">
-          En Devink
+          Devink
         </h3>
         <h1 className="animate-fade-up text-5xl font-medium animate-delay-75">
-          Sabemos como ayudarte a resolver lo que necesites
+          Te ayudamos a construir la solucion digital para tu empresa.
         </h1>
         <h4 className="animate-fade-up text-xl animate-delay-75">
-          Desarrollamos soluciones de IT para tu empresa.
+          Desarrollos a medida y soluciones IT
         </h4>
         <Link
           href="#makeacall"

@@ -23,7 +23,7 @@ const OurExperience = () => {
     <section
       id="contact"
       style={{ scrollMarginTop: '80px' }}
-      className=" relative flex h-full w-full items-center justify-center pb-8 sm:pt-12 "
+      className=" relative flex h-full w-full items-center justify-center bg-white pb-8 sm:pt-12"
       ref={ref}
     >
       <div className="absolute -top-20 left-10 z-10">
@@ -32,7 +32,7 @@ const OurExperience = () => {
       <div className="absolute -top-20 right-10 z-10">
         <GearColumn />
       </div>
-      <div className="flex w-full flex-col items-center justify-center md:max-w-[70%] xl:ml-10 xl:flex-row">
+      <div className="flex w-full flex-col items-center justify-center md:max-w-[70%] xl:ml-10 xl:flex-row ">
         <figure className="hidden w-fit lg:inline-flex">
           <Image
             width={360}
@@ -60,12 +60,12 @@ const OurExperience = () => {
               los requerimientos de nuestros clientes.
             </p>
           </div>
-          <button type="button" className="self-start" onClick={handlePress}>
+          <button type="button" className=" xl:self-start mt-8 xl:mt-4" onClick={handlePress}>
             <Link
               href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
               target="_blank"
-              className={`mt-2 w-fit self-center rounded-xl bg-blue-dark px-8 py-2 text-center text-xl font-medium 
-            text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark md:w-[180px] xl:self-start 
+              className={`  w-fit self-center rounded-full border-2 border-cyan-bright bg-blue-dark px-10 py-3 text-center text-xl font-medium text-cyan-bright 
+            shadow-lg transition-colors duration-300 md:w-[180px]   xl:mt-2 xl:self-start 
             ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
             >
               Agendar una reunion
