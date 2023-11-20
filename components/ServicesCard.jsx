@@ -1,6 +1,6 @@
 const Card = ({ logo, title, text }) => (
-  <section className="flex w-full flex-col overflow-x-hidden rounded-xl bg-white p-8 px-6
-  shadow-md transition-shadow duration-300 md:hover:shadow-xl"
+  <section className="flex w-full flex-col overflow-x-hidden rounded-xl bg-white bg-opacity-70 p-8
+  px-6 shadow-md transition-shadow duration-300 md:hover:shadow-xl"
   >
     <h3 className="py-2 text-2xl text-blue-dark">{logo || ''}</h3>
 
