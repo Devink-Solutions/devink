@@ -28,7 +28,7 @@ export function Blogs() {
   return (
     <div className="z-20 flex w-full flex-col  items-center justify-center bg-blue-dark px-2 py-10 md:px-6">
       <h3 className="pb-10 text-4xl font-bold text-cyan-bright">Nuestros Blogs</h3>
-      <section className=" flex w-full h-[500px]  items-center overflow-hidden px-16 xl:h-[430px]">
+      <section className=" flex h-[500px] w-full  items-center overflow-hidden px-16 xl:h-[430px]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           breakpoints={{
