@@ -18,6 +18,9 @@ background: #5BC0BE;
 .gear-reverse {
 	animation: spin-reverse 20s linear infinite 1.45s;
 }
+:root{
+  font-family: 'Red Hat Display', sans-serif;
+}
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -54,3 +57,4 @@ background: #5BC0BE;
   background-size: 200% 200%;
   animation: gradientAnimation 3s linear infinite;
 }
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Red+Hat+Display:wght@400;500&display=swap');

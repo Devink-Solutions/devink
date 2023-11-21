@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable max-len */
 import { MdOutlineDeveloperMode } from 'react-icons/md'
 import { FaHourglassHalf, FaRobot } from 'react-icons/fa'
@@ -40,12 +41,13 @@ const OurServicesScreen = () => {
       id="services"
       className=" relative z-20 grid w-full gap-5 bg-blue-dark px-6 py-8 sm:grid-cols-2 md:px-20 2xl:grid-cols-5 2xl:py-12 "
     >
-      {cards.map((x) => (
+      {cards.map((card, index) => (
         <ServicesCard
-          logo={x.logo}
-          title={x.title}
-          text={x.text}
-          key={cards.indexOf(x)}
+          logo={card.logo}
+          title={card.title}
+          text={card.text}
+          image={card.image}
+          key={index}
         />
       ))}
     </section>

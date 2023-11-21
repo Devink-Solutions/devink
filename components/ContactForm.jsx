@@ -14,7 +14,6 @@ const ContactForm = ({ className, isAvailbleAnimation = true }) => {
   function sendEmail(e) {
     e.preventDefault()
     console.log(e.target)
-
     emailjs
       .sendForm(
         'service_if4cb5g',
@@ -96,7 +95,7 @@ const ContactForm = ({ className, isAvailbleAnimation = true }) => {
                   : (
                     <button
                       type="submit"
-                      className="mt-2 w-full rounded-xl  bg-blue-dark px-8 py-2 text-center text-xl font-medium text-white shadow-lg transition-colors duration-300 hover:bg-cyan-bright hover:text-blue-dark md:w-[120px] xl:self-start "
+                      className="mt-2 flex rounded-full border-2 border-cyan-bright bg-blue-dark px-10 py-3 text-center text-xl font-medium text-cyan-bright shadow-lg transition-colors  duration-300 xl:self-start "
                     >
                       Enviar Mail
                     </button>
