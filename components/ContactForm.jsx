@@ -34,7 +34,7 @@ const ContactForm = ({ className, isAvailbleAnimation = true }) => {
   }
 
   return (
-    <section className={`relative mx-auto w-full overflow-hidden bg-white py-20 ${className} `}>
+    <section className={`relative z-10 mx-auto w-full overflow-hidden bg-white py-20 ${className} `}>
       {isAvailbleAnimation ? (
         <>
           <div className="absolute -top-20 left-10 z-10">

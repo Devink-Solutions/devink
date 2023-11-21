@@ -47,7 +47,7 @@ const OurExperience = () => {
          text-center text-blue-dark md:px-3 lg:w-3/5 xl:ml-12 xl:mt-0 xl:w-4/6 xl:text-left"
         >
           <div className="px-10 md:px-0">
-            <h4 className="text-xl font-medium text-cyan-bright">
+            <h4 className=" text-2xl md:text-xl font-medium text-cyan-bright">
               Creativos, Energicos y Dedicados
             </h4>
             <h3 className="pt-2 text-xl font-medium md:pt-4 md:text-2xl">

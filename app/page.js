@@ -9,6 +9,7 @@ import OurServicesScreen from '@/components/OurServicesScreen'
 import Steps from '@/components/Steps'
 import ContactForm from '@/components/ContactForm'
 import { Blogs } from '@/components/Blogs'
+import Cover from '@/components/Cover/Cover'
 
 export default function Home() {
   useEffect(() => {
@@ -18,13 +19,16 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
-      <Hero />
-      <Steps />
-      <OurServicesScreen />
-      <OurExperience />
-      <Blogs />
-      <ContactForm />
-    </main>
+    <>
+      <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
+        <Hero />
+        <Steps />
+        <OurServicesScreen />
+        <OurExperience />
+        <Blogs />
+        <ContactForm />
+        <Cover />
+      </main>
+    </>
   )
 }

@@ -26,15 +26,15 @@ export function Blogs() {
   }
 
   return (
-    <div className="z-20 flex w-full flex-col  items-center justify-center bg-blue-dark px-2 py-10 md:px-6">
-      <h3 className="pb-10 text-4xl font-bold text-cyan-bright">Nuestros Blogs</h3>
-      <section className=" flex h-[500px] w-full  items-center overflow-hidden px-16 xl:h-[430px]">
+    <div className="z-20 flex w-full flex-col  items-center justify-center rounded-3xl bg-blue-dark px-2 py-10 md:px-6">
+      <h3 className="pb-4 md:pb-10 text-4xl font-bold text-cyan-bright">Nuestros Blogs</h3>
+      <section className=" flex h-[500px] w-full  items-center overflow-hidden px-4 md:px-16 xl:h-[430px]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           breakpoints={{
             450: {
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 5,
             },
             768: {
               slidesPerView: 2,
@@ -46,7 +46,7 @@ export function Blogs() {
             },
             1280: {
               slidesPerView: 3,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
           }}
           className="flex h-[430px] w-full flex-row"
