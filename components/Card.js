@@ -1,6 +1,3 @@
-import { useEffect } from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import useObserver from '@/hooks/useObserver'
 
 const Card = ({
@@ -11,12 +8,7 @@ const Card = ({
   return (
     <section
       ref={ref}
-      className={classNames(
-        'flex w-full flex-col',
-        className,
-        { 'animate-fade-right animate-ease-in-out': inView },
-        { 'opacity-0': !inView },
-      )}
+      className={`flex w-full flex-col ${className} ${inView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'}`}
     >
       <h3 className="text-xl font-medium leading-5 text-cyan md:text-2xl">
         {logo}
@@ -26,18 +18,6 @@ const Card = ({
       <p className="text-lg text-blue-mid1 md:text-xl">{text}</p>
     </section>
   )
-}
-
-Card.propTypes = {
-  logo: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  className: PropTypes.string,
-}
-
-Card.defaultProps = {
-  logo: '',
-  className: '',
 }
 
 export default Card

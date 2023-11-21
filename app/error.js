@@ -7,7 +7,9 @@ const error = () => (
       <article className="prose w-full text-center">
         <p>Parece que hubo un error del lado del servidor.</p>
         <button
-          className="mt-4 rounded bg-blue-500 px-4 py-2 text-lg text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          type="button"
+          className="mt-4 rounded bg-blue-500 px-4 py-2 text-lg text-white hover:bg-blue-700 focus:outline-none focus:ring-2
+          focus:ring-blue-500 focus:ring-opacity-50"
           onClick={() => window.history.back()}
         >
           Volver
