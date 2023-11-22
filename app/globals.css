@@ -58,3 +58,10 @@ background: #5BC0BE;
   animation: gradientAnimation 3s linear infinite;
 }
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Red+Hat+Display:wght@400;500&display=swap');
+
+#cover {
+  display: flex;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

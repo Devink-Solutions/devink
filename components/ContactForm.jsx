@@ -5,10 +5,9 @@
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
 import Image from 'next/image'
-import GearColumn from './GearColumn'
 import { trackAmplitudeEvent } from '../utils/AmplitudeTrackers'
 
-const ContactForm = ({ className, isAvailbleAnimation = true }) => {
+const ContactForm = ({ className }) => {
   const [send, setSend] = useState(false)
 
   function sendEmail(e) {
@@ -34,18 +33,9 @@ const ContactForm = ({ className, isAvailbleAnimation = true }) => {
   }
 
   return (
-    <section className={`relative mx-auto w-full overflow-hidden bg-white py-20 ${className} `}>
-      {isAvailbleAnimation ? (
-        <>
-          <div className="absolute -top-20 left-10 z-10">
-            <GearColumn />
-          </div>
-          <div className="absolute -top-20 right-10 z-10">
-            <GearColumn />
-          </div>
-        </>
-      ) : null}
-      <div className={`mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center gap-4 ${isAvailbleAnimation ? 'md:w-[70%] ' : 'md:w-full '} md:flex-row `}>
+    <section className={`relative z-10 mx-auto w-full overflow-hidden bg-white py-20 ${className} `}>
+
+      <div className="mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center gap-4 md:w-full md:flex-row ">
 
         <div className="w-[90%] sm:w-[60%]">
           <header className="mb-2 w-full py-2 md:w-[90%]">

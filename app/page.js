@@ -9,6 +9,7 @@ import OurServicesScreen from '@/components/OurServicesScreen'
 import Steps from '@/components/Steps'
 import ContactForm from '@/components/ContactForm'
 import { Blogs } from '@/components/Blogs'
+import Cover from '@/components/Cover/Cover'
 
 export default function Home() {
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function Home() {
       <OurExperience />
       <Blogs />
       <ContactForm />
+      <Cover />
     </main>
   )
 }
