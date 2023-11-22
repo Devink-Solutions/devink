@@ -31,7 +31,7 @@ export function Blogs() {
       id="blogs"
       className="z-20 flex w-full  flex-col items-center justify-center bg-blue-dark py-10"
     >
-      <h3 className="pb-4 text-4xl font-bold text-cyan-bright md:pb-10">Nuestros Blogs</h3>
+      <h3 className="pb-4 text-3xl font-bold text-cyan-bright md:pb-10">Nuestros Blogs</h3>
       <section className=" flex h-[500px] w-[90%]  items-center overflow-hidden xl:h-[430px]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
