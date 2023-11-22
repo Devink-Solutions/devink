@@ -3,7 +3,7 @@
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import { optionsParticles } from './particleOptions'
+import optionsParticles from './particleOptions'
 
 export default function Cover() {
   const particlesInit = useCallback(async (engine) => {

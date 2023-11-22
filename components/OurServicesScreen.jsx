@@ -1,5 +1,21 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable max-len */
+
+'use client'
+
+import {
+  Navigation, Pagination, Scrollbar, A11y, Autoplay,
+} from 'swiper/modules'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import 'swiper/css/effect-fade'
+import 'swiper/css/zoom'
+
 import { MdOutlineDeveloperMode } from 'react-icons/md'
 import { FaHourglassHalf, FaRobot } from 'react-icons/fa'
 // import { GiConnectedWorld } from 'react-icons/gi'
@@ -40,17 +56,52 @@ const OurServicesScreen = () => {
     <section
       id="services"
       style={{ scrollMarginTop: '80px' }}
-      className=" relative z-20 grid w-full gap-5 bg-blue-dark px-6 py-8 sm:grid-cols-2 md:px-20 2xl:grid-cols-5 2xl:py-12 "
+      className="z-20 flex w-full flex-col items-center  justify-center bg-blue-dark py-8"
     >
-      {cards.map((card, index) => (
-        <ServicesCard
-          logo={card.logo}
-          title={card.title}
-          text={card.text}
-          image={card.image}
-          key={index}
-        />
-      ))}
+      <h3 className="mb-4 text-3xl font-medium text-cyan-bright">Nuestros Servicios</h3>
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
+          750: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1020: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1320: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          1840: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+        }}
+        className="flex h-[480px]  w-[95%] flex-row sm:w-[90%]  "
+        navigation
+        autoplay={{
+          delay: 7500,
+          disableOnInteraction: false,
+        }}
+      >
+        {cards.map((card, index) => (
+          <SwiperSlide key={card.id}>
+            <ServicesCard
+              logo={card.logo}
+              title={card.title}
+              text={card.text}
+              image={card.image}
+              key={index}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   )
 }

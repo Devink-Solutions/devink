@@ -23,11 +23,11 @@ const OurExperience = () => {
     <section
       id="contact"
       style={{ scrollMarginTop: '80px' }}
-      className=" relative flex h-full w-full items-center justify-center bg-white pb-8 sm:pt-12"
+      className=" relative flex h-full w-full items-center justify-center bg-white pb-8 pt-12"
       ref={ref}
     >
-      <div className="flex w-full flex-col items-center justify-center md:max-w-[70%] xl:ml-10 xl:flex-row ">
-        <figure className="hidden w-fit lg:inline-flex">
+      <div className="flex w-full flex-col items-center justify-center md:max-w-[70%] lg:ml-10 lg:flex-row ">
+        <figure className="w-fit">
           <Image
             width={360}
             height={344}
@@ -37,7 +37,7 @@ const OurExperience = () => {
           />
         </figure>
         <div className="relative mt-8 flex h-2/3 w-[90%] flex-col justify-between p-2
-         text-center text-blue-dark md:px-3 lg:w-3/5 xl:ml-12 xl:mt-0 xl:w-4/6 xl:text-left"
+         text-center text-blue-dark md:px-3 lg:ml-12 lg:mt-0 lg:w-3/5 lg:text-left"
         >
           <div className="px-10 md:px-0">
             <h4 className=" text-2xl font-medium text-cyan-bright md:text-xl">
@@ -54,7 +54,7 @@ const OurExperience = () => {
               los requerimientos de nuestros clientes.
             </p>
           </div>
-          <button type="button" className=" mt-8 xl:mt-4 xl:self-start" onClick={handlePress}>
+          <button type="button" className=" mt-8 lg:mt-4 lg:self-start" onClick={handlePress}>
             <Link
               href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
               target="_blank"

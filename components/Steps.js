@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import Image from 'next/image'
 import Card from './Card'
-import GearColumn from './GearColumn'
 
 const cards = [
   {

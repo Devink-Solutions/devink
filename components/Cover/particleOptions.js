@@ -1,14 +1,14 @@
-export const optionsParticles = {
+const optionsParticles = {
   fpsLimit: 120,
   interactivity: {
     events: {
       onClick: {
         enable: true,
-        mode: "push",
+        mode: 'push',
       },
       onHover: {
         enable: true,
-        mode: "repulse",
+        mode: 'repulse',
       },
       resize: true,
     },
@@ -24,10 +24,10 @@ export const optionsParticles = {
   },
   particles: {
     color: {
-      value: "#fff",
+      value: '#fff',
     },
     links: {
-      color: "#fff",
+      color: '#fff',
       distance: 150,
       enable: true,
       opacity: 0.5,
@@ -54,11 +54,13 @@ export const optionsParticles = {
       value: 0.5,
     },
     shape: {
-      type: "circle",
+      type: 'circle',
     },
     size: {
       value: { min: 1, max: 5 },
     },
   },
   detectRetina: true,
-};
+}
+
+export default optionsParticles
