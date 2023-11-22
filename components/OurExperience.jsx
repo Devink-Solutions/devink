@@ -26,8 +26,8 @@ const OurExperience = () => {
       className=" relative flex h-full w-full items-center justify-center bg-white py-8"
       ref={ref}
     >
-      <div className="flex w-[90%] max-w-[1200px] flex-col items-center justify-center gap-4 lg:flex-row lg:gap-12 ">
-        <figure className="w-fit">
+      <div className="flex w-[90%] max-w-[1440px] flex-col items-center justify-center gap-4 lg:flex-row lg:gap-8 ">
+        <figure className=" w-fit">
           <Image
             width={360}
             height={344}
@@ -46,7 +46,7 @@ const OurExperience = () => {
             <h3 className="pt-2 text-xl font-medium sm:pt-4 sm:text-2xl">
               Venimos a cambiar el paradigma tecnologico de nuestros clientes!
             </h3>
-            <p className="py-2 text-lg font-light sm:py-4">
+            <p className=" py-2 text-lg font-light sm:py-4">
               Somos una nueva empresa de IT formada por un equipo de
               profesionales especializados en la creacion de software de alto
               rendimiento nuestras soluciones implementan toda la creatividad de

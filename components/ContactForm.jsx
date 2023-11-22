@@ -37,7 +37,7 @@ const ContactForm = ({ className }) => {
       <div className="mx-auto flex h-[100%] w-[90%] max-w-[1200px] flex-col-reverse items-center justify-center gap-4 md:flex-row ">
         <div className="">
           <header className="mb-2 w-full py-2 md:w-[90%]">
-            <h3 className="text-xl font-medium md:pt-4 md:text-2xl">
+            <h3 className="text-xl font-medium text-cyan md:pt-4 md:text-2xl">
               Quiero que se comuniquen conmigo
             </h3>
             <p className=" text-lg font-light ">

@@ -78,12 +78,8 @@ const OurServicesScreen = () => {
             slidesPerView: 4,
             spaceBetween: 10,
           },
-          1840: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-          },
         }}
-        className="flex h-[480px]  w-[95%] flex-row sm:w-[90%]  "
+        className="flex h-[480px] w-[95%] max-w-[1440px] flex-row sm:w-[90%]  "
         navigation
         autoplay={{
           delay: 7500,

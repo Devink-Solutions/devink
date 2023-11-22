@@ -53,7 +53,7 @@ export function Blogs() {
               spaceBetween: 20,
             },
           }}
-          className="flex h-[430px] w-full flex-row"
+          className="flex h-[430px] w-full max-w-[1440px] flex-row"
           navigation
           autoplay={{
 
