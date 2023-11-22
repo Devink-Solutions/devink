@@ -14,7 +14,6 @@ const Navbar = () => (
         height={180}
         priority
       />
-
     </Link>
 
     {/* Logo pequeño para pantallas pequeñas */}
@@ -30,19 +29,20 @@ const Navbar = () => (
     </Link>
 
     <ul className="flex w-full grow items-center justify-end gap-10 text-xl">
+
       <li>
-        <Link className="hidden sm:inline-flex text-lg font-medium sm:text-xl xl:text-2xl " href="/blogs">
-          Blogs
+        <Link className=" text-lg font-medium sm:text-xl xl:text-2xl " href="/#services">
+          Servicios
         </Link>
       </li>
       <li>
-        <Link className=" text-lg font-medium sm:text-xl xl:text-2xl " href="/services">
-          Services
-        </Link>
-      </li>
-      <li>
-        <Link className=" text-lg font-medium sm:text-xl xl:text-2xl " href="/contact">
+        <Link className=" text-lg font-medium sm:text-xl xl:text-2xl " href="/#contact">
           Contacto
+        </Link>
+      </li>
+      <li>
+        <Link className="hidden text-lg font-medium sm:inline-flex sm:text-xl xl:text-2xl " href="/#blogs">
+          Blogs
         </Link>
       </li>
     </ul>

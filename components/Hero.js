@@ -2,10 +2,9 @@ import Link from 'next/link'
 import React from 'react'
 import { AiOutlineDown } from 'react-icons/ai'
 import Image from 'next/image'
-import Cover from './Cover/Cover'
 
 const Hero = () => (
-  <header className="z-20 flex h-[85vh] w-full flex-col items-center justify-center gap-4 px-10 text-cyan-bright md:h-[92vh]">
+  <header className="z-20 flex  h-[92vh] w-full flex-col items-center justify-center gap-4 px-10 text-cyan-bright">
     <section className="absolute mx-auto mb-14 flex justify-between px-8 ">
       <div className="flex h-full flex-col gap-2 text-left md:w-3/5">
         <h3 className="animate-fade-up text-xl font-medium animate-delay-75 xl:text-2xl">

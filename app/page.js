@@ -19,16 +19,14 @@ export default function Home() {
   }, [])
 
   return (
-    <>
-      <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
-        <Hero />
-        <Steps />
-        <OurServicesScreen />
-        <OurExperience />
-        <Blogs />
-        <ContactForm />
-        <Cover />
-      </main>
-    </>
+    <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
+      <Hero />
+      <Steps />
+      <OurServicesScreen />
+      <OurExperience />
+      <Blogs />
+      <ContactForm />
+      <Cover />
+    </main>
   )
 }

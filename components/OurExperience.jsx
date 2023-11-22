@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import useObserver from '@/hooks/useObserver'
-import GearColumn from './GearColumn'
 import { trackAmplitudeEvent } from '@/utils/AmplitudeTrackers'
 
 const OurExperience = () => {
@@ -27,12 +26,6 @@ const OurExperience = () => {
       className=" relative flex h-full w-full items-center justify-center bg-white pb-8 sm:pt-12"
       ref={ref}
     >
-      <div className="absolute -top-20 left-10 z-10">
-        <GearColumn />
-      </div>
-      <div className="absolute -top-20 right-10 z-10">
-        <GearColumn />
-      </div>
       <div className="flex w-full flex-col items-center justify-center md:max-w-[70%] xl:ml-10 xl:flex-row ">
         <figure className="hidden w-fit lg:inline-flex">
           <Image
@@ -47,7 +40,7 @@ const OurExperience = () => {
          text-center text-blue-dark md:px-3 lg:w-3/5 xl:ml-12 xl:mt-0 xl:w-4/6 xl:text-left"
         >
           <div className="px-10 md:px-0">
-            <h4 className=" text-2xl md:text-xl font-medium text-cyan-bright">
+            <h4 className=" text-2xl font-medium text-cyan-bright md:text-xl">
               Creativos, Energicos y Dedicados
             </h4>
             <h3 className="pt-2 text-xl font-medium md:pt-4 md:text-2xl">

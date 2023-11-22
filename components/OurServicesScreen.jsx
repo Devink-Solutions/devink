@@ -39,6 +39,7 @@ const OurServicesScreen = () => {
   return (
     <section
       id="services"
+      style={{ scrollMarginTop: '80px' }}
       className=" relative z-20 grid w-full gap-5 bg-blue-dark px-6 py-8 sm:grid-cols-2 md:px-20 2xl:grid-cols-5 2xl:py-12 "
     >
       {cards.map((card, index) => (

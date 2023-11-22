@@ -13,7 +13,7 @@ export default function Cover() {
   const particlesLoaded = useCallback(async () => { }, [])
 
   return (
-    <div id="cover" className=" z-[-10]">
+    <div id="cover" className="absolute z-[-10]">
       <Particles
         className=" h-full w-full"
         id="tsparticles"
