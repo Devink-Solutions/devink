@@ -8,14 +8,14 @@ const Card = ({
   return (
     <section
       ref={ref}
-      className={`flex w-full flex-col ${className} ${inView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'}`}
+      className={`flex w-full flex-col gap-1 ${className} ${inView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'}`}
     >
-      <h3 className="text-xl font-medium leading-5 text-cyan md:text-2xl">
+      <h3 className="text-xl font-medium leading-5 text-cyan">
         {logo}
         {' '}
         {title}
       </h3>
-      <p className="text-lg text-blue-mid1 md:text-xl">{text}</p>
+      <p className="text-lg font-medium leading-6 text-blue-mid1">{text}</p>
     </section>
   )
 }

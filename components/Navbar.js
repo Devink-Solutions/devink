@@ -31,29 +31,36 @@ export default function Navbar() {
         <nav className={`fixed ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'} right-0 top-[80px]
        z-[30] flex w-[200px] flex-col rounded-bl-2xl bg-blue-dark py-2 text-white brightness-125 transition-transform duration-300`}
         >
-          <Link href="/#services" className="flex w-full items-center px-4 py-2">
-            {/*
+          <Link href="/#services">
+            <button type="button" className="flex w-full items-center px-4 py-2" onClick={toggleDropdown}>
+              {/*
               <button type="button" aria-label="Admin" className="bg-primary-yellow mr-4 flex h-12 w-12 items-center justify-center rounded-full">
                 <CgProfile size={40} color="cyan" />
               </button>
               */}
-            <span className="text-xl font-medium">Servicios</span>
+              <span className="text-xl font-medium">Servicios</span>
+            </button>
           </Link>
-          <Link href="/#contact" className="flex w-full items-center px-4 py-2">
+          <Link href="/#contact">
             {/*
               <button type="button" aria-label="Admin" className="bg-primary-yellow mr-4 flex h-12 w-12 items-center justify-center rounded-full">
                 <CgProfile size={40} color="cyan" />
               </button>
               */}
-            <span className="text-xl font-medium">Contacto</span>
+            <button type="button" className="flex w-full items-center px-4 py-2" onClick={toggleDropdown}>
+              <span className="text-xl font-medium">Contacto</span>
+
+            </button>
           </Link>
-          <Link href="/#blogs" className="flex w-full items-center px-4 py-2">
+          <Link href="/#blogs">
             {/*
               <button type="button" aria-label="Admin" className="bg-primary-yellow mr-4 flex h-12 w-12 items-center justify-center rounded-full">
                 <CgProfile size={40} color="cyan" />
               </button>
               */}
-            <span className="text-xl font-medium">Blogs</span>
+            <button type="button" className="flex w-full items-center px-4 py-2" onClick={toggleDropdown}>
+              <span className="text-xl font-medium">Blogs</span>
+            </button>
           </Link>
         </nav>
       </div>

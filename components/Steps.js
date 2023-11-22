@@ -26,8 +26,8 @@ const Steps = () => (
     id="about"
     className="relative flex w-full items-center justify-center bg-white"
   >
-    <div className="flex w-10/12  max-w-[1440px] items-center justify-between py-10 md:px-20 xl:px-0 ">
-      <div className="flex w-full flex-col items-start gap-4 xl:w-4/5 xl:pr-32">
+    <div className="flex w-11/12  max-w-[1440px] items-center justify-between gap-12 py-12 ">
+      <div className="flex w-full flex-col items-start gap-4 xl:w-4/5">
         <h3 className="w-fit text-xl font-medium text-cyan lg:text-2xl">
           Que pasos vamos a seguir?
         </h3>

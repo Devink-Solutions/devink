@@ -33,11 +33,9 @@ const ContactForm = ({ className }) => {
   }
 
   return (
-    <section className={`relative z-10 mx-auto w-full overflow-hidden bg-white py-20 ${className} `}>
-
-      <div className="mx-auto flex h-[100%] w-full  flex-col-reverse items-center justify-center gap-4 md:w-full md:flex-row ">
-
-        <div className="w-[90%] sm:w-[60%]">
+    <section className={`relative z-10 w-full overflow-hidden bg-white py-8 ${className} `}>
+      <div className="mx-auto flex h-[100%] w-[90%] max-w-[1200px] flex-col-reverse items-center justify-center gap-4 md:flex-row ">
+        <div className="">
           <header className="mb-2 w-full py-2 md:w-[90%]">
             <h3 className="text-xl font-medium md:pt-4 md:text-2xl">
               Quiero que se comuniquen conmigo

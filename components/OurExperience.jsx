@@ -23,10 +23,10 @@ const OurExperience = () => {
     <section
       id="contact"
       style={{ scrollMarginTop: '80px' }}
-      className=" relative flex h-full w-full items-center justify-center bg-white pb-8 pt-12"
+      className=" relative flex h-full w-full items-center justify-center bg-white py-8"
       ref={ref}
     >
-      <div className="flex w-full flex-col items-center justify-center md:max-w-[70%] lg:ml-10 lg:flex-row ">
+      <div className="flex w-[90%] max-w-[1200px] flex-col items-center justify-center gap-4 lg:flex-row lg:gap-12 ">
         <figure className="w-fit">
           <Image
             width={360}
@@ -36,17 +36,17 @@ const OurExperience = () => {
             className="mx-auto object-contain object-center"
           />
         </figure>
-        <div className="relative mt-8 flex h-2/3 w-[90%] flex-col justify-between p-2
-         text-center text-blue-dark md:px-3 lg:ml-12 lg:mt-0 lg:w-3/5 lg:text-left"
+        <div className="relative flex h-2/3 w-[90%] flex-col justify-between
+          text-blue-dark lg:w-3/5 lg:text-left"
         >
-          <div className="px-10 md:px-0">
-            <h4 className=" text-2xl font-medium text-cyan-bright md:text-xl">
+          <div className="">
+            <h4 className="text-2xl font-medium text-cyan-bright sm:text-xl">
               Creativos, Energicos y Dedicados
             </h4>
-            <h3 className="pt-2 text-xl font-medium md:pt-4 md:text-2xl">
+            <h3 className="pt-2 text-xl font-medium sm:pt-4 sm:text-2xl">
               Venimos a cambiar el paradigma tecnologico de nuestros clientes!
             </h3>
-            <p className="py-2 text-lg font-light md:py-4">
+            <p className="py-2 text-lg font-light sm:py-4">
               Somos una nueva empresa de IT formada por un equipo de
               profesionales especializados en la creacion de software de alto
               rendimiento nuestras soluciones implementan toda la creatividad de
