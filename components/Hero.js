@@ -17,7 +17,7 @@ const Hero = () => (
           Desarrollos a medida y soluciones IT
         </h4>
         <Link
-          href="#makeacall"
+          href="#contact"
           className="mt-2 w-fit animate-fade-up rounded-full border border-[#6fffe9] bg-[#0B132B]
            px-4 py-2 text-xl font-medium text-[#6FFFE9] animate-delay-75  md:inline-flex md:px-8"
         >
