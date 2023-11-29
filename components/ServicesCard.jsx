@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/migration-from-tailwind-2 */
 /* eslint-disable max-len */
 /* eslint-disable @next/next/no-img-element */
 const Card = ({

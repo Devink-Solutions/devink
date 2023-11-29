@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/migration-from-tailwind-2 */
+
 'use client'
 
 const error = () => (

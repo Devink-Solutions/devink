@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable max-len */
 
 'use client'
@@ -12,7 +13,6 @@ const ContactForm = ({ className }) => {
 
   function sendEmail(e) {
     e.preventDefault()
-    console.log(e.target)
     emailjs
       .sendForm(
         'service_if4cb5g',
