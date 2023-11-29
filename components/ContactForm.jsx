@@ -41,8 +41,7 @@ const ContactForm = ({ className }) => {
               Quiero que se comuniquen conmigo
             </h3>
             <p className=" text-lg font-light ">
-              Si nos das más información sobre tu problema, idea o proyecto,
-              podremos ayudarte de manera más efectiva.
+              Cuéntanos más sobre tu idea, proyecto o desafío. Cuanta más información nos brindes, más eficazmente podremos trabajar para encontrar la mejor solución para ti.
             </p>
           </header>
           <div className="flex h-auto w-[100%] flex-col justify-center ">
@@ -76,8 +75,8 @@ const ContactForm = ({ className }) => {
               <div className="flex w-[100%] justify-center ">
                 {send
                   ? (
-                    <span className="text-[#05F100]">
-                      form sent successfully!
+                    <span className="text-blue-dark">
+                      El formulario ha sido enviado correctamente! Pronto nuestro equipo te contactara :)
                     </span>
                   )
                   : (
@@ -96,10 +95,11 @@ const ContactForm = ({ className }) => {
           <Image
             width={360}
             height={344}
-            src="/Augmented-reality.png"
-            alt="form-image"
+            src="/Chatgpt.png"
+            alt=""
             className="mx-auto object-contain object-center"
           />
+
         </figure>
       </div>
 

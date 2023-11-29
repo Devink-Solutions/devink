@@ -6,18 +6,18 @@ const cards = [
   {
     logo: '01.',
     title: 'Planeamiento y estrategia',
-    text: 'El camino inicia en el primer momento cuando te pones en contacto y nos cuentas tu problema. Rápidamente nos pondremos sobre ello a pensar cuál es la mejor forma de resolver la problemática, que genere valor, sea sostenible  y escalable en el tiempo, ya que queremos que crezcas y nos recomiendes.',
+    text: 'Nuestro proceso empieza tan pronto como nos contactas. Nos centramos en entender tus necesidades y rápidamente empezamos a elaborar un plan que se ajuste a tus objetivos. Buscamos soluciones prácticas y eficientes, pensando siempre en el crecimiento y la escalabilidad de tu negocio.',
   },
   {
     logo: '02.',
     title: 'Desarrollo y entrega',
-    text: 'Luego te presentaremos software funcional de acuerdo a tus requerimientos: frontend, experiencia de usuario, backend, bases de datos, tableros de análisis o la solución integral, si es que tu proyecto así lo requiere. Esto es una aproximación y que se puede pulir en base a la respuesta de su necesidad.',
+    text: 'Una vez definido el plan, nos ponemos manos a la obra. Desarrollamos el software que necesitas, cubriendo desde la interfaz de usuario hasta las funcionalidades de backend, siempre según tus especificaciones. Nuestro enfoque es crear algo que no solo cumpla con tus expectativas, sino que sea fácil de usar y de mantener.',
     special: 'animate-delay-150',
   },
   {
     logo: '03.',
     title: 'Mantenimiento y evaluacion de resultados',
-    text: 'Una vez finalizado nuestro servicio y puesto en marcha, se brinda un seguimiento a la solucion brindada, dándole así mantenimiento y apoyo en el tiempo, generando una sólida relación de confianza entre el cliente y nuestra empresa.',
+    text: 'Después del lanzamiento, seguimos a tu lado. Ofrecemos mantenimiento y apoyo continuo para asegurar que todo funcione sin problemas. Nos importa construir una relación de confianza contigo, garantizando que tu inversión tecnológica siga siendo relevante y efectiva a largo plazo.',
     special: 'animate-delay-300',
   },
 ]

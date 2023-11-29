@@ -31,36 +31,34 @@ const OurExperience = () => {
           <Image
             width={360}
             height={344}
-            src="/Chatgpt.png"
-            alt=""
+            src="/Augmented-reality.png"
+            alt="form-image"
             className="mx-auto object-contain object-center"
           />
         </figure>
         <div className="relative flex h-2/3 w-[90%] flex-col justify-between
-          text-blue-dark lg:w-3/5 lg:text-left"
+          text-blue-dark lg:w-fit lg:text-left"
         >
           <div className="">
-            <h4 className="text-2xl font-medium text-cyan-bright sm:text-xl">
-              Creativos, Energicos y Dedicados
-            </h4>
             <h3 className="pt-2 text-xl font-medium sm:pt-4 sm:text-2xl">
-              Venimos a cambiar el paradigma tecnologico de nuestros clientes!
+              Creatividad y Energía en Cada Solución:
             </h3>
-            <p className=" py-2 text-lg font-light sm:py-4">
-              Somos una nueva empresa de IT formada por un equipo de
-              profesionales especializados en la creacion de software de alto
-              rendimiento nuestras soluciones implementan toda la creatividad de
-              nuestro equipo, junto con las ultimas tecnologias para satisfacer
-              los requerimientos de nuestros clientes.
+            <p className=" max-w-[720px] py-2 text-lg font-light sm:py-4">
+              Estamos aquí para marcar una diferencia en el mundo tecnológico. Como una empresa emergente en el sector IT, nuestro equipo de profesionales aporta una combinación única de creatividad y especialización técnica.
+              Con nosotros, tu proyecto no es solo un trabajo más, es nuestra oportunidad de innovar y superar expectativas.
+            </p>
+            <p className="max-w-[660px] pb-2">
+              ¿Listo para llevar tu negocio al siguiente nivel con soluciones tecnológicas a medida? Agenda una reunión con nosotros hoy y comienza a transformar tus ideas en realidad.
             </p>
           </div>
           <button type="button" className=" mt-8 lg:mt-4 lg:self-start" onClick={handlePress}>
             <Link
               href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
               target="_blank"
-              className={`w-fit self-center rounded-full border-2 border-cyan-bright bg-blue-dark px-10 py-3 text-center text-xl font-medium text-cyan-bright shadow-lg transition-colors duration-300 md:w-[180px] xl:mt-2 xl:self-start ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
+              className={`w-fit self-center rounded-full border-[2px] border-cyan-bright bg-blue-dark px-10 py-3 text-center 
+              text-xl font-semibold text-cyan-bright shadow-lg transition-colors duration-300 md:w-[180px] xl:mt-2 xl:self-start ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
             >
-              Agendar una reunion
+              Haz Click para Empezar
             </Link>
 
           </button>
