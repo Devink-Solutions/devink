@@ -19,7 +19,6 @@ import 'swiper/css/zoom'
 import { MdOutlineDeveloperMode } from 'react-icons/md'
 import { FaHourglassHalf, FaRobot } from 'react-icons/fa'
 import { FaMobileScreenButton } from 'react-icons/fa6'
-import { GiConnectedWorld } from 'react-icons/gi'
 import { IoMdSync } from 'react-icons/io'
 import { IoAnalytics } from 'react-icons/io5'
 

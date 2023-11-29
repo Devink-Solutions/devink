@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/migration-from-tailwind-2 */
 import Image from 'next/image'
 import Link from 'next/link'
 
