@@ -9,7 +9,7 @@ const BlogCard = ({ blog }) => (
     >
       <div className="relative h-60 w-full">
         <Image
-          src={blog.attributes.cover.data.attributes.formats.small.url}
+          src={blog.attributes.cover.media.data.attributes.url}
           alt="Descripción de la imagen"
           layout="fill"
           objectFit="cover"
