@@ -39,6 +39,7 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ],
+    "import/prefer-default-export": "off",
     "no-console": "off",
     "react-hooks/exhaustive-deps": "off",
     "jsx-a11y/control-has-associated-label": "off",
