@@ -16,41 +16,34 @@ import 'swiper/css/scrollbar'
 import 'swiper/css/effect-fade'
 import 'swiper/css/zoom'
 
-export function Blogs({ blogs }) {
-  return (
-    <div
-      style={{ scrollMarginTop: '80px' }}
-      id="blogs"
-      className="z-20 flex w-full  flex-col items-center justify-center bg-blue-dark py-10"
-    >
-      <h3 className="pb-4 text-3xl font-bold text-cyan-bright md:pb-10">Nuestros Blogs</h3>
-      <section className=" flex h-[500px] w-[90%]  items-center overflow-hidden xl:h-[430px]">
+const Blogs = ({ blogs }) => (
+  <div
+    style={{ scrollMarginTop: '80px' }}
+    id="blogs"
+    className="z-20 flex w-full  flex-col items-center justify-center bg-blue-dark py-10"
+  >
+    <h3 className="pb-4 text-3xl font-bold text-cyan-bright md:pb-10">Nuestros Blogs</h3>
+    <section className=" flex h-[500px] w-[90%]  items-center overflow-hidden xl:h-[430px]">
+      {blogs?.length > 1 && (
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={10}
           breakpoints={{
             450: {
               slidesPerView: 1,
-              spaceBetween: 5,
             },
             768: {
               slidesPerView: 2,
-              spaceBetween: 10,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 10,
-            },
-            1280: {
-              slidesPerView: 3,
-              spaceBetween: 20,
             },
           }}
           className="flex h-[430px] w-full max-w-[1440px] flex-row"
           navigation
           autoplay={{
-
             delay: 7500,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
         >
           {blogs?.map((blog) => (
@@ -59,7 +52,9 @@ export function Blogs({ blogs }) {
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
-    </div>
-  )
-}
+      )}
+    </section>
+  </div>
+)
+
+export default Blogs

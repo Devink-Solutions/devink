@@ -18,10 +18,10 @@ const BlogCard = ({ blog }) => (
           priority
         />
       </div>
-      <h3 className="mt-4 text-lg font-semibold leading-tight text-gray-900">
+      <h3 className="mt-4 text-lg font-semibold leading-tight text-blue-dark">
         {blog.attributes.title}
       </h3>
-      <p className="mt-2 text-sm text-gray-700">
+      <p className="mt-2 line-clamp-4 pr-2 text-sm text-blue-dark opacity-80">
         {blog.attributes.description}
       </p>
     </div>

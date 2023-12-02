@@ -1,50 +1,43 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-/* eslint-disable @next/next/no-img-element */
 import {
   FaLinkedin,
   FaEnvelope,
-  FaPhoneAlt,
   FaWhatsapp,
   FaRocket,
   FaInstagram,
 } from 'react-icons/fa'
 import Link from 'next/link'
+import Image from 'next/image'
 
-const Footer1 = () => (
+const Footer = () => (
   <footer className="flex min-h-[250px] w-full flex-col items-center space-y-6  bg-blue-dark p-10 text-white md:space-y-10 md:px-20">
-    <div className="flex w-full flex-col space-y-5 md:flex-row md:justify-between md:space-y-0">
+    <div className="flex w-full max-w-[1440px] flex-col space-y-5 md:flex-row md:justify-between md:space-y-0">
       <figure className="hidden flex-col items-center md:flex">
-        <img
+        <Image
+          width={152}
+          height={136}
           src="/logo-without-name.svg"
           alt="logo"
-          className="ml-20 mt-4 w-32"
+          className="mt-4 w-32"
         />
       </figure>
-      <div>
-        <div className="flex  w-full flex-col items-center justify-center pb-4 md:flex-row">
-          <h2 className="flex items-center space-x-2 text-center text-2xl sm:text-left">Devink desde la web para el mundo</h2>
-          <FaRocket className="mt-4 text-2xl text-cyan md:ml-6 md:text-4xl" />
-
-        </div>
-        <div className="mt-4 flex flex-col items-center justify-around gap-4 md:flex-row">
-          <span className="flex items-center space-x-4">
-            <FaPhoneAlt />
-            <span className="text-lg">+543513084848</span>
-          </span>
-          <span className="ml-4 flex items-center space-x-4">
-            <FaEnvelope />
-            <a
-              className="text-lg transition-colors duration-200  hover:text-blue-400"
-              href="mailto:devinksolutions@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              devinksolutions@gmail.com
-            </a>
-          </span>
-        </div>
-        <div className="mt-8 flex flex-col items-center justify-evenly gap-5  md:flex-row">
-          <span className="mb-2 block text-xl">Social Media:</span>
+      <div className="flex flex-col items-center md:items-end">
+        <span className="flex w-full flex-col items-center justify-center pb-4 md:flex-row">
+          <h3 className="space-x-2 text-center text-2xl sm:text-left">Devink desde la web para el mundo</h3>
+          <FaRocket className="mt-4 text-3xl text-cyan  md:ml-2 md:mt-0" />
+        </span>
+        <span className="flex items-center space-x-4">
+          <FaEnvelope />
+          <a
+            className="text-lg transition-colors duration-200  hover:text-blue-400"
+            href="mailto:devinksolutions@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            devinksolutions@gmail.com
+          </a>
+        </span>
+        <div className="mt-8 flex flex-col items-center justify-end gap-5  md:flex-row">
           <div className="flex gap-5  ">
             <Link
               href="https://www.linkedin.com/company/devink-solutions/"
@@ -74,10 +67,9 @@ const Footer1 = () => (
         </div>
       </div>
     </div>
-    <div className="my-4 w-full border-t border-slate-500" />
-    <div className="mt-4 flex w-full flex-col items-center justify-end md:flex-row">
-
-      <span className="mt-8 font-semibold md:mt-0">
+    <div className="my-4 w-full max-w-[1440px] border-t border-slate-500" />
+    <div className="mt-4 flex w-full max-w-[1440px] flex-col items-center justify-end md:flex-row">
+      <span className="mt-4 font-semibold md:mt-0">
         &copy;
         {' '}
         {new Date().getFullYear()}
@@ -97,4 +89,4 @@ const Footer1 = () => (
   </footer>
 )
 
-export default Footer1
+export default Footer

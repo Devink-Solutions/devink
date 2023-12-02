@@ -19,7 +19,6 @@ export default function Navbar() {
             <Image
               src="/logo-without-name.svg"
               alt="logo"
-              layout="fixed"
               width={60}
               height={60}
               priority
@@ -72,7 +71,6 @@ export default function Navbar() {
           <Image
             src="/logo.svg"
             alt="logo"
-            layout="fixed"
             width={180}
             height={180}
             priority
@@ -84,7 +82,6 @@ export default function Navbar() {
           <Image
             src="/logo-without-name.svg"
             alt="logo"
-            layout="fixed"
             width={80}
             height={100}
             priority
