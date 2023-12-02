@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { trackAmplitudeEvent } from '../utils/AmplitudeTrackers'
 
-const ContactForm = ({ className }) => {
+const ContactForm = () => {
   const [send, setSend] = useState(false)
 
   function sendEmail(e) {
