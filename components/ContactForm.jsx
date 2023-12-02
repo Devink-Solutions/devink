@@ -33,7 +33,7 @@ const ContactForm = ({ className }) => {
   }
 
   return (
-    <section className={`relative z-10 w-full overflow-hidden bg-white py-8 ${className} `}>
+    <section className="relative z-10 w-full overflow-hidden bg-white py-8">
       <div className="mx-auto flex h-[100%] w-[90%] max-w-[1200px] flex-col-reverse items-center justify-center gap-4 md:flex-row ">
         <div className="">
           <header className="mb-2 w-full py-2 md:w-[90%]">

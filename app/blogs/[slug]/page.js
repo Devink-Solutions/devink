@@ -1,26 +1,18 @@
-'use client'
-
-import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Markdown from 'react-markdown'
 
-const Blog = ({ params }) => {
+const getBlog = async (slug) => {
+  const res = await fetch(
+    `https://strapi-cms.devink.tech/api/blogs/${slug}?populate[cover][populate][]=media`,
+  )
+    .then((r) => r.json())
+    .catch((err) => console.log(err))
+  return res.data
+}
+
+const Blog = async ({ params }) => {
   const { slug } = params
-  const [blog, setBlog] = useState(null)
-
-  const getBlog = async () => {
-    const res = await fetch(
-      `https://strapi-cms.devink.tech/api/blogs/${slug}?populate[cover][populate][]=media`,
-    )
-      .then((r) => r.json())
-      .catch((err) => console.log(err))
-    return setBlog(res.data)
-  }
-
-  useEffect(() => {
-    getBlog()
-  }, [])
-  console.log(blog)
+  const blog = await getBlog(slug)
 
   if (!blog) return null
   return (
