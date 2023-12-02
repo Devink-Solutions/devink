@@ -15,16 +15,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/effect-fade'
 import 'swiper/css/zoom'
-import BlogsData from '@/public/Blogs.json'
 
-export function Blogs() {
-  const blogsData = BlogsData
-
-  // Si no hay blogs, retornar null
-  if (!blogsData.data || blogsData.data.length === 0) {
-    return null
-  }
-
+export function Blogs({ blogs }) {
   return (
     <div
       style={{ scrollMarginTop: '80px' }}
@@ -61,8 +53,7 @@ export function Blogs() {
             disableOnInteraction: false,
           }}
         >
-
-          {blogsData.data?.map((blog) => (
+          {blogs?.map((blog) => (
             <SwiperSlide key={blog.id}>
               <BlogCard blog={blog} />
             </SwiperSlide>

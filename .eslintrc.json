@@ -11,7 +11,7 @@
     }
   ],
   "rules": {
-    "import/no-unresolved":"off",
+    "import/no-unresolved": "off",
     "import/extensions": [
       "off",
       "ignorePackages",
@@ -21,17 +21,27 @@
         "ts": "never",
         "tsx": "never"
       }
-   ],
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts", ".jsx", ".js"] }],
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".tsx", ".ts", ".jsx", ".js"] }
+    ],
     "semi": ["error", "never"],
-   "react/function-component-definition": [
-    "error", { "namedComponents": ["function-declaration", "arrow-function"] }
-   ],
-   "jsx-a11y/anchor-is-valid": ["error", {
-      "components": [ "Link" ],
-      "specialLink": [ "hrefLeft", "hrefRight" ],
-      "aspects": [ "invalidHref", "preferButton" ]
-    }],
+    "react/function-component-definition": [
+      "error",
+      { "namedComponents": ["function-declaration", "arrow-function"] }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "no-console": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "jsx-a11y/control-has-associated-label": "off",
     "max-len": ["error", { "code": 150 }],
     "max-lines": ["error", 350]
   }
