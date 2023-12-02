@@ -17,12 +17,6 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/zoom'
 
 export function Blogs({ blogs }) {
-  const blogsData = blogs
-  // Si no hay blogs, retornar null
-  if (!blogsData.data || blogsData.data.length === 0) {
-    return null
-  }
-
   return (
     <div
       style={{ scrollMarginTop: '80px' }}
@@ -59,8 +53,7 @@ export function Blogs({ blogs }) {
             disableOnInteraction: false,
           }}
         >
-
-          {blogs.data?.map((blog) => (
+          {blogs?.map((blog) => (
             <SwiperSlide key={blog.id}>
               <BlogCard blog={blog} />
             </SwiperSlide>
