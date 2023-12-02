@@ -15,7 +15,7 @@ const Footer1 = () => (
     <div className="flex w-full flex-col space-y-5 md:flex-row md:justify-between md:space-y-0">
       <figure className="hidden flex-col items-center md:flex">
         <img
-          src="./logo-without-name.svg"
+          src="/logo-without-name.svg"
           alt="logo"
           className="ml-20 mt-4 w-32"
         />

@@ -15,7 +15,9 @@ export default function Home() {
   const [blogs, setBlogs] = useState([])
 
   const getBlogs = async () => {
-    const res = await fetch('https://strapi-cms.devink.tech/api/blogs?populate[cover][populate][]=media')
+    const res = await fetch(
+      'https://strapi-cms.devink.tech/api/blogs?populate[cover][populate][]=media',
+    )
       .then((r) => r.json())
       .catch((err) => console.log(err))
     return setBlogs(res.data)
@@ -28,7 +30,6 @@ export default function Home() {
       defaultTracking: true,
     })
   }, [])
-  console.log(blogs)
 
   return (
     <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
