@@ -53,7 +53,7 @@ const OurExperience = () => {
           </div>
           <button type="button" className=" mt-8 lg:mt-4 lg:self-start" onClick={handlePress}>
             <Link
-              href="https://usemotion.com/meet/ian-duhamel/devink?d=20"
+              href="https://calendly.com/devinksolutions/30min"
               target="_blank"
               className={`w-fit self-center rounded-full border-[2px] border-cyan-bright bg-blue-dark px-10 py-3 text-center 
               text-xl font-semibold text-cyan-bright shadow-lg transition-colors duration-300 md:w-[180px] xl:mt-2 xl:self-start ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
