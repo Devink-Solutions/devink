@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable import/prefer-default-export */
 
 'use client'
@@ -42,7 +43,7 @@ const Blogs = ({ blogs }) => (
           className="flex h-[430px] w-full max-w-[1440px] flex-row"
           navigation
           autoplay={{
-            delay: 7500,
+            delay: 9500,
             disableOnInteraction: true,
           }}
         >

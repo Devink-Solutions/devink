@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable max-len */
 
@@ -94,7 +95,7 @@ const OurServicesScreen = () => {
         className="flex h-[480px] w-[95%] max-w-[1440px] flex-row sm:w-[90%]  "
         navigation
         autoplay={{
-          delay: 7500,
+          delay: 9500,
           disableOnInteraction: false,
         }}
       >
