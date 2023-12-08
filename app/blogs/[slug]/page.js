@@ -3,7 +3,7 @@ import Markdown from 'react-markdown'
 
 const getBlog = async (slug) => {
   const res = await fetch(
-    `https://strapi-cms.devink.tech/api/blogs?filters[slug][$eq]=${encodeURIComponent(slug)}&populate[cover][populate][]=media`,
+    `https://strapi-cms.devink.tech/api/blogs?filters[slug][$eq]=${(slug)}&populate[cover][populate][]=media`,
   )
     .then((r) => r.json())
     .catch((err) => console.log(err))
