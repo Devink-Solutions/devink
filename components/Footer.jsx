@@ -34,7 +34,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            devinksolutions@gmail.com
+            team@devink.tech
           </a>
         </span>
         <div className="mt-8 flex flex-col items-center justify-end gap-5  md:flex-row">
