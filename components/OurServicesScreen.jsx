@@ -68,10 +68,10 @@ const OurServicesScreen = () => {
     <section
       id="services"
       style={{ scrollMarginTop: '80px' }}
-      className="z-20 flex w-full flex-col items-center  justify-center bg-blue-dark py-8"
+      className="z-20 flex w-full flex-col items-center justify-center  bg-blue-dark py-8  md:py-12"
     >
       <h3 className="mb-4 text-3xl font-medium text-cyan-bright md:mb-2">Nuestros Servicios</h3>
-      <h4 className="mb-4 hidden px-4 text-center text-xl text-cyan-bright md:flex">Una pequeña guía para conocer mas en que te podemos ayudar</h4>
+      <h4 className="mb-8 hidden px-4 text-center text-xl text-white md:flex">Una pequeña guía para conocer mas en que te podemos ayudar</h4>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         breakpoints={{
@@ -87,12 +87,8 @@ const OurServicesScreen = () => {
             slidesPerView: 3,
             spaceBetween: 10,
           },
-          1320: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
         }}
-        className="flex h-[480px] w-[95%] max-w-[1440px] flex-row sm:w-[90%]  "
+        className="flex h-[440px] w-[95%] max-w-[1200px] flex-row sm:w-[90%] 2xl:max-w-[1440px]  "
         navigation
         autoplay={{
           delay: 9500,

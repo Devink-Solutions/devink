@@ -13,7 +13,7 @@ export default function Navbar() {
   const { isOpen, toggleDropdown, ref } = useModal()
   return (
     <>
-      <div ref={ref} className="sticky top-0 z-50 flex md:hidden ">
+      <div ref={ref} className="sticky   top-0 z-50 flex md:hidden ">
         <nav className="relative flex h-20 w-full flex-row items-center justify-between bg-blue-dark px-10  lg:px-12 ">
           <Link href="/" className="m-2 inline-flex cursor-pointer  ">
             <Image
@@ -65,7 +65,7 @@ export default function Navbar() {
           </Link>
         </nav>
       </div>
-      <nav className=" sticky top-0 z-50 hidden h-20 w-full items-center justify-between bg-blue-dark bg-opacity-75 px-12 text-white md:flex">
+      <nav className=" relative top-0 z-50 hidden h-20 w-full items-center justify-between bg-blue-dark  px-12 text-white md:flex">
         {/* Logo grande para pantallas medianas y grandes */}
         <Link href="/" className="hidden  cursor-pointer pt-2 md:inline-flex">
           <Image

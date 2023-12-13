@@ -4,7 +4,7 @@
 const Card = ({
   logo, title, text,
 }) => (
-  <section className="mx-auto  flex h-[440px] max-h-[550px] w-full max-w-[360px] flex-col overflow-hidden rounded-xl
+  <section className="mx-auto flex h-full w-full max-w-[400px] flex-col overflow-hidden rounded-xl
   bg-white bg-opacity-70  p-4 shadow-md transition-shadow duration-300 md:hover:shadow-xl"
   >
     <div className="relative flex flex-col px-5 py-2">

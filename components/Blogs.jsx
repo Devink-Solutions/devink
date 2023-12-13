@@ -40,7 +40,7 @@ const Blogs = ({ blogs }) => (
               slidesPerView: 3,
             },
           }}
-          className="flex h-[430px] w-full max-w-[1440px] flex-row"
+          className="flex h-[430px] w-full max-w-[1200px] flex-row 2xl:max-w-[1440px]"
           navigation
           autoplay={{
             delay: 9500,

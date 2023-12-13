@@ -8,7 +8,7 @@ const Card = ({
   return (
     <section
       ref={ref}
-      className={`flex w-full flex-col gap-1 ${className} ${inView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'}`}
+      className={`flex w-full flex-col gap-1 sm:gap-3 ${className} ${inView ? 'animate-fade-right animate-ease-in-out' : 'opacity-0'}`}
     >
       <h3 className="text-xl font-medium leading-5 text-cyan">
         {logo}
