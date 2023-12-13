@@ -24,11 +24,11 @@ const cards = [
 const Steps = () => (
   <section
     id="about"
-    className="relative flex w-full items-center justify-center bg-white"
+    className="relative flex w-full items-center justify-center bg-white py-4"
   >
-    <div className="flex w-11/12  max-w-[1440px] items-center justify-between gap-12 py-12 ">
+    <div className="flex w-11/12 max-w-[1200px]  items-center justify-between gap-12 py-12 2xl:max-w-[1440px] ">
       <div className="flex w-full flex-col items-start gap-4 xl:w-4/5">
-        <h3 className="w-fit text-xl font-medium text-cyan lg:text-2xl">
+        <h3 className="mb-2 w-fit text-xl font-medium text-cyan lg:text-2xl">
           Que pasos vamos a seguir?
         </h3>
         {cards.map((x) => (
@@ -43,8 +43,8 @@ const Steps = () => (
       </div>
       <figure className="hidden w-fit justify-end lg:mt-4 xl:inline-flex">
         <Image
-          width={424}
-          height={367}
+          width={318}
+          height={276}
           src="/Ai-development.png"
           alt="AI development"
         />

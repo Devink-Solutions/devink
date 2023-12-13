@@ -34,7 +34,7 @@ const ContactForm = () => {
 
   return (
     <section className="relative z-10 w-full overflow-hidden bg-white py-8">
-      <div className="mx-auto flex h-[100%] w-[90%] max-w-[1200px] flex-col-reverse items-center justify-center gap-4 md:flex-row ">
+      <div className="mx-auto flex h-[100%] w-[90%] max-w-[1000px] flex-col-reverse items-center justify-center gap-4 md:flex-row ">
         <div className="">
           <header className="mb-2 w-full py-2 md:w-[90%]">
             <h3 className="text-xl font-medium text-cyan md:pt-4 md:text-2xl">
@@ -91,10 +91,10 @@ const ContactForm = () => {
             </form>
           </div>
         </div>
-        <figure className="w-[90%] sm:w-fit">
+        <figure className="w-[90%] sm:w-1/2">
           <Image
-            width={360}
-            height={344}
+            width={318}
+            height={276}
             src="/Chatgpt.png"
             alt=""
             className="mx-auto object-contain object-center"

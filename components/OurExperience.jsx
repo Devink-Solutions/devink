@@ -23,14 +23,14 @@ const OurExperience = () => {
     <section
       id="contact"
       style={{ scrollMarginTop: '80px' }}
-      className=" relative flex h-full w-full items-center justify-center bg-white py-8"
+      className=" relative flex h-full w-full items-center justify-center bg-white py-12"
       ref={ref}
     >
       <div className="flex w-[90%] max-w-[1440px] flex-col items-center justify-center gap-4 lg:flex-row lg:gap-8 ">
         <figure className="w-fit">
           <Image
-            width={360}
-            height={344}
+            width={318}
+            height={276}
             src="/Augmented-reality.png"
             alt="form-image"
             className="mx-auto object-contain object-center"

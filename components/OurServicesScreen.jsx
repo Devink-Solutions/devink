@@ -16,6 +16,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/effect-fade'
 import 'swiper/css/zoom'
+import { useState, useEffect } from 'react'
+import { LuLoader2 } from 'react-icons/lu'
 
 import { MdOutlineDeveloperMode } from 'react-icons/md'
 import { FaHourglassHalf, FaRobot } from 'react-icons/fa'
@@ -26,6 +28,15 @@ import { IoAnalytics } from 'react-icons/io5'
 import ServicesCard from './ServicesCard'
 
 const OurServicesScreen = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 300)
+    return () => clearTimeout(timer)
+  }, [])
+
   const cards = [
     {
       logo: <FaMobileScreenButton color="#6FFFE9" />,
@@ -68,49 +79,53 @@ const OurServicesScreen = () => {
     <section
       id="services"
       style={{ scrollMarginTop: '80px' }}
-      className="z-20 flex w-full flex-col items-center  justify-center bg-blue-dark py-8"
+      className="z-20 flex w-full flex-col items-center justify-center  bg-blue-dark py-8  md:py-12"
     >
       <h3 className="mb-4 text-3xl font-medium text-cyan-bright md:mb-2">Nuestros Servicios</h3>
-      <h4 className="mb-4 hidden px-4 text-center text-xl text-cyan-bright md:flex">Una pequeña guía para conocer mas en que te podemos ayudar</h4>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          750: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          1020: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1320: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
-        }}
-        className="flex h-[480px] w-[95%] max-w-[1440px] flex-row sm:w-[90%]  "
-        navigation
-        autoplay={{
-          delay: 9500,
-          disableOnInteraction: false,
-        }}
-      >
-        {cards.map((card, index) => (
-          <SwiperSlide key={card.id}>
-            <ServicesCard
-              logo={card.logo}
-              title={card.title}
-              text={card.text}
-              image={card.image}
-              key={index}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <h4 className="mb-8 hidden px-4 text-center text-xl text-white md:flex">Una pequeña guía para conocer mas en que te podemos ayudar</h4>
+      {isLoading
+        ? (
+          <div className="flex h-[440px] w-full items-center justify-center">
+            <LuLoader2 className=" animate-spin text-cyan-bright" size={50} />
+          </div>
+        )
+        : (
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              750: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1020: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+            }}
+            className="flex h-[440px] w-[95%] max-w-[1200px] flex-row sm:w-[90%] 2xl:max-w-[1440px]  "
+            navigation
+            autoplay={{
+              delay: 9500,
+              disableOnInteraction: false,
+            }}
+          >
+            {cards.map((card, index) => (
+              <SwiperSlide key={card.id}>
+                <ServicesCard
+                  logo={card.logo}
+                  title={card.title}
+                  text={card.text}
+                  image={card.image}
+                  key={index}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
     </section>
   )
 }
