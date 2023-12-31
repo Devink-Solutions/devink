@@ -27,14 +27,14 @@ const Footer = () => (
           <FaRocket className="mt-4 text-3xl text-cyan  md:ml-2 md:mt-0" />
         </span>
         <span className="flex items-center space-x-4">
-          <FaEnvelope />
+          <FaEnvelope size={30} />
           <a
             className="text-lg transition-colors duration-200  hover:text-blue-400"
             href="mailto:devinksolutions@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            team@devink.tech
+            Enviar Correo
           </a>
         </span>
         <div className="mt-8 flex flex-col items-center justify-end gap-5  md:flex-row">
