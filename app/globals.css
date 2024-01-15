@@ -23,7 +23,7 @@ background: #5BC0BE;
 }
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
   }
   
 }
