@@ -1,16 +1,16 @@
 /* eslint-disable tailwindcss/migration-from-tailwind-2 */
 
-"use client";
+'use client'
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { AiOutlineMenu } from "react-icons/ai";
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { AiOutlineMenu } from 'react-icons/ai'
 // import { CgProfile } from 'react-icons/cg'
-import useModal from "@/hooks/useModal";
+import useModal from '@/hooks/useModal'
 
 export default function Navbar() {
-  const { isOpen, toggleDropdown, ref } = useModal();
+  const { isOpen, toggleDropdown, ref } = useModal()
   return (
     <>
       <div ref={ref} className="sticky   top-0 z-50 flex md:hidden ">
@@ -31,7 +31,7 @@ export default function Navbar() {
         </nav>
         <nav
           className={`fixed ${
-            isOpen ? "translate-x-0" : "translate-x-[100%]"
+            isOpen ? 'translate-x-0' : 'translate-x-[100%]'
           } right-0 top-[80px]
        z-[30] flex w-[200px] flex-col rounded-bl-2xl bg-blue-dark py-2 text-white brightness-125 transition-transform duration-300`}
         >
@@ -124,5 +124,5 @@ export default function Navbar() {
         </ul>
       </nav>
     </>
-  );
+  )
 }
