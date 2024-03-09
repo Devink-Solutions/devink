@@ -4,12 +4,12 @@
 import { init } from '@amplitude/analytics-browser'
 import { useEffect } from 'react'
 import Hero from '@/components/Hero'
-import OurExperience from '@/components/OurExperience'
 import OurServicesScreen from '@/components/OurServicesScreen'
-import Steps from '@/components/Steps'
 import ContactForm from '@/components/ContactForm'
 import InfiniteSlider from '@/components/InfiniteSlider'
 import SolucionesDigitales from '@/components/SolucionesDigitales'
+import ServicesCard from '@/components/ServicesCard'
+import SuccessCases from '@/components/SuccessCases'
 
 export default function Home() {
   useEffect(() => {
@@ -19,13 +19,13 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-col items-center overflow-x-hidden scroll-smooth">
+    <main className="flex flex-col items-center overflow-x-hidden scroll-smooth bg-bg-dark">
       <Hero />
       <InfiniteSlider />
       <SolucionesDigitales />
-      <Steps />
       <OurServicesScreen />
-      <OurExperience />
+      <ServicesCard />
+      <SuccessCases />
       <ContactForm />
 
     </main>

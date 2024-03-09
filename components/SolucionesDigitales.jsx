@@ -2,21 +2,21 @@ import React from 'react'
 import Image from 'next/image'
 
 const SolucionesDigitales = () => (
-  <div className="flex w-full items-center justify-center bg-bg-dark py-10 text-white">
-    <div className=" flex w-full flex-col items-center justify-center">
+  <div className="flex h-[600px] w-full items-center justify-center bg-bg-dark py-10 text-white">
+    <div className=" flex w-full max-w-[1440px] flex-col items-center justify-center">
       <h2 className="mb-6 text-center text-3xl font-bold text-cyan-bright">Soluciones digitales integradas</h2>
 
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
 
         {/* Columna de texto */}
-        <div>
+        <div className="flex flex-col gap-4">
           {/* Estrategia personalizada */}
           <div className="mb-6 flex items-start">
-            <div className="flex pl-10">
+            <div className="flex items-center pl-10">
               <Image
                 src="/Frame 428.png"
-                width={100}
-                height={100}
+                width={130}
+                height={130}
                 class="aspect-square"
                 alt=""
               />
@@ -34,11 +34,11 @@ const SolucionesDigitales = () => (
 
           {/* Desarrollo */}
           <div className="mb-6 flex items-start">
-            <div className="flex pl-10">
+            <div className="flex h-full items-center justify-center pl-10">
               <Image
                 src="/Frame 429.png"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 class="aspect-square"
                 alt=""
               />
@@ -75,8 +75,8 @@ const SolucionesDigitales = () => (
         <div className="flex justify-center">
           <Image
             src="/amico.svg"
-            width={320}
-            height={320}
+            width={400}
+            height={400}
             class=""
             alt=""
           />

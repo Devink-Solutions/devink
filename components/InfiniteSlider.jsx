@@ -18,7 +18,7 @@ const InfiniteSlider = () => {
   const slidingItems = [...carouselItems, ...carouselItems]
 
   return (
-    <div className="relative m-auto flex h-[10vh] w-full items-center overflow-hidden">
+    <div className="relative m-auto flex h-[10vh] w-full items-center overflow-hidden shadow-sm shadow-cyan-bright">
       <motion.div
         className="flex"
         initial={{ x: 0 }}
@@ -34,7 +34,7 @@ const InfiniteSlider = () => {
           <div
             key={uuidv4()} // Generar una clave única para cada elemento
             className=" flex h-full min-w-[240px] items-center justify-center rounded-md
-             bg-blue-dark  text-white  transition-all duration-200 hover:scale-105 "
+             bg-bg-dark  text-white   transition-all duration-200 hover:scale-105 "
           >
             <item.IconComponent size={36} className="mr-4 text-current" />
             <span className="text-lg">{item.text}</span>
