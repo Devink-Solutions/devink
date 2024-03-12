@@ -10,6 +10,7 @@ import { trackAmplitudeEvent } from '@/utils/AmplitudeTrackers'
 const OurExperience = () => {
   const [ref, inView] = useObserver({ threshold: 0.7 })
   const [isInView, setIsInView] = useState(false)
+
   useEffect(() => {
     if (inView) {
       setIsInView(true)
