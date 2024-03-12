@@ -10,6 +10,8 @@ import InfiniteSlider from '@/components/InfiniteSlider'
 import SolucionesDigitales from '@/components/SolucionesDigitales'
 import ServicesCard from '@/components/ServicesCard'
 import SuccessCases from '@/components/SuccessCases'
+import { Accordion } from '@radix-ui/react-accordion'
+import Accordion1 from '@/components/Accordion1'
 
 export default function Home() {
   useEffect(() => {
@@ -26,6 +28,7 @@ export default function Home() {
       <OurServicesScreen />
       <ServicesCard />
       <SuccessCases />
+      <Accordion1 />
       <ContactForm />
 
     </main>
