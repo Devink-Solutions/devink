@@ -28,7 +28,7 @@ const Hero = () => (
         <Image
           src="/Vector.png"
           width={680}
-          height={680}
+          height={600}
           class="absolute right-[-100px] top-[-80px] z-10"
           alt=""
         />

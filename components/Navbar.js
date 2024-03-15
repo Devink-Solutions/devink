@@ -10,6 +10,7 @@ import { BsFillSunFill } from 'react-icons/bs'
 import { IoMdGlobe } from 'react-icons/io'
 
 import useModal from '@/hooks/useModal'
+import Pild from './Pild'
 
 export default function Navbar() {
   const { isOpen, toggleDropdown, ref } = useModal()
@@ -122,19 +123,21 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="flex flex-row space-x-4">
-          <button type="button" className="w-fit rounded-full border border-cyan bg-bg-light px-4 py-2 text-lg font-medium text-bg-dark">
-            Contáctanos
+          <button
+            type="button"
+            className="w-fit rounded-full border
+           border-cyan bg-slate-700 px-8  py-2 text-lg font-medium text-bg-dark text-bg-light
+            hover:bg-bg-light hover:text-black"
+          >
+            Contáctar
           </button>
 
-          <button type="button" className="p-2 text-lg font-medium">
-            <BsFillSunFill size={26} />
-          </button>
-
-          <div className="relative">
+          <div className="relative flex flex-row gap-2">
             <button type="button" className="p-2 text-lg font-medium">
-              <IoMdGlobe size={30} />
+              <Pild />
             </button>
-            {/* Menú desplegable de idiomas */}
+    
+
           </div>
         </div>
       </nav>

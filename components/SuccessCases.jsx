@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function SuccessCases() {
   return (
-    <div className="h-[600px] min-w-[1440px] bg-bg-dark px-4 py-12 text-white sm:px-6 lg:px-8">
+    <div className="h-[600px] max-w-[1440px] bg-bg-dark px-4 py-12 text-white sm:px-6 lg:px-8">
       <div className="mx-auto ">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
           <div className="relative h-96 w-full">
@@ -15,7 +15,7 @@ export default function SuccessCases() {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-cyan">Creatividad y energía en cada idea</h2>
+            <h2 className="text-4xl font-semibold text-cyan-bright">Creatividad y energía en cada idea</h2>
             <p className="mt-4 max-w-[90%] text-lg">
               Somos una empresa emergente en el sector IT, comprometida en marcar una diferencia.
               Nuestro equipo de profesionales combina creatividad y experiencia, ofreciéndote

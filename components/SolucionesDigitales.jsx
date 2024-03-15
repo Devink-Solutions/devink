@@ -4,7 +4,7 @@ import Image from 'next/image'
 const SolucionesDigitales = () => (
   <div className="flex h-[600px] w-full items-center justify-center bg-bg-dark py-10 text-white">
     <div className=" flex w-full max-w-[1440px] flex-col items-center justify-center">
-      <h2 className="mb-6 text-center text-3xl font-bold text-cyan-bright">Soluciones digitales integradas</h2>
+      <h2 className="mb-6 text-center text-4xl font-semibold text-cyan-bright">Soluciones digitales integradas</h2>
 
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
 

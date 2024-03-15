@@ -34,14 +34,14 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="relative z-10 w-full overflow-hidden bg-bg-dark px-6 py-16 md:px-0">
+    <section className="relative z-10  max-w-[1440px] overflow-hidden bg-bg-dark px-6 py-16 md:px-0">
       <div
         className="relative mx-auto flex max-w-6xl flex-col items-center rounded-lg p-12 lg:flex-row lg:items-start"
         style={{ backgroundImage: "url('/Rectangle 39.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
 
         <div className="flex w-1/2 flex-col items-center justify-center text-white">
-          <h2 className="mb-6 items-center text-center text-4xl font-normal">Transforma tus ideas en realidad. ¡Contáctanos!</h2>
+          <h2 className="mb-6 items-center text-center text-4xl font-semibold">Transforma tus ideas en realidad. ¡Contáctanos!</h2>
           <p className="mb-10 pt-4 text-center text-xl font-normal">
             Comparte más detalles sobre tu idea, proyecto o desafío. Cuanta más información nos proporciones, mejor podremos trabajar para encontrar la solución más adecuada para ti.
           </p>
@@ -49,28 +49,28 @@ const ContactForm = () => {
         <div className="w-full max-w-lg  bg-transparent p-8 lg:w-1/2">
           <form onSubmit={sendEmail} className="flex flex-col gap-4">
             <Input
-              className="w-full rounded-md border-0 bg-blue-dark px-4 py-3 text-white placeholder:text-gray-300"
+              className="w-full rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
               type="text"
               placeholder="Nombre"
               name="name"
               required
             />
             <Input
-              className="w-full rounded-md border-0 bg-blue-dark px-4 py-3 text-white placeholder:text-gray-300"
+              className="w-full rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
               type="email"
               placeholder="Mail"
               name="email"
               required
             />
             <Input
-              className="w-full rounded-md border-0 bg-blue-dark px-4 py-3 text-white placeholder:text-gray-300"
+              className="w-full rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
               type="text"
               placeholder="Asunto"
               name="affair"
               required
             />
             <Textarea
-              className="w-full rounded-md border-0 bg-blue-dark px-4 py-3 text-white placeholder:text-gray-300"
+              className="h-24 w-full resize-none rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
               placeholder="Escribe tu idea o consulta aquí"
               name="message"
               required

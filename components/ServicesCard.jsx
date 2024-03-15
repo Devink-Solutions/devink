@@ -32,7 +32,7 @@ export default function ServicesCard() {
     <div className="flex w-full flex-wrap bg-bg-dark py-12">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-6xl font-extrabold leading-9 text-white">
+          <h2 className="text-4xl font-semibold leading-9 text-white">
             Casos de éxito
           </h2>
         </div>
