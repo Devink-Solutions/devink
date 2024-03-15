@@ -16,7 +16,7 @@ export default function Navbar() {
   const { isOpen, toggleDropdown, ref } = useModal()
   return (
     <>
-      <div ref={ref} className="sticky   top-0 z-50 flex md:hidden ">
+      <div ref={ref} className="sticky   top-0 z-50 flex lg:hidden ">
         <nav className="relative flex h-20 w-full flex-row items-center justify-between bg-bg-dark px-10  lg:px-12 ">
           <Link href="/" className="m-2 inline-flex cursor-pointer  ">
             <Image
@@ -65,15 +65,25 @@ export default function Navbar() {
               className="flex w-full items-center px-4 py-2"
               onClick={toggleDropdown}
             >
-              <span className="text-xl font-medium">Blogs</span>
+              <span className="text-xl font-medium">casos de exito</span>
+            </button>
+          </Link>
+          <Link href="/#faq">
+
+            <button
+              type="button"
+              className="flex w-full items-center px-4 py-2"
+              onClick={toggleDropdown}
+            >
+              <span className="text-xl font-medium">Faq</span>
             </button>
           </Link>
         </nav>
       </div>
       <nav className="relative  top-0 z-50 hidden h-20 w-full flex-row items-center
-      justify-between border-b-2 border-bg-dark bg-bg-dark px-12 text-white shadow-lg md:flex"
+      justify-between border-b-2 border-bg-dark bg-bg-dark px-12 text-white shadow-lg lg:flex"
       >
-        <div className="hidden cursor-pointer pt-2 md:inline-flex">
+        <div className="hidden cursor-pointer pt-2 lg:inline-flex">
           <Image src="/logo.svg" alt="logo" width={180} height={180} priority />
         </div>
 
@@ -136,7 +146,6 @@ export default function Navbar() {
             <button type="button" className="p-2 text-lg font-medium">
               <Pild />
             </button>
-    
 
           </div>
         </div>

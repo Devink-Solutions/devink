@@ -39,7 +39,7 @@ const InfiniteSlider = () => {
   }
 
   return (
-    <div className="relative m-auto flex h-[10vh] w-full z-50 items-center overflow-hidden bg-bg-dark shadow-sm shadow-cyan-bright">
+    <div className="relative z-50 m-auto mb-36 flex h-[10vh] w-full items-center overflow-hidden bg-bg-dark shadow-sm shadow-cyan-bright">
       <motion.div
         className="flex"
         initial={{ x: '0%' }}
