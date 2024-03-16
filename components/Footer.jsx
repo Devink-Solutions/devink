@@ -78,7 +78,7 @@ const Footer = () => (
         {' '}
         <Link
           className="hover:text-cyan-400 animate-gradient-x inline-flex bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent"
-          href="https://www.devink.dev/"
+          href="https://www.devink.tech/"
           target="_blank"
           rel="noopener noreferrer"
         >

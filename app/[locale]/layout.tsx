@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { Red_Hat_Display as redHatDisplay } from 'next/font/google'
+import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
+import NextIntlProvider from './NextIntlProvider'
 import './globals.css'
 import Footer from '@/components/Footer'
 
@@ -12,14 +14,31 @@ export const metadata = {
   keywords: 'soluciones IT, analytics, desarrollo móvil, transformación digital, tecnología empresarial',
   author: 'Devink Solutions',
 }
+const locales = ['es', 'en', 'pt', 'ru']
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params: { locale } }) {
+  if (!locales.includes(locale as any)) notFound()
+  let messages
+  try {
+    messages = (await import(`../../messages/${locale}.json`))
+      .default
+  } catch (error) {
+    notFound()
+  }
+
   return (
     <html lang="en">
       <body className={`${RedHatDisplay.className}flex bg-blue-dark`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <NextIntlProvider
+          locale={locale}
+          messages={messages}
+          timeZone="America/Montevideo"
+          now={new Date()}
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </NextIntlProvider>
       </body>
     </html>
   )
