@@ -17,7 +17,6 @@ const SolucionesDigitales = () => (
                 src="/Frame 428.png"
                 width={130}
                 height={130}
-                class="aspect-square"
                 alt=""
               />
 
@@ -39,7 +38,6 @@ const SolucionesDigitales = () => (
                 src="/Frame 429.png"
                 width={150}
                 height={150}
-                class="aspect-square"
                 alt=""
               />
             </div>
@@ -60,7 +58,6 @@ const SolucionesDigitales = () => (
                 src="/Frame 430.png"
                 width={100}
                 height={100}
-                class="aspect-square"
                 alt=""
               />
             </div>
@@ -77,7 +74,6 @@ const SolucionesDigitales = () => (
             src="/amico.svg"
             width={400}
             height={400}
-            class=""
             alt=""
           />
 

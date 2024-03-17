@@ -33,21 +33,21 @@ const Hero = () => {
               src="/Vector.png"
               width={680}
               height={600}
-              class="absolute right-[-100px] top-[-80px] z-10 "
+              className="absolute right-[-100px] top-[-80px] z-10 "
               alt=""
             />
             <Image
               src="/phones/phone1.png"
               width={320}
               height={320}
-              class="absolute bottom-0 left-[150px] z-40 object-contain 2xl:left-[250px] "
+              className="absolute bottom-0 left-[150px] z-40 object-contain 2xl:left-[250px] "
               alt=""
             />
             <Image
               src="/phones/phone2.png"
               width={320}
               height={320}
-              class="absolute bottom-0 left-[400px] z-30 object-contain 2xl:left-[520px] "
+              className="absolute bottom-0 left-[400px] z-30 object-contain 2xl:left-[520px] "
               alt=""
             />
           </figure>
