@@ -1,6 +1,8 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export default function SuccessCases() {
+  const s = useTranslations('SuccessCases')
   return (
     <div className="relative h-[600px] w-full bg-bg-dark text-white">
       <div className=" mx-auto flex h-full w-full max-w-[1440px]  items-center justify-between">
@@ -14,15 +16,12 @@ export default function SuccessCases() {
           />
         </div>
         <div className="flex h-full w-full flex-col items-start justify-center">
-          <h2 className="mb-4 text-4xl font-semibold text-cyan-bright">Creatividad y energía en cada idea</h2>
+          <h2 className="mb-4 text-4xl font-semibold text-cyan-bright">{s('title')}</h2>
           <p className=" my-4 max-w-[96%] text-lg">
-            Somos una empresa emergente en el sector IT, comprometida en marcar una diferencia.
-            Nuestro equipo de profesionales combina creatividad y experiencia, ofreciéndote
-            soluciones innovadoras que superan las expectativas. ¿Estás listo para llevar tu negocio
-            al siguiente nivel con soluciones tecnológicas a medida?
+            {s('description')}
           </p>
           <h4 className=" my-4 text-2xl">
-            Agenda una reunion con nosotros hoy y comienza a transformar tus ideas en realidad.
+            {s('callToAction')}
           </h4>
           <button
             type="submit"
@@ -33,7 +32,6 @@ export default function SuccessCases() {
           >
             Empezar
           </button>
-
         </div>
       </div>
       <Image

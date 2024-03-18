@@ -6,38 +6,57 @@ import {
 import { SlEnergy } from 'react-icons/sl'
 import { TbColorSwatch } from 'react-icons/tb'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
+import { useEffect, useState } from 'react'
+import { spanishServicesData } from '@/data/spanishServicesData'
+import { englishServicesData } from '@/data/englishServicesData'
+import { portugeseServicesData } from '@/data/portugeseServicesData'
 
-const services = [
+const services ({locale}) = [
+  const o = useTranslations('OurServicesScreen')
+  const [localeData, setLocaleData] = useState(spanishFaqsData)
+
+  useEffect(() => {
+    if (locale === 'es') {
+      setLocaleData(spanishServicesData)
+    }
+    if (locale === 'en') {
+      setLocaleData(englishServicesData)
+    }
+    if (locale === 'pt') {
+      setLocaleData(portugeseServicesData)
+    }
+  }, [locale])
   {
     Icon: FaCode,
-    title: 'Desarrollo de Apps',
-    description: 'Con React Native, creamos apps rápidas, responsivas y visualmente atractivas, garantizando un rendimiento óptimo en iOS y Android.',
+    title: {o('title1')},
+    description: {o('content1')},
   },
   {
     Icon: FaBusinessTime,
-    title: 'Consultoría',
-    description: 'Te asesoraremos en la migración hacia sistemas más avanzados y eficientes, minimizando interrupciones y maximizando tu retorno de inversión.',
+    title: {o('title2')},
+    description: {o('content2')},
   },
   {
     Icon: TbColorSwatch,
-    title: 'Diseños personalizados',
-    description: 'Diseñamos aplicaciones móviles, plataformas web corporativas o sistemas integrados,\n nuestro equipo trabaja contigo para crear soluciones que se adapten a tus expectativas.',
+    title: {o('title3')},
+    description:  {o('content3')},
   },
   {
     Icon: FaChartBar,
-    title: 'Advanced Analytics',
-    description: 'Nos destacamos en integrar análisis de sistemas de datos en tus sistemas. Proporcionándote información clave sobre tus clientes y sus procesos, permitiéndote tomar decisiones informadas y optimizando la eficiencia de tu negocio.',
+    title: {o('title4')},
+    description:  {o('content4')},
   },
   {
     Icon: FaRobot,
-    title: 'Chatbot',
-    description: 'Mejoramos la interacción con tus clientes mediante chatbots inteligentes. Los mismos son capaces de manejar consultas diversas, optimizando la experiencia del cliente y aliviando la carga de trabajo para tu equipo de soporte.',
+    title: {o('title5')},
+    description:  {o('content5')},
   },
 
   {
     Icon: SlEnergy,
-    title: 'Entregas',
-    description: 'Valoramos la eficiencia en el mundo empresarial y nos comprometemos a entregar proyectos con calidad y rapidez.\n Nuestro equipo utiliza métodos ágiles para garantizar una entrega precisa y satisfactoria del producto final.',
+    title: {o('title6')},
+    description:  {o('content6')},
   },
 ]
 

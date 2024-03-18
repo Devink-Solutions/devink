@@ -6,14 +6,13 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AiOutlineMenu } from 'react-icons/ai'
-import { BsFillSunFill } from 'react-icons/bs'
-import { IoMdGlobe } from 'react-icons/io'
-
+import { useTranslations } from 'next-intl'
 import useModal from '@/hooks/useModal'
 import Pild from './Pild'
 
 export default function Navbar() {
   const { isOpen, toggleDropdown, ref } = useModal()
+  const n = useTranslations('Navbar')
   return (
     <>
       <div ref={ref} className="sticky   top-0 z-50 flex lg:hidden ">
@@ -45,7 +44,7 @@ export default function Navbar() {
               onClick={toggleDropdown}
             >
 
-              <span className="text-xl font-medium">Servicios</span>
+              <span className="text-xl font-medium">{n('home')}</span>
             </button>
           </Link>
           <Link href="/#contact">
@@ -55,7 +54,7 @@ export default function Navbar() {
               className="flex w-full items-center px-4 py-2"
               onClick={toggleDropdown}
             >
-              <span className="text-xl font-medium">Contacto</span>
+              <span className="text-xl font-medium">{n('services')}</span>
             </button>
           </Link>
           <Link href="/#blogs">
@@ -65,7 +64,7 @@ export default function Navbar() {
               className="flex w-full items-center px-4 py-2"
               onClick={toggleDropdown}
             >
-              <span className="text-xl font-medium">casos de exito</span>
+              <span className="text-xl font-medium">{n('cases')}</span>
             </button>
           </Link>
           <Link href="/#faq">
@@ -75,7 +74,7 @@ export default function Navbar() {
               className="flex w-full items-center px-4 py-2"
               onClick={toggleDropdown}
             >
-              <span className="text-xl font-medium">Faq</span>
+              <span className="text-xl font-medium">{n('Faq')}</span>
             </button>
           </Link>
         </nav>
@@ -103,7 +102,7 @@ export default function Navbar() {
                 className=" p-2  font-light  "
                 href="/#process"
               >
-                Proceso Devink
+                {n('home')}
               </Link>
             </li>
             <li>
@@ -111,7 +110,7 @@ export default function Navbar() {
                 className=" p-2  font-light  "
                 href="/#services"
               >
-                Servicios
+                {n('services')}
               </Link>
             </li>
             <li>
@@ -119,7 +118,7 @@ export default function Navbar() {
                 className=" p-2  font-light "
                 href="/#contact"
               >
-                Casos de éxito
+                {n('cases')}
               </Link>
             </li>
             <li>
@@ -127,7 +126,7 @@ export default function Navbar() {
                 className="hidden p-2  font-light sm:inline-flex "
                 href="/#blogs"
               >
-                FAQ
+                {n('Faq')}
               </Link>
             </li>
           </ul>
@@ -139,7 +138,7 @@ export default function Navbar() {
            border-cyan bg-slate-700 px-8  py-2 text-lg font-medium text-bg-dark text-bg-light
             hover:bg-bg-light hover:text-black"
           >
-            Contáctar
+            {n('contact')}
           </button>
 
           <div className="relative flex flex-row gap-2">
