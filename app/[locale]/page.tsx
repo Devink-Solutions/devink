@@ -13,22 +13,24 @@ import ServicesCard from '@/components/ServicesCard'
 import SuccessCases from '@/components/SuccessCases'
 import Accordion1 from '@/components/Accordion1'
 
-export default function Home() {
+export default function Home({ params: { locale } }) {
   useEffect(() => {
     init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY, {
       defaultTracking: true,
     })
   }, [])
 
+  console.log()
+
   return (
-    <main className="flex flex-col items-center overflow-x-hidden scroll-smooth bg-bg-dark">
+    <main className="flex flex-1 flex-col items-center overflow-x-hidden scroll-smooth bg-bg-dark">
       <Hero />
       <InfiniteSlider />
       <SolucionesDigitales />
       <OurServicesScreen />
       <ServicesCard />
       <SuccessCases />
-      <Accordion1 />
+      <Accordion1 locale={locale} />
       <ContactForm />
 
     </main>

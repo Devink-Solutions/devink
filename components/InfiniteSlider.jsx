@@ -39,7 +39,7 @@ const InfiniteSlider = () => {
   }
 
   return (
-    <div className="relative z-50 m-auto mb-36 flex h-[10vh] w-full items-center overflow-hidden bg-bg-dark shadow-sm shadow-cyan-bright">
+    <div className="relative z-50 flex h-[10vh] min-h-[90px] w-full items-center overflow-hidden bg-bg-dark shadow-md shadow-cyan-bright/40">
       <motion.div
         className="flex"
         initial={{ x: '0%' }}
@@ -51,7 +51,7 @@ const InfiniteSlider = () => {
             key={uuidv4()} // Clave única para cada elemento
             className="flex h-full min-w-[340px] items-center justify-center rounded-md bg-bg-dark text-white transition-all duration-200 hover:scale-105"
           >
-            <item.IconComponent size={36} className="mr-4 text-current" />
+            <item.IconComponent size={24} className="mr-2 text-current" />
             <span className="text-lg">{item.text}</span>
           </div>
         ))}

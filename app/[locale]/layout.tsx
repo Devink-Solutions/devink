@@ -14,7 +14,7 @@ export const metadata = {
   keywords: 'soluciones IT, analytics, desarrollo móvil, transformación digital, tecnología empresarial',
   author: 'Devink Solutions',
 }
-const locales = ['es', 'en', 'pt', 'ru']
+const locales = ['es', 'en', 'pt']
 
 export default async function RootLayout({ children, params: { locale } }) {
   if (!locales.includes(locale as any)) notFound()
@@ -27,8 +27,8 @@ export default async function RootLayout({ children, params: { locale } }) {
   }
 
   return (
-    <html lang="en">
-      <body className={`${RedHatDisplay.className}flex bg-blue-dark`}>
+    <html lang={locale}>
+      <body className={`${RedHatDisplay.className} flex flex-col overflow-x-hidden bg-blue-dark`}>
         <NextIntlProvider
           locale={locale}
           messages={messages}
@@ -36,7 +36,9 @@ export default async function RootLayout({ children, params: { locale } }) {
           now={new Date()}
         >
           <Navbar />
-          {children}
+          <div className="flex-1 grow">
+            {children}
+          </div>
           <Footer />
         </NextIntlProvider>
       </body>

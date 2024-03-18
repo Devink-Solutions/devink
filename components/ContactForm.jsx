@@ -34,7 +34,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="relative z-10  max-w-[1440px] overflow-hidden bg-bg-dark px-6 py-16 md:px-0">
+    <section className="relative z-10  max-w-[1440px] overflow-hidden px-6 py-16 md:px-0">
       <div
         className="relative mx-auto flex max-w-6xl flex-col items-center rounded-lg p-12 lg:flex-row lg:items-start"
         style={{ backgroundImage: "url('/Rectangle 39.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}

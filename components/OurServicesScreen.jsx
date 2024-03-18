@@ -5,6 +5,7 @@ import {
 } from 'react-icons/fa'
 import { SlEnergy } from 'react-icons/sl'
 import { TbColorSwatch } from 'react-icons/tb'
+import Image from 'next/image'
 
 const services = [
   {
@@ -42,12 +43,11 @@ const services = [
 
 function ServiceCard({ Icon, title, description }) {
   return (
-    <div className="rounded-lg bg-blue-dark p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
-      <div className="mb-2 flex h-14 w-14 items-center justify-center rounded-lg bg-bg-dark ">
-        <Icon className=" h-8 w-9 text-white" />
+    <div className="flex flex-col gap-2 rounded-lg bg-blue-dark p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-bg-dark ">
+        <Icon className=" h-5 w-5 object-contain object-center text-white" />
       </div>
-
-      <h3 className="mb-4 text-lg font-semibold text-white">{title}</h3>
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
       <p className="text-gray-300">{description}</p>
     </div>
   )
@@ -55,21 +55,31 @@ function ServiceCard({ Icon, title, description }) {
 
 function Services() {
   return (
-    <div className="flex max-w-[1440px] flex-col items-center bg-bg-dark p-12 text-white ">
-      <h2 className="mb-8 text-4xl font-semibold">Nuestros servicios</h2>
-      <p className="mb-8 text-center text-gray-400">
-        Ofrecemos una amplia gama de servicios para ayudarte a alcanzar tus objetivos empresariales.
-      </p>
-      <div className="mb-20 grid max-w-[1440px] grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
-        {services.map((service) => (
-          <ServiceCard
-            key={uuidv4()}
-            Icon={service.Icon}
-            title={service.title}
-            description={service.description}
-          />
-        ))}
+    <div className="relative w-full">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center bg-bg-dark p-12 text-white ">
+        <h2 className="mb-8 text-4xl font-semibold">Nuestros servicios</h2>
+        <p className="mb-8 text-center text-gray-400">
+          Ofrecemos una amplia gama de servicios para ayudarte a alcanzar tus objetivos empresariales.
+        </p>
+        <div className="mb-20 grid max-w-[1440px] grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
+          {services.map((service) => (
+            <ServiceCard
+              key={uuidv4()}
+              Icon={service.Icon}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </div>
+
       </div>
+      <Image
+        src="/lightSoluciones.png"
+        width={200}
+        height={200}
+        alt="light"
+        className="absolute bottom-[-50%] left-0 h-full w-[300px] rotate-180"
+      />
     </div>
   )
 }

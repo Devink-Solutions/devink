@@ -41,7 +41,7 @@ const Pild = ({ className, direction }) => {
   const posibleOptions = useMemo(() => options.filter((option) => option.lang !== selectedOption.lang), [selectedOption])
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className={`${isOpen ? 'bg-blue-dark' : ''} relative  transition duration-100 ease-in`}>
       <button
         type="button" // Add the type attribute with a value of "button"
         onClick={toggleDropdown}
@@ -51,12 +51,12 @@ const Pild = ({ className, direction }) => {
         {selectedOption ? selectedOption.lang.toUpperCase() : null}
       </button>
       {isOpen && (
-        <div className={`${direction} absolute z-50  mt-2 flex flex-col items-center justify-center bg-bg-dark `}>
+        <div className={`${direction} absolute z-50 flex flex-col items-center justify-center bg-blue-dark transition duration-300 ease-in `}>
           {posibleOptions.map((option) => (
             <Link key={option.lang} href={`/${option.lang}`} locale={option.lang}>
               <button
                 className={`${className}  flex items-center justify-center
-               gap-2 px-3 font-medium hover:bg-blue-dark md:px-6 md:py-1 `}
+               gap-2 px-3 font-medium hover:bg-blue-mid1 md:px-6 md:py-1 `}
                 onClick={() => selectOption(option)}
                 type="button"
               >
