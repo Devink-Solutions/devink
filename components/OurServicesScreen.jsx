@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { v4 as uuidv4 } from 'uuid'
+import { useEffect, useState } from 'react'
 import {
   FaCode, FaBusinessTime, FaChartBar, FaRobot,
 } from 'react-icons/fa'
@@ -7,58 +8,9 @@ import { SlEnergy } from 'react-icons/sl'
 import { TbColorSwatch } from 'react-icons/tb'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { useEffect, useState } from 'react'
-import { spanishServicesData } from '@/data/spanishServicesData'
 import { englishServicesData } from '@/data/englishServicesData'
-import { portugeseServicesData } from '@/data/portugeseServicesData'
-
-const services ({locale}) = [
-  const o = useTranslations('OurServicesScreen')
-  const [localeData, setLocaleData] = useState(spanishFaqsData)
-
-  useEffect(() => {
-    if (locale === 'es') {
-      setLocaleData(spanishServicesData)
-    }
-    if (locale === 'en') {
-      setLocaleData(englishServicesData)
-    }
-    if (locale === 'pt') {
-      setLocaleData(portugeseServicesData)
-    }
-  }, [locale])
-  {
-    Icon: FaCode,
-    title: {o('title1')},
-    description: {o('content1')},
-  },
-  {
-    Icon: FaBusinessTime,
-    title: {o('title2')},
-    description: {o('content2')},
-  },
-  {
-    Icon: TbColorSwatch,
-    title: {o('title3')},
-    description:  {o('content3')},
-  },
-  {
-    Icon: FaChartBar,
-    title: {o('title4')},
-    description:  {o('content4')},
-  },
-  {
-    Icon: FaRobot,
-    title: {o('title5')},
-    description:  {o('content5')},
-  },
-
-  {
-    Icon: SlEnergy,
-    title: {o('title6')},
-    description:  {o('content6')},
-  },
-]
+import spanishServicesData from '@/data/spanishServicesData'
+import { portugueseServicesData } from '@/data/portugueseServicesData'
 
 function ServiceCard({ Icon, title, description }) {
   return (
@@ -72,7 +24,20 @@ function ServiceCard({ Icon, title, description }) {
   )
 }
 
-function Services() {
+function Services({ locale }) {
+  const [localeData, setLocaleData] = useState(spanishServicesData)
+
+  useEffect(() => {
+    if (locale === 'es') {
+      setLocaleData(spanishServicesData)
+    }
+    if (locale === 'en') {
+      setLocaleData(englishServicesData)
+    }
+    if (locale === 'pt') {
+      setLocaleData(portugueseServicesData)
+    }
+  }, [locale])
   return (
     <div className="relative w-full">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center bg-bg-dark p-12 text-white ">
@@ -81,12 +46,12 @@ function Services() {
           Ofrecemos una amplia gama de servicios para ayudarte a alcanzar tus objetivos empresariales.
         </p>
         <div className="mb-20 grid max-w-[1440px] grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
-          {services.map((service) => (
+          {localeData.map((service) => (
             <ServiceCard
               key={uuidv4()}
-              Icon={service.Icon}
+              Icon={service.icon}
               title={service.title}
-              description={service.description}
+              description={service.content}
             />
           ))}
         </div>

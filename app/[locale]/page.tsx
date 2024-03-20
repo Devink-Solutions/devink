@@ -27,7 +27,7 @@ export default function Home({ params: { locale } }) {
       <Hero />
       <InfiniteSlider />
       <SolucionesDigitales />
-      <OurServicesScreen />
+      <OurServicesScreen locale={locale} />
       <ServicesCard />
       <SuccessCases />
       <Accordion1 locale={locale} />
