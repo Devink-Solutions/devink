@@ -73,4 +73,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+}
+
+.main-container {
+  gap: 120px;
 }

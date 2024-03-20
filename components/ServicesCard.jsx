@@ -28,7 +28,7 @@ export default function ServicesCard() {
   ]
 
   return (
-    <section className="flex w-full flex-wrap bg-bg-dark py-12">
+    <section className="flex w-full flex-wrap bg-bg-dark">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-semibold leading-9 text-white">
@@ -40,10 +40,10 @@ export default function ServicesCard() {
             {cases.map((caseItem) => (
               <section
                 key={caseItem.id}
-                className="flex w-72 flex-col items-start overflow-hidden text-left
+                className="flex w-72 flex-col items-start text-left
              transition-transform hover:scale-105 lg:w-96"
               >
-                <div className="mb-4 flex h-72 w-full items-center justify-center overflow-hidden rounded-lg lg:h-96 lg:max-h-96">
+                <div className="mb-4 flex h-72 w-full items-center justify-center rounded-lg lg:h-96 lg:max-h-96">
                   <Image
                     src={caseItem.image}
                     width={200}

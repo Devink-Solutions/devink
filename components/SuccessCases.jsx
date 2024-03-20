@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 export default function SuccessCases() {
   const s = useTranslations('SuccessCases')
   return (
-    <div className="relative h-[600px] w-full bg-bg-dark text-white">
+    <div className="relative w-full bg-bg-dark text-white">
       <div className=" mx-auto flex h-full w-full max-w-[1440px]  items-center justify-between">
         <div className="relative h-96 w-full">
           <Image

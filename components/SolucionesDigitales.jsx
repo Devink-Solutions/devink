@@ -7,7 +7,7 @@ export default function SolucionesDigitales() {
 
   return (
 
-    <div className="relative my-20 flex w-full items-center justify-center bg-bg-dark text-white">
+    <div className="relative mt-12 flex w-full items-center justify-center bg-bg-dark text-white">
       <div className=" flex w-full max-w-[1440px] flex-col items-center justify-between">
         <h2 className="mb-6 text-center text-4xl font-semibold text-cyan-bright">Soluciones digitales integradas</h2>
 

@@ -2,12 +2,13 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import InfiniteSlider from './InfiniteSlider'
 
 const Hero = () => {
   const h = useTranslations('Hero')
 
   return (
-    <header className="z-20 flex h-[82vh] w-full bg-bg-dark">
+    <header className="relative z-20 flex h-[82vh] w-full bg-bg-dark">
       <section className="relative mx-auto flex w-full max-w-[1440px] items-center justify-between">
         <div className="mx-auto flex w-[400px] flex-col justify-center  gap-8 text-left  md:ml-10 md:mr-0 md:w-[50%] ">
           <h1 className=" text-2xl font-medium text-white md:text-3xl xl:text-5xl">
@@ -53,6 +54,9 @@ const Hero = () => {
           alt=""
         />
       </figure>
+      <div className="absolute -bottom-16">
+        <InfiniteSlider />
+      </div>
     </header>
   )
 }
