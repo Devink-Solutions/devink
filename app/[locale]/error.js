@@ -3,7 +3,7 @@
 'use client'
 
 const error = () => (
-  <main className="flex h-[50vh] items-center justify-center bg-gray-100">
+  <main className="flex h-full flex-grow items-center justify-center bg-gray-100">
     <section className="flex w-full max-w-4xl flex-col items-center rounded-lg bg-white p-6 shadow-xl">
       <h3 className="mb-4 text-3xl font-bold text-red-600">Error 500</h3>
       <article className="prose w-full text-center">

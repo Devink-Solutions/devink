@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import useObserver from '@/hooks/useObserver'
 
 const Card = ({

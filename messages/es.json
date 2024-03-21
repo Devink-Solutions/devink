@@ -1,0 +1,48 @@
+{
+  "Index": {
+    "title": "Devink - soluciones IT"
+  },
+  "Navbar": {
+    "home": "Proceso Devink",
+    "services": "Servicios",
+    "cases": "Casos de exito",
+    "Faq": "Ayuda",
+    "contact": "Contactar"
+  },
+  "Hero": {
+    "special-word": "Construyendo",
+    "hero-title": "la solucion digital que tu empresa necesita",
+    "about-subtitle": "Optimizamos tu presencia en línea con nuestro equipo de expertos y analíticas avanzadas, te proporcionamos soluciones adaptadas a tus necesidades únicas.",
+    "hero-bottom": "Agendar una llamada"
+  },
+  "Services": {
+    "services-title": "Nuestros servicios",
+    "services-subtitle": "Ofrecemos una amplia gama de servicios de desarrollo web y móvil, incluyendo diseño de interfaces, desarrollo de aplicaciones, e-commerce, y más. Nuestro enfoque se centra en la calidad, el rendimiento y la seguridad.",
+    "services-bottom": "ver todos los servicios"
+  },
+  "Faqs": {
+    "accordion": "Preguntas frecuentes",
+    "question": "{title}",
+    "content": "{content}"
+  },
+  "OurServices": {
+    "section1": "Estrategia personalizada",
+    "title1": "Estrategia personalizada",
+    "description1": "Desde el primer contacto, nos centramos en entender tus necesidades para elaborar un plan que se ajuste a tus objetivos empresariales.",
+    "section2": "Desarrollo",
+    "title2": "Desarrollo",
+    "description2": "Luego de definir el plan, nos enfocamos en desarrollar el software necesario, abarcando desde la interfaz hasta las funcionalidades de backend, según tus especificaciones.",
+    "section3": "Soporte integral",
+    "title3": "Soporte integral",
+    "description3": "Tras el lanzamiento, proporcionamos mantenimiento y apoyo continuo para garantizar el correcto funcionamiento."
+  },
+    "SuccessCases": {
+    "title": "Creatividad y energía en cada idea",
+    "description": "Somos una empresa emergente en el sector IT, comprometida en marcar una diferencia. Nuestro equipo de profesionales combina creatividad y experiencia, ofreciéndote soluciones innovadoras que superan las expectativas. ¿Estás listo para llevar tu negocio al siguiente nivel con soluciones tecnológicas a medida?",
+    "callToAction": "Agenda una reunion con nosotros hoy y comienza a transformar tus ideas en realidad."
+  },
+  "OurServicesScreen": {
+    "question": "{title}",
+    "content": "{content}"
+  }
+}

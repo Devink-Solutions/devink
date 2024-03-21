@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+
 'use client'
 
 /* eslint-disable max-len */
@@ -42,7 +44,7 @@ const OurExperience = () => {
         >
           <div className="">
             <h3 className="pt-2 text-xl font-medium text-cyan sm:pt-4 sm:text-2xl">
-              Creatividad y Energía en Cada Solución:
+              Creatividad y Energía en Cada Soluciónxd:
             </h3>
             <p className=" max-w-[720px] py-2 text-lg font-light sm:py-4">
               Estamos aquí para marcar una diferencia en el mundo tecnológico. Como una empresa emergente en el sector IT, nuestro equipo de profesionales aporta una combinación única de creatividad y especialización técnica.
