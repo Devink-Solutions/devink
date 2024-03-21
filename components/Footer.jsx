@@ -8,8 +8,8 @@ import Image from 'next/image'
 
 const Footer = () => (
   <footer className="flex min-h-[180px] w-full items-center justify-center space-y-6 bg-bg-dark p-10 text-white">
-    <div className="flex w-full max-w-[1440px] flex-col space-y-5 md:flex-row md:justify-between md:space-y-0">
-      <figure className="hidden flex-col items-center md:flex">
+    <div className="flex w-full max-w-[1440px] justify-between space-y-5 md:space-y-0">
+      <figure className="">
         <Image
           width={178}
           height={60}

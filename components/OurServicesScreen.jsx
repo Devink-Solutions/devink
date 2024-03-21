@@ -34,12 +34,12 @@ function Services({ locale }) {
   }, [locale])
   return (
     <div className="relative w-full">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center bg-bg-dark text-white ">
+      <div className="mx-auto flex w-[90%] max-w-[1440px] flex-col items-center bg-bg-dark text-white ">
         <h2 className="mb-8 text-4xl font-semibold">Nuestros servicios</h2>
         <p className="mb-8 text-center text-gray-400">
           Ofrecemos una amplia gama de servicios para ayudarte a alcanzar tus objetivos empresariales.
         </p>
-        <div className="grid max-w-[1440px] grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
+        <div className="grid max-w-[1440px] grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 ">
           {localeData.map((service) => (
             <ServiceCard
               key={uuidv4()}
@@ -51,13 +51,14 @@ function Services({ locale }) {
         </div>
 
       </div>
-      <Image
+      {/* comentada hasta agregar la seccion de casos de exito nuevamente */}
+      {/* <Image
         src="/lightSoluciones.png"
         width={200}
         height={200}
         alt="light"
         className="absolute bottom-[-50%] left-0 h-full w-[300px] rotate-180"
-      />
+      /> */}
     </div>
   )
 }
