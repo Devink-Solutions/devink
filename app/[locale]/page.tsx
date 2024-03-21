@@ -7,7 +7,6 @@ import Hero from '@/components/Hero'
 import OurServicesScreen from '@/components/OurServicesScreen'
 import ContactForm from '@/components/ContactForm'
 import SolucionesDigitales from '@/components/SolucionesDigitales'
-import ServicesCard from '@/components/ServicesCard'
 import SuccessCases from '@/components/SuccessCases'
 import { Accordion1 } from '@/components/Accordion1'
 

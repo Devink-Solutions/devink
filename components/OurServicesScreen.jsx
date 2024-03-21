@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import { v4 as uuidv4 } from 'uuid'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { englishServicesData } from '@/data/englishServicesData'
 import spanishServicesData from '@/data/spanishServicesData'
 import { portugueseServicesData } from '@/data/portugueseServicesData'
