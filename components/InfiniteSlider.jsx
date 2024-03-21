@@ -49,7 +49,8 @@ const InfiniteSlider = () => {
         {slidingItems.map((item) => (
           <div
             key={uuidv4()} // Clave única para cada elemento
-            className="flex h-full min-w-[340px] items-center justify-center rounded-md bg-bg-dark text-white transition-all duration-200 hover:scale-105"
+            className="flex h-full min-w-[340px] items-center
+            justify-center rounded-md bg-bg-dark text-white transition-all duration-200 hover:scale-105"
           >
             <item.IconComponent size={24} className="mr-2 text-current" />
             <span className="text-lg">{item.text}</span>

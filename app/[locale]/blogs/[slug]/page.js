@@ -30,7 +30,7 @@ const Blog = async ({ params }) => {
 
         <h3 className="m-4 text-xl font-semibold md:m-6 md:text-3xl">{blog.attributes.title}</h3>
 
-        <article className="prose prose-sm w-full md:prose-lg lg:prose-xl prose-headings:underline prose-h1:text-xl prose-a:text-blue-600">
+        <article className="prose prose-sm md:prose-lg lg:prose-xl prose-headings:underline prose-h1:text-xl prose-a:text-blue-600 w-full">
           <Markdown>{blog.attributes.content}</Markdown>
         </article>
       </section>

@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 /* eslint-disable no-console */
 /* eslint-disable max-len */
 
@@ -5,7 +6,6 @@
 
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
-import Image from 'next/image'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'

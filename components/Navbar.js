@@ -135,8 +135,8 @@ export default function Navbar() {
           <button
             type="button"
             className="w-fit rounded-full border
-           border-cyan bg-slate-700 px-8  py-2 text-lg font-medium text-bg-dark text-bg-light
-            hover:bg-bg-light hover:text-black"
+           border-cyan bg-slate-700 px-8  py-2 text-lg font-medium text-bg-dark hover:bg-bg-light
+            hover:text-black dark:text-bg-light"
           >
             {n('contact')}
           </button>

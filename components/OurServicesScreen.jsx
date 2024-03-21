@@ -1,13 +1,7 @@
 /* eslint-disable max-len */
 import { v4 as uuidv4 } from 'uuid'
 import { useEffect, useState } from 'react'
-import {
-  FaCode, FaBusinessTime, FaChartBar, FaRobot,
-} from 'react-icons/fa'
-import { SlEnergy } from 'react-icons/sl'
-import { TbColorSwatch } from 'react-icons/tb'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
 import { englishServicesData } from '@/data/englishServicesData'
 import spanishServicesData from '@/data/spanishServicesData'
 import { portugueseServicesData } from '@/data/portugueseServicesData'
