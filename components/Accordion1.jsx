@@ -35,7 +35,7 @@ export function Accordion1({ locale }) {
         <h2 className="text-center text-4xl font-semibold text-white">{f('accordion')}</h2>
       </div>
 
-      <Accordion type="single" collapsible className="z-10 mx-auto w-full max-w-6xl">
+      <Accordion type="single" collapsible className="z-10 mx-auto w-[90%] max-w-6xl">
         {localeData ? localeData.map((item) => (
           <AccordionItem key={item.id} value={item.id} className="mb-2">
             <AccordionTrigger

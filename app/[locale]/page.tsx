@@ -23,7 +23,7 @@ export default function Home({ params: { locale } }) {
       <Hero />
       <SolucionesDigitales />
       <OurServicesScreen locale={locale} />
-      <ServicesCard />
+      {/* <ServicesCard /> */}
       <SuccessCases />
       <Accordion1 locale={locale} />
       <ContactForm />

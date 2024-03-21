@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl'
 export default function SuccessCases() {
   const s = useTranslations('SuccessCases')
   return (
-    <div className="relative w-full bg-bg-dark text-white">
-      <div className=" mx-auto flex h-full w-full max-w-[1440px]  items-center justify-between">
-        <div className="relative h-96 w-full">
+    <div className="relative w-full bg-bg-dark text-white ">
+      <div className=" mx-auto flex h-full w-[90%] max-w-[1440px]  items-center justify-between">
+        <div className="relative hidden h-96 w-full md:block">
           <Image
             src="/amico1.png" // Asegúrate de reemplazar esta ruta con la ruta de tu imagen
             alt="Creatividad y energía en cada idea"
@@ -20,7 +20,7 @@ export default function SuccessCases() {
           <p className=" my-4 max-w-[96%] text-lg">
             {s('description')}
           </p>
-          <h4 className=" my-4 text-2xl">
+          <h4 className=" my-4 text-xl sm:mr-20">
             {s('callToAction')}
           </h4>
           <button
