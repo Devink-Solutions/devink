@@ -67,7 +67,7 @@ export default function SolucionesDigitales() {
 
           {/* Columna de imagen */}
           <Image
-            src="/amico.svg"
+            src="/amico.png"
             width={400}
             height={400}
             alt=""

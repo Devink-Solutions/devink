@@ -8,7 +8,7 @@ export default function SuccessCases() {
       <div className=" mx-auto flex h-full w-[90%] max-w-[1440px]  items-center justify-between">
         <div className="relative hidden h-96 w-full md:block">
           <Image
-            src="/amico1.png" // Asegúrate de reemplazar esta ruta con la ruta de tu imagen
+            src="/creativity.png"
             alt="Creatividad y energía en cada idea"
             layout="fill"
             objectFit="contain" // Cambiar a 'cover' si quieres que la imagen cubra todo el espacio
