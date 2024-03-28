@@ -1,11 +1,10 @@
 /* eslint-disable max-len */
-import { v4 as uuidv4 } from 'uuid'
 import { useEffect, useState } from 'react'
-import { englishServicesData } from '@/data/englishServicesData'
-import spanishServicesData from '@/data/spanishServicesData'
+import { spanishServicesData } from '@/data/spanishServicesData'
 import { portugueseServicesData } from '@/data/portugueseServicesData'
+import { englishServicesData } from '@/data/englishServicesData'
 
-function ServiceCard({ Icon, title, description }) {
+function ServiceCard({ Icon, title, description }: { Icon: any, title: string, description: string }) {
   return (
     <div className="flex flex-col gap-2 rounded-lg bg-blue-dark p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-bg-dark ">
@@ -17,13 +16,15 @@ function ServiceCard({ Icon, title, description }) {
   )
 }
 
-function Services({ locale }) {
+export default function OurServicesScreen({ locale }: { locale: string }) {
   const [localeData, setLocaleData] = useState(spanishServicesData)
 
   useEffect(() => {
     if (locale === 'es') {
       setLocaleData(spanishServicesData)
     }
+    // to-do arreglar estas traducciones, ian arreglo la de sp
+
     if (locale === 'en') {
       setLocaleData(englishServicesData)
     }
@@ -41,7 +42,7 @@ function Services({ locale }) {
         <div className="grid max-w-[1440px] grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 ">
           {localeData.map((service) => (
             <ServiceCard
-              key={uuidv4()}
+              key={service.id}
               Icon={service.icon}
               title={service.title}
               description={service.content}
@@ -61,5 +62,3 @@ function Services({ locale }) {
     </div>
   )
 }
-
-export default Services

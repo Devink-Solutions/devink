@@ -13,7 +13,7 @@ import { spanishFaqsData } from '@/data/spanishFaqsData'
 import { englishFaqsData } from '@/data/englishFaqsData'
 import { portugeseFaqsData } from '@/data/portugeseFaqsData'
 
-export function Accordion1({ locale }) {
+export function FaqsAccordion({ locale }: { locale: string }) {
   const f = useTranslations('Faqs')
   const [localeData, setLocaleData] = useState(spanishFaqsData)
 
@@ -37,14 +37,14 @@ export function Accordion1({ locale }) {
 
       <Accordion type="single" collapsible className="z-10 mx-auto w-[90%] max-w-6xl">
         {localeData ? localeData.map((item) => (
-          <AccordionItem key={item.id} value={item.id} className="mb-2">
+          <AccordionItem key={item.id} value={item.id.toString()} className="mb-2">
             <AccordionTrigger
               className="flex items-center justify-between rounded-md bg-blue-dark px-5 py-3 text-lg font-medium text-white hover:brightness-110"
             >
               {item.title}
             </AccordionTrigger>
             <AccordionContent className="rounded-b-md bg-bg-dark p-6 text-lg font-medium text-gray-300">
-              { item.content }
+              {item.content}
             </AccordionContent>
           </AccordionItem>
         )) : null}
@@ -59,5 +59,3 @@ export function Accordion1({ locale }) {
     </div>
   )
 }
-
-export default Accordion1

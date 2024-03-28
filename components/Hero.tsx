@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <figure class="absolute bottom-0 right-0 h-full w-[40%] overflow-hidden">
+      <figure className="absolute bottom-0 right-0 h-full w-[40%] overflow-hidden">
         <Image
           src="/Vector.png"
           width={680}

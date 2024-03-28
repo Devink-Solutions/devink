@@ -44,4 +44,4 @@ const spanishServicesData = [
   },
 ]
 
-export default spanishServicesData
+export { spanishServicesData }
