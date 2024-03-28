@@ -6,20 +6,24 @@
 
 import emailjs from '@emailjs/browser'
 import React, { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 
 const ContactForm = () => {
   const [send, setSend] = useState(false)
+  const t = useTranslations('Contact')
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    const form = e.currentTarget
+
     emailjs
       .sendForm(
         'service_if4cb5g',
         'template_uqmz0gp',
-        e.target,
+        form,
         'r5e0ULGMbZDfNqhQ3',
       )
       .then(
@@ -30,7 +34,7 @@ const ContactForm = () => {
           console.log(error.text)
         },
       )
-    e.target.reset()
+    form.reset()
   }
 
   return (
@@ -41,37 +45,35 @@ const ContactForm = () => {
       >
 
         <div className="flex flex-col items-center justify-center text-white md:w-1/2">
-          <h2 className="mb-6 items-center text-center text-4xl font-semibold">Transforma tus ideas en realidad. ¡Contáctanos!</h2>
-          <p className="mb-10 pt-4 text-center text-xl font-normal">
-            Comparte más detalles sobre tu idea, proyecto o desafío. Cuanta más información nos proporciones, mejor podremos trabajar para encontrar la solución más adecuada para ti.
-          </p>
+          <h2 className="mb-6 items-center text-center text-4xl font-semibold">{t('title')}</h2>
+          <p className="mb-10 pt-4 text-center text-xl font-normal">{t('paragraph')}</p>
         </div>
         <div className="w-full max-w-lg  bg-transparent sm:p-8 lg:w-1/2">
           <form onSubmit={sendEmail} className="flex flex-col gap-4">
             <Input
               className="w-full rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
               type="text"
-              placeholder="Nombre"
+              placeholder={t('placeholderName')}
               name="name"
               required
             />
             <Input
               className="w-full rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
               type="email"
-              placeholder="Mail"
+              placeholder={t('placeholderMail')}
               name="email"
               required
             />
             <Input
               className="w-full rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
               type="text"
-              placeholder="Asunto"
+              placeholder={t('placeholderAffair')}
               name="affair"
               required
             />
             <Textarea
               className="h-24 w-full resize-none rounded-md border-0 bg-bg-light px-4 py-3 text-bg-dark placeholder:text-gray-400"
-              placeholder="Escribe tu idea o consulta aquí"
+              placeholder={t('placeholderMessage')}
               name="message"
               required
             />

@@ -30,13 +30,13 @@ const Footer = () => (
         <div className="flex flex-col  items-center gap-3">
           <h3 className="text-lg font-medium">Contáctanos:</h3>
           <Link
-            href="mailto:correo@example.com"
+            href="mailto:info@devink.tech"
             className="flex items-center justify-center gap-4 text-base font-semibold transition-colors duration-200 hover:text-blue-400"
             target="_blank"
             rel="noopener noreferrer"
           >
             <IoIosMail />
-            info@devink.dev
+            info@devink.tech
           </Link>
         </div>
       </div>
