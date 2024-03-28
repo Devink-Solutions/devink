@@ -8,11 +8,11 @@ import OurServicesScreen from '@/components/OurServicesScreen'
 import ContactForm from '@/components/ContactForm'
 import SolucionesDigitales from '@/components/SolucionesDigitales'
 import SuccessCases from '@/components/SuccessCases'
-import { Accordion1 } from '@/components/Accordion1'
+import { FaqsAccordion } from '@/components/FaqsAccordion'
 
-export default function Home({ params: { locale } }) {
+export default function Home({ params: { locale } }: { params: { locale: string } }) {
   useEffect(() => {
-    init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY, {
+    init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY!, {
       defaultTracking: true,
     })
   }, [])
@@ -24,7 +24,7 @@ export default function Home({ params: { locale } }) {
       <OurServicesScreen locale={locale} />
       {/* <ServicesCard /> */}
       <SuccessCases />
-      <Accordion1 locale={locale} />
+      <FaqsAccordion locale={locale} />
       <ContactForm />
     </main>
   )

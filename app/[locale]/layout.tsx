@@ -3,7 +3,6 @@ import { Red_Hat_Display as redHatDisplay } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import NextIntlProvider from './NextIntlProvider'
-import './globals.css'
 import Footer from '@/components/Footer'
 
 const RedHatDisplay = redHatDisplay({ subsets: ['latin'] })
@@ -16,7 +15,7 @@ export const metadata = {
 }
 const locales = ['es', 'en', 'pt']
 
-export default async function RootLayout({ children, params: { locale } }) {
+export default async function RootLayout({ children, params: { locale } }: { children: React.ReactNode, params: { locale: string } }) {
   if (!locales.includes(locale as any)) notFound()
   let messages
   try {
@@ -45,3 +44,4 @@ export default async function RootLayout({ children, params: { locale } }) {
     </html>
   )
 }
+
