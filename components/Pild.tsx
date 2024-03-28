@@ -6,7 +6,7 @@ import Image from 'next/image'
 import useModal from '@/hooks/useModal'
 import useLocation from '@/hooks/useLocation'
 
-const Pild = ({ className, direction }) => {
+const Pild = ({ className, direction }: { className?: string, direction?: string }) => {
   const options = [
     {
       flagImg: '/flags/spain.png',
@@ -27,7 +27,7 @@ const Pild = ({ className, direction }) => {
   const { isOpen, toggleDropdown, ref } = useModal()
   const path = useLocation()
 
-  const selectOption = (option) => {
+  const selectOption = (option: { flagImg: string, lang: string }) => {
     if (options.map((opt) => opt.lang).includes(option.lang)) setSelectedOption(option)
     toggleDropdown()
   }

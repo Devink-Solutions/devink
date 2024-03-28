@@ -3,7 +3,6 @@ import {
   FaReact, FaRocket, FaPalette, FaChartLine, FaDesktop,
   FaCode, FaMobileAlt, FaDatabase, FaCloud, FaBug, FaUserShield,
 } from 'react-icons/fa'
-import { v4 as uuidv4 } from 'uuid'
 
 const carouselItems = [
   { IconComponent: FaReact, text: 'Development' },
@@ -48,7 +47,7 @@ const InfiniteSlider = () => {
       >
         {slidingItems.map((item) => (
           <div
-            key={uuidv4()} // Clave única para cada elemento
+            key={item.text}
             className="flex h-full min-w-[340px] items-center
             justify-center rounded-md bg-bg-dark text-white transition-all duration-200 hover:scale-105"
           >

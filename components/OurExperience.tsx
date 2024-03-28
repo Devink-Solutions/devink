@@ -5,19 +5,9 @@
 /* eslint-disable max-len */
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import useObserver from '@/hooks/useObserver'
 import { trackAmplitudeEvent } from '@/utils/AmplitudeTrackers'
 
 const OurExperience = () => {
-  const [ref, inView] = useObserver({ threshold: 0.7 })
-  const [isInView, setIsInView] = useState(false)
-
-  useEffect(() => {
-    if (inView) {
-      setIsInView(true)
-    }
-  }, [inView])
   const handlePress = () => {
     trackAmplitudeEvent('call-scheduled')
   }
@@ -27,7 +17,6 @@ const OurExperience = () => {
       id="contact"
       style={{ scrollMarginTop: '80px' }}
       className=" relative flex h-full w-full items-center justify-center bg-white py-12"
-      ref={ref}
     >
       <div className="flex w-[90%] max-w-[1440px] flex-col items-center justify-center gap-4 lg:flex-row lg:gap-8 ">
         <figure className="w-fit">
@@ -60,7 +49,7 @@ const OurExperience = () => {
               href="https://calendly.com/devinksolutions/30min"
               target="_blank"
               className={`w-fit self-center rounded-full border-[2px] border-cyan-bright bg-blue-dark px-10 py-3 text-center 
-              text-xl font-semibold text-cyan-bright shadow-lg transition-colors duration-300 md:w-[180px] xl:mt-2 xl:self-start ${isInView ? 'animate-shake animate-ease-in-out' : undefined}`}
+              text-xl font-semibold text-cyan-bright shadow-lg transition-colors duration-300 md:w-[180px] xl:mt-2 xl:self-start `}
             >
               Empezar
             </Link>

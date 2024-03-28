@@ -11,7 +11,7 @@ export default function SuccessCases() {
             src="/creativity.png"
             alt="Creatividad y energía en cada idea"
             layout="fill"
-            objectFit="contain" // Cambiar a 'cover' si quieres que la imagen cubra todo el espacio
+            objectFit="contain"
             className=""
           />
         </div>

@@ -5,7 +5,7 @@
 'use client'
 
 import emailjs from '@emailjs/browser'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button'
 const ContactForm = () => {
   const [send, setSend] = useState(false)
 
-  function sendEmail(e) {
+  function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     emailjs
       .sendForm(

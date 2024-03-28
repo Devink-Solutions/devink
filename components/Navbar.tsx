@@ -32,9 +32,7 @@ export default function Navbar() {
           </button>
         </nav>
         <nav
-          className={`fixed ${
-            isOpen ? 'translate-x-0' : 'translate-x-[100%]'
-          } right-0 top-[80px]
+          className={`fixed ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'} right-0 top-[80px]
        z-[30] flex w-[200px] flex-col rounded-bl-2xl bg-bg-dark py-2 text-white brightness-125 transition-transform duration-300`}
         >
           <Link href="/#services">
