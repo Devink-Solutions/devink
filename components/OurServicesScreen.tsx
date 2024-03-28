@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import { useEffect, useState } from 'react'
-import spanishServicesData from '@/data/spanishServicesData'
+import { spanishServicesData } from '@/data/spanishServicesData'
+import { portugueseServicesData } from '@/data/portugueseServicesData'
+import { englishServicesData } from '@/data/englishServicesData'
 
 function ServiceCard({ Icon, title, description }: { Icon: any, title: string, description: string }) {
   return (
@@ -23,12 +25,12 @@ export default function OurServicesScreen({ locale }: { locale: string }) {
     }
     // to-do arreglar estas traducciones, ian arreglo la de sp
 
-    // if (locale === 'en') {
-    //   setLocaleData(englishServicesData)
-    // }
-    // if (locale === 'pt') {
-    //   setLocaleData(portugueseServicesData)
-    // }
+    if (locale === 'en') {
+      setLocaleData(englishServicesData)
+    }
+    if (locale === 'pt') {
+      setLocaleData(portugueseServicesData)
+    }
   }, [locale])
   return (
     <div className="relative w-full">

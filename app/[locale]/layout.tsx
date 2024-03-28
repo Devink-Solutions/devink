@@ -1,9 +1,11 @@
 /* eslint-disable max-len */
+import React from 'react'
 import { Red_Hat_Display as redHatDisplay } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import NextIntlProvider from './NextIntlProvider'
 import Footer from '@/components/Footer'
+import './globals.css'
 
 const RedHatDisplay = redHatDisplay({ subsets: ['latin'] })
 
@@ -11,7 +13,7 @@ export const metadata = {
   title: 'Devink - Soluciones IT',
   description: 'En Devink, ofrecemos soluciones IT personalizadas, análisis de datos avanzados, y desarrollo de aplicaciones móviles para impulsar el crecimiento empresarial.Descubre cómo nuestra tecnología puede transformar tu negocio.',
   keywords: 'soluciones IT, analytics, desarrollo móvil, transformación digital, tecnología empresarial',
-  author: 'Devink Solutions',
+  authors: [{ name: 'Devink Solutions' }],
 }
 const locales = ['es', 'en', 'pt']
 
@@ -44,4 +46,3 @@ export default async function RootLayout({ children, params: { locale } }: { chi
     </html>
   )
 }
-

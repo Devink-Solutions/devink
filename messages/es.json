@@ -45,5 +45,13 @@
   "OurServicesScreen": {
     "question": "{title}",
     "content": "{content}"
+  },
+  "Contact": {
+   "title": "Transforma tus ideas en realidad. ¡Contáctanos!",
+   "paragraph": "Comparte más detalles sobre tu idea, proyecto o desafío. Cuanta más información nos proporciones, mejor podremos trabajar para encontrar la solución más adecuada para ti.",
+   "placeholderName": "Nombre",
+   "placeholderMail": "Email",
+   "placeholderAffair": "Asunto",
+   "placeholderMessage": "Mensaje..." 
   }
 }
