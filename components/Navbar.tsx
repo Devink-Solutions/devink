@@ -138,14 +138,15 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="flex flex-row space-x-4">
-          <button
-            type="button"
+          <Link
+            href="https://calendly.com/devinksolutions/30min"
+            target="_blank"
             className="w-fit rounded-full border
            border-bg-light bg-slate-700 px-8  py-2 text-lg font-medium text-bg-light hover:bg-bg-light
             hover:text-black dark:text-bg-light"
           >
             {n('contact')}
-          </button>
+          </Link>
 
           <div className="relative flex flex-row gap-2">
             <Pild />

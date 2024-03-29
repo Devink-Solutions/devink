@@ -20,7 +20,8 @@ const Hero = () => {
             {h('about-subtitle')}
           </h4>
           <Link
-            href="#contact"
+            href="https://calendly.com/devinksolutions/30min"
+            target="_blank"
             className=" mt-2 w-fit rounded-full border border-[#6fffe9]
            bg-transparent px-4 py-2 text-xl font-medium text-[#6FFFE9]  md:inline-flex md:px-8"
           >
