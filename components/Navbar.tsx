@@ -80,11 +80,16 @@ export default function Navbar() {
       <nav className="relative  top-0 z-50 hidden h-20 w-full flex-row items-center
       justify-between border-b-2 border-bg-dark bg-bg-dark px-12 text-white shadow-lg lg:flex"
       >
-        <div className="hidden cursor-pointer pt-2 lg:inline-flex">
+        <Link
+          href="/"
+          className="hidden cursor-pointer pt-2 lg:inline-flex"
+        >
           <Image src="/logo.svg" alt="logo" width={180} height={180} priority />
-        </div>
-
-        <div className="inline-flex cursor-pointer pt-2 md:hidden">
+        </Link>
+        <Link
+          href="/"
+          className="inline-flex cursor-pointer pt-2 md:hidden"
+        >
           <Image
             src="/logo-without-name.svg"
             alt="logo"
@@ -92,7 +97,7 @@ export default function Navbar() {
             height={100}
             priority
           />
-        </div>
+        </Link>
         <div className="">
           <ul className="flex w-full grow items-center justify-end gap-4 text-xl">
             <li>

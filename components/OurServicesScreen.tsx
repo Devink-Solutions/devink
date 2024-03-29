@@ -1,3 +1,5 @@
+'use client'
+
 /* eslint-disable max-len */
 import { useEffect, useState } from 'react'
 import { spanishServicesData } from '@/data/spanishServicesData'

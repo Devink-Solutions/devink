@@ -1,31 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getStudyCasesBlog } from '@/app/ghost/studyCasesBlogs'
 
-export default function ServicesCard() {
-  const cases = [
-    {
-      id: 1,
-      title: 'Pomodoro Timer',
-      description: 'Texto de dos a tres renglones que describe la funcionalidad de la app',
-      image: '/pomodoroApp.png',
-      link: '/',
-    },
-    {
-      id: 2,
-      title: 'Reynaldo & Coimbra',
-      description: 'Texto de dos a tres renglones que describe la funcionalidad de la app',
-      image: '/r&c.png',
-      link: '/',
-    },
-    {
-      id: 3,
-      title: 'App',
-      description: 'Texto de dos a tres renglones que describe la funcionalidad de la app',
-      image: '/krWeb.png',
-      link: '/',
-    },
-  ]
+export default async function ServicesCard({ locale }: { locale: string }) {
+  const blogPosts = await getStudyCasesBlog(locale)
+
+  if (!blogPosts?.length) return null
 
   return (
     <section className="flex w-full flex-wrap bg-bg-dark">
@@ -37,25 +18,28 @@ export default function ServicesCard() {
         </div>
         <div className="mt-10">
           <div className="flex w-full flex-wrap justify-center gap-8">
-            {cases.map((caseItem) => (
+            {blogPosts.map((blog) => (
               <section
-                key={caseItem.id}
+                key={blog.id}
                 className="flex w-72 flex-col items-start text-left
              transition-transform hover:scale-105 lg:w-96"
               >
                 <div className="mb-4 flex h-72 w-full items-center justify-center rounded-lg lg:h-96 lg:max-h-96">
-                  <Image
-                    src={caseItem.image}
-                    width={200}
-                    height={200}
-                    alt={caseItem.title}
-                    className="aspect-video h-full w-full object-cover object-center"
-                  />
+                  {blog.feature_image
+                    && (
+                      <Image
+                        src={blog?.feature_image}
+                        width={200}
+                        height={200}
+                        alt="featured image"
+                        className="aspect-video h-full w-full object-cover object-center"
+                      />
+                    )}
                 </div>
-                <h3 className="text-lg font-medium leading-6 text-white">{caseItem.title}</h3>
-                <p className="mt-2 text-base text-white">{caseItem.description}</p>
+                <h3 className="text-lg font-medium leading-6 text-white">{blog.title}</h3>
+                <p className="mt-2 text-base text-white">{blog.excerpt}</p>
                 <Link
-                  href={caseItem.link}
+                  href={`/${locale}/${blog.slug}`}
                   passHref
                   className="mt-3 flex cursor-pointer items-center "
                 >
