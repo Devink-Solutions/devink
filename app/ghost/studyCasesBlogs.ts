@@ -23,10 +23,9 @@ const api = new GhostContentAPI(
           console.error('Fetch error:', error)
         })
     },
-
   },
 )
 
-export async function getGhostBlogs() {
-  return api.posts.browse({ limit: 'all' }).catch((e) => { console.log(e) })
+export async function getStudyCasesBlog(locale: string) {
+  return api.posts.browse({ filter: `tag:study-cases+tag:${locale}`, limit: 'all' }).catch((e) => { console.log(e) })
 }

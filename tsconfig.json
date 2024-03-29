@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ghost/blogs.ts", "app/ghost/blogBySlug.ss"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ghost/studyCasesBlogs.ts", "app/ghost/blogBySlug.ss"],
   "exclude": ["node_modules"]
 }

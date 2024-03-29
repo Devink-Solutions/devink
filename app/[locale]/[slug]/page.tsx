@@ -1,15 +1,19 @@
+/* eslint-disable react/no-danger */
 import Image from 'next/image'
 import { getGhostBlogsBySlug } from '@/app/ghost/blogBySlug'
 
-const Blog = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params
-  const blog = await getGhostBlogsBySlug(slug)
+const Blog = async ({ params }: { params: { locale: string, slug: string } }) => {
+  const { slug, locale } = params
+  const blogArr = await getGhostBlogsBySlug(slug, locale)
 
-  if (!blog) return null
+  if (blogArr?.length === undefined) return null
+
+  const blog = blogArr[0]
+
   return (
     <main className="flex h-full flex-col items-center justify-center bg-white">
       <section className="flex w-full   max-w-4xl flex-col items-center justify-center bg-white p-4 shadow-md md:p-8">
-        {blog.feature_image
+        {blog?.feature_image
           && (
             <figure className="mb-2 flex w-full max-w-[800px] flex-col overflow-hidden">
               <Image

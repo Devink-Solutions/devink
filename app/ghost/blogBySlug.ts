@@ -27,6 +27,10 @@ const api = new GhostContentAPI(
   },
 )
 
-export async function getGhostBlogsBySlug(slug: string) {
-  return api.posts.read({ slug }, { formats: ['html', 'plaintext'] }).catch((e) => { console.log(e) })
+export async function getGhostBlogsBySlug(slug: string, locale: string) {
+  return api.posts.browse({
+    filter: `slug:${slug}+tag:${locale}`,
+    limit: 1,
+    formats: ['html'],
+  }).catch((e) => { console.log(e) })
 }

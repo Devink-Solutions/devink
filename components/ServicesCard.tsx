@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getGhostBlogs } from '@/app/ghost/blogs'
+import { getStudyCasesBlog } from '@/app/ghost/studyCasesBlogs'
 
 export default async function ServicesCard({ locale }: { locale: string }) {
-  const blogPosts = await getGhostBlogs()
+  const blogPosts = await getStudyCasesBlog(locale)
 
   if (!blogPosts?.length) return null
 
@@ -27,13 +27,13 @@ export default async function ServicesCard({ locale }: { locale: string }) {
                 <div className="mb-4 flex h-72 w-full items-center justify-center rounded-lg lg:h-96 lg:max-h-96">
                   {blog.feature_image
                     && (
-                    <Image
-                      src={blog?.feature_image}
-                      width={200}
-                      height={200}
-                      alt="featured image"
-                      className="aspect-video h-full w-full object-cover object-center"
-                    />
+                      <Image
+                        src={blog?.feature_image}
+                        width={200}
+                        height={200}
+                        alt="featured image"
+                        className="aspect-video h-full w-full object-cover object-center"
+                      />
                     )}
                 </div>
                 <h3 className="text-lg font-medium leading-6 text-white">{blog.title}</h3>
