@@ -124,7 +124,7 @@ export default function Navbar() {
                 className="hidden p-2  font-light sm:inline-flex "
                 href="/#blogs"
               >
-                {n('Blogs')}
+                {/* {n('Blogs')} */}
               </Link>
             </li>
             <li>
