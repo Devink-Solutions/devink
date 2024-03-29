@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar'
 import NextIntlProvider from './NextIntlProvider'
 import Footer from '@/components/Footer'
 import './globals.css'
+import AmplitudeProvider from '../providers/AmplitudeProvider'
 
 const RedHatDisplay = redHatDisplay({ subsets: ['latin'] })
 
@@ -30,18 +31,20 @@ export default async function RootLayout({ children, params: { locale } }: { chi
   return (
     <html lang={locale}>
       <body className={`${RedHatDisplay.className} flex flex-col overflow-x-hidden bg-blue-dark`}>
-        <NextIntlProvider
-          locale={locale}
-          messages={messages}
-          timeZone="America/Montevideo"
-          now={new Date()}
-        >
-          <Navbar />
-          <div className="flex-1 grow">
-            {children}
-          </div>
-          <Footer />
-        </NextIntlProvider>
+        <AmplitudeProvider>
+          <NextIntlProvider
+            locale={locale}
+            messages={messages}
+            timeZone="America/Montevideo"
+            now={new Date()}
+          >
+            <Navbar />
+            <div className="flex-1 grow">
+              {children}
+            </div>
+            <Footer />
+          </NextIntlProvider>
+        </AmplitudeProvider>
       </body>
     </html>
   )
