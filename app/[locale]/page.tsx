@@ -5,7 +5,6 @@ import ContactForm from '@/components/ContactForm'
 import SolucionesDigitales from '@/components/SolucionesDigitales'
 import SuccessCases from '@/components/SuccessCases'
 import { FaqsAccordion } from '@/components/FaqsAccordion'
-import { getGhostBlogs } from '../ghost/blogs'
 import ServicesCard from '@/components/ServicesCard'
 
 export default async function Home({ params: { locale } }: { params: { locale: string } }) {

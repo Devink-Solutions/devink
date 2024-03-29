@@ -8,17 +8,17 @@ export default function SuccessCases() {
   const s = useTranslations('SuccessCases')
   return (
     <div className="relative w-full bg-bg-dark text-white ">
-      <div className=" mx-auto flex h-full w-[90%] max-w-[1440px] gap-20 items-center justify-between">
+      <div className=" mx-auto flex h-full w-[90%] max-w-[1440px] items-center justify-between gap-20">
         <div className="relative hidden  md:block">
           <Image
             src="/creativity.png"
             width={400}
             height={400}
             alt="Creatividad y energía en cada idea"
-            className="object-contain ml-8"
+            className="ml-8 object-contain"
           />
         </div>
-        <div className="flex h-full sm:w-[60%] flex-col items-start justify-center">
+        <div className="flex h-full flex-col items-start justify-center sm:w-[60%]">
           <h2 className="mb-4 text-4xl font-semibold text-cyan-bright">{s('title')}</h2>
           <p className=" my-4 max-w-[96%] text-lg">
             {s('description')}
