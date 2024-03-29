@@ -22,7 +22,7 @@ export default async function ServicesCard({ locale }: { locale: string }) {
               <section
                 key={blog.id}
                 className="flex w-72 flex-col items-start text-left
-             transition-transform hover:scale-105 lg:w-96"
+             transition-transform lg:w-96"
               >
                 <div className="mb-4 flex h-72 w-full items-center justify-center rounded-lg lg:h-96 lg:max-h-96">
                   {blog.feature_image
@@ -32,7 +32,7 @@ export default async function ServicesCard({ locale }: { locale: string }) {
                         width={200}
                         height={200}
                         alt="featured image"
-                        className="aspect-video h-full w-full object-cover object-center"
+                        className="aspect-video h-full w-full rounded-xl object-cover object-center"
                       />
                     )}
                 </div>
