@@ -42,7 +42,7 @@ export default async function ServicesCard({ locale }: { locale: string }) {
                       )}
                   </div>
                   <h3 className="text-lg font-medium leading-6 text-white">{blog.title}</h3>
-                  <p className="mt-2 text-base text-white">{blog.excerpt}</p>
+                  <p className="mt-2 line-clamp-3 text-base text-white">{blog.excerpt}</p>
                   <Link
                     href={`/${locale}/${blog.slug}`}
                     passHref

@@ -28,7 +28,7 @@ const Blog = async ({ params }: { params: { locale: string, slug: string } }) =>
         <h3 className="m-4 text-xl font-semibold md:m-6 md:text-3xl">{blog.title}</h3>
         <article className="prose prose-sm md:prose-lg lg:prose-xl prose-headings:underline prose-h1:text-xl prose-a:text-blue-600 w-full">
           {blog.html
-            && <div dangerouslySetInnerHTML={{ __html: blog.html }} />}
+            && <div className="" dangerouslySetInnerHTML={{ __html: blog.html }} />}
         </article>
       </section>
     </main>
