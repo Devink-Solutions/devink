@@ -1,0 +1,57 @@
+{
+  "Index": {
+    "title": "Devink - IT solutions"
+  },
+  "Navbar": {
+    "home": "Devink Process",
+    "services": "Services",
+    "cases": "Success Cases",
+    "Blogs": "Blog",
+    "Faq": "Help",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "special-word": "Building",
+    "hero-title": "the digital solution your company needs",
+    "about-subtitle": "We optimize your online presence with our team of experts and advanced analytics, providing customized solutions to your unique needs.",
+    "hero-bottom": "Schedule a call"
+  },
+  "Services": {
+    "services-title": "Our Services",
+    "services-subtitle": "We offer a wide range of web and mobile development services, including interface design, application development, e-commerce, and more. Our focus is on quality, performance, and security.",
+    "services-bottom": "view all services"
+  },
+  "Faqs": {
+    "accordion": "Frequently Asked Questions",
+    "question": "{title}",
+    "content": "{content}"
+  },
+  "OurServices": {
+    "section1": "Customized Strategy",
+    "title1": "Customized Strategy",
+    "description1": "From the first contact, we focus on understanding your needs to develop a plan that fits your business objectives.",
+    "section2": "Development",
+    "title2": "Development",
+    "description2": "After defining the plan, we focus on developing the necessary software, covering everything from the interface to backend functionalities, according to your specifications.",
+    "section3": "Integral Support",
+    "title3": "Integral Support",
+    "description3": "After launch, we provide ongoing maintenance and support to ensure proper functioning."
+  },
+  "SuccessCases": {
+    "title": "Creativity and Energy in Every Idea",
+    "description": "We are an emerging company in the IT sector, committed to making a difference. Our team of professionals combines creativity and experience, offering you innovative solutions that exceed expectations. Are you ready to take your business to the next level with tailor-made technological solutions?",
+    "callToAction": "Schedule a meeting with us today and start transforming your ideas into reality."
+  },
+  "OurServicesScreen": {
+    "question": "{title}",
+    "content": "{content}"
+  },
+  "Contact": {
+   "title": "Transform your ideas into reality. Contact us!",
+   "paragraph": "Share more details about your idea, project or challenge. The more information you provide us, the better we can work to find the most suitable solution for you.",
+   "placeholderName": "Name",
+   "placeholderMail": "Email",
+   "placeholderAffair": "Affair",
+   "placeholderMessage": "Message..."
+  }
+}
