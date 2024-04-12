@@ -15,27 +15,27 @@ export default function Navbar() {
   const n = useTranslations('Navbar')
   return (
     <>
-      <div ref={ref} className="sticky   top-0 z-50 flex lg:hidden ">
-        <nav className="relative flex h-20 w-full flex-row items-center justify-between bg-bg-dark px-10  lg:px-12 ">
+      <div ref={ref} className="sticky top-0 z-50 flex lg:hidden ">
+        <nav className="relative flex h-16 w-full flex-row items-center justify-between bg-bg-dark px-10  lg:px-12  ">
           <Link href="/" className="m-2 inline-flex cursor-pointer  ">
             <Image
               src="/logo-without-name.svg"
               alt="logo"
-              width={60}
-              height={60}
+              width={50}
+              height={50}
               priority
             />
           </Link>
 
           <button type="button" onClick={toggleDropdown}>
-            <AiOutlineMenu size={40} color="cyan" />
+            <AiOutlineMenu size={30} color="cyan" />
           </button>
         </nav>
         <nav
-          className={`fixed ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'} right-0 top-[80px]
+          className={`fixed ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'} right-0 top-[64px]
        z-[30] flex w-[200px] flex-col rounded-bl-2xl bg-bg-dark py-2 text-white brightness-125 transition-transform duration-300`}
         >
-          <Link href="/#services">
+          <Link href="/services">
             <button
               type="button"
               className="flex w-full items-center px-4 py-2"
@@ -45,7 +45,7 @@ export default function Navbar() {
               <span className="text-xl font-medium">{n('home')}</span>
             </button>
           </Link>
-          <Link href="/#contact">
+          <Link href="/contact">
 
             <button
               type="button"
@@ -55,7 +55,7 @@ export default function Navbar() {
               <span className="text-xl font-medium">{n('services')}</span>
             </button>
           </Link>
-          <Link href="/#blogs">
+          <Link href="/cases">
 
             <button
               type="button"
@@ -65,7 +65,7 @@ export default function Navbar() {
               <span className="text-xl font-medium">{n('cases')}</span>
             </button>
           </Link>
-          <Link href="/#faq">
+          <Link href="/faq">
 
             <button
               type="button"
@@ -119,7 +119,7 @@ export default function Navbar() {
             <li>
               <Link
                 className=" p-2  font-light "
-                href="/#contact"
+                href="/#cases"
               >
                 {n('cases')}
               </Link>
@@ -135,7 +135,7 @@ export default function Navbar() {
             <li>
               <Link
                 className="hidden p-2  font-light sm:inline-flex "
-                href="/#blogs"
+                href="/#help"
               >
                 {n('Faq')}
               </Link>

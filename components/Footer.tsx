@@ -10,17 +10,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const Footer = () => (
-  <footer className="flex min-h-[180px] w-full flex-col items-center justify-center bg-bg-dark p-10 text-white">
-    <div className="flex w-full flex-col items-center justify-center gap-8 md:grid md:grid-cols-3">
-      <div className="flex flex-col items-center gap-6 ">
+  <footer className="flex min-h-[180px] w-full flex-col items-center justify-center bg-bg-dark p-6 text-white md:p-10">
+    <div className="flex w-full flex-col items-center justify-center gap-4 md:gap-8 md:grid md:grid-cols-3">
+      <div className="flex flex-col items-center gap-4 md:gap-6 ">
         <Image
           width={200}
           height={100}
           src="/logoFooter.png"
           alt="logo"
-          className="mt-4 w-40"
+          className=" mt-4 w-32 md:w-40"
         />
-        <p className="flex gap-4 text-center text-sm font-bold">
+        <p className="flex gap-2 text-center text-sm font-bold md:gap-4">
           Desde la web para el mundo
           <FaRocket className="text-2xl text-cyan-bright" />
         </p>
@@ -40,9 +40,9 @@ const Footer = () => (
           </Link>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-3">
-        <h3 className="text-lg font-medium">Síguenos:</h3>
-        <div className="flex  gap-5">
+      <div className="flex flex-col items-center justify-center gap-1">
+        <h3 className="text-lg  font-medium">Síguenos:</h3>
+        <div className="flex gap-5">
           <Link
             href="https://www.linkedin.com/company/devink-solutions/"
             className="text-2xl font-semibold transition-colors duration-200 hover:text-blue-400"
@@ -64,7 +64,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <hr className="my-10 w-full  max-w-[1440px] border border-slate-700 shadow-xl  shadow-white" />
+    <hr className="my-6 w-full max-w-[1440px]  border border-slate-700 shadow-xl shadow-white  md:my-10" />
 
     <div className="mb-4 flex w-full items-center justify-center gap-1 text-white">
       &#169; 2024, This website is made with

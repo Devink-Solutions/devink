@@ -18,12 +18,19 @@ export default function SuccessCases() {
             className="ml-8 object-contain"
           />
         </div>
-        <div className="flex h-full flex-col items-start justify-center sm:w-[60%]">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-4 text-center md:w-[60%] md:items-start md:text-start">
           <h2 className="mb-4 text-4xl font-semibold text-cyan-bright">{s('title')}</h2>
-          <p className=" my-4 max-w-[96%] text-lg">
+          <Image
+            src="/creativity.png"
+            width={300}
+            height={300}
+            alt="Creatividad y energía en cada idea"
+            className="object-contain md:hidden"
+          />
+          <p className=" text-pretty text-lg">
             {s('description')}
           </p>
-          <h4 className=" my-4 text-xl sm:mr-20">
+          <h4 className=" text-pretty text-xl sm:mr-20">
             {s('callToAction')}
           </h4>
           <Link

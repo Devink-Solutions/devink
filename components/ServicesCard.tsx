@@ -12,7 +12,7 @@ export default async function ServicesCard({ locale }: { locale: string }) {
   if (!blogPosts?.length) return null
 
   return (
-    <section className="flex w-full bg-bg-dark">
+    <section id="cases" className="flex w-full bg-bg-dark">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-semibold leading-9 text-white">
