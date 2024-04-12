@@ -27,10 +27,10 @@ export default function SuccessCases() {
             alt="Creatividad y energía en cada idea"
             className="object-contain md:hidden"
           />
-          <p className=" text-pretty text-lg">
+          <p className=" text-pretty text-start text-lg">
             {s('description')}
           </p>
-          <h4 className=" text-pretty text-xl sm:mr-20">
+          <h4 className=" text-pretty text-start text-xl sm:mr-20">
             {s('callToAction')}
           </h4>
           <Link

@@ -8,7 +8,7 @@ import { englishServicesData } from '@/data/englishServicesData'
 
 function ServiceCard({ Icon, title, description }: { Icon: any, title: string, description: string }) {
   return (
-    <div className="flex flex-col gap-2 rounded-lg bg-blue-dark p-3 shadow-md transition-shadow duration-300 hover:shadow-lg sm:p-6">
+    <div className="flex flex-col gap-2 rounded-2xl bg-blue-dark p-3 shadow-md transition-shadow duration-300 hover:shadow-lg sm:p-6">
       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-bg-dark ">
         <Icon className=" h-5 w-5 object-contain object-center text-white" />
       </div>

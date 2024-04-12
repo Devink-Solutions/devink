@@ -10,7 +10,7 @@ const Hero = () => {
   const h = useTranslations('Hero')
 
   return (
-    <header className="relative z-20  flex  h-[82vh] w-full bg-bg-dark">
+    <header className="relative z-20  flex  sm:h-[82vh] w-full bg-bg-dark">
       <section className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center px-0 sm:px-6 md:flex-row md:justify-between">
         <div className="mx-auto flex w-[375px] flex-col items-center justify-center gap-6 text-left sm:w-[400px]  md:ml-10 md:mr-0 md:w-[50%] ">
           <div className="flex w-full flex-row items-center justify-center text-center md:text-start">

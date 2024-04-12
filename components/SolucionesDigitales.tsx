@@ -80,10 +80,10 @@ export default function SolucionesDigitales() {
         </div>
         <Image
           src="/amico.png"
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           alt=""
-          className="inline-flex px-8 lg:hidden"
+          className="inline-flex px-8 pt-6 lg:hidden"
         />
 
       </div>
