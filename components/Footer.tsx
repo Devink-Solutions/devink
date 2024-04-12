@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 const Footer = () => (
   <footer className="flex min-h-[180px] w-full flex-col items-center justify-center bg-bg-dark p-6 text-white md:p-10">
-    <div className="flex w-full flex-col items-center justify-center gap-4 md:gap-8 md:grid md:grid-cols-3">
+    <div className="flex w-full flex-col items-center justify-center gap-4 md:grid md:grid-cols-3 md:gap-8">
       <div className="flex flex-col items-center gap-4 md:gap-6 ">
         <Image
           width={200}
