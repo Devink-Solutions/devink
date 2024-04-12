@@ -30,7 +30,7 @@ export function FaqsAccordion({ locale }: { locale: string }) {
   }, [locale])
 
   return (
-    <div className="relative flex w-full flex-col items-center justify-center bg-bg-dark">
+    <div id="help" className="relative flex w-full flex-col items-center justify-center bg-bg-dark">
       <div className="mb-10">
         <h2 className="text-center text-4xl font-semibold text-white">{f('accordion')}</h2>
       </div>

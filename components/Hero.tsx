@@ -11,24 +11,42 @@ const Hero = () => {
 
   return (
     <header className="relative z-20  flex  h-[82vh] w-full bg-bg-dark">
-      <section className="relative mx-auto flex w-full max-w-[1440px] flex-col-reverse items-center px-6 sm:px-0 md:flex-row md:justify-between">
-        <div className="mx-auto flex w-[400px] flex-col justify-center  gap-8 text-left   md:ml-10 md:mr-0 md:w-[50%] ">
-          <h1 className=" text-2xl font-medium text-white md:text-3xl xl:text-5xl">
-            <span className="text-cyan-bright">{h('special-word')}</span>
-            {' '}
-            {h('hero-title')}
-          </h1>
-          <h4 className="text-base text-white md:text-lg xl:text-xl">
+      <section className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center px-0 sm:px-6 md:flex-row md:justify-between">
+        <div className="mx-auto flex w-[375px] flex-col items-center justify-center gap-6 text-left sm:w-[400px]  md:ml-10 md:mr-0 md:w-[50%] ">
+          <div className="flex w-full flex-row items-center justify-center text-center md:text-start">
+            <h1 className=" text-pretty text-2xl  font-medium text-white  md:text-3xl xl:text-5xl">
+              <span className=" text-cyan-bright">{h('special-word')}</span>
+              {' '}
+              {h('hero-title')}
+            </h1>
+          </div>
+          <h4 className="text-center text-base text-white md:text-start md:text-lg xl:text-xl">
             {h('about-subtitle')}
           </h4>
           <Link
             href="https://calendly.com/devinksolutions/30min"
             target="_blank"
-            className=" mt-2 w-fit rounded-full border border-[#6fffe9]
-           bg-transparent px-4 py-2 text-xl font-medium text-[#6FFFE9]  md:inline-flex md:px-8"
+            className=" mt-2 hidden w-fit rounded-full border
+           border-[#6fffe9] bg-transparent px-4 py-2 text-xl font-medium text-[#6FFFE9] md:inline-flex md:px-8"
           >
             {h('hero-bottom')}
           </Link>
+        </div>
+        <div className="mt-6 flex h-[60%] w-[60%]  lg:hidden">
+          <Image
+            src="/phones/phone1xs.png"
+            width={320}
+            height={320}
+            className=" relative -left-10 bottom-0 z-40 object-contain object-bottom sm:left-4 md:left-8 "
+            alt=""
+          />
+          <Image
+            src="/phones/phone2xs.png"
+            width={320}
+            height={320}
+            className="relative -left-12 bottom-0 z-30 object-contain sm:-left-2 sm:left-0 md:-left-12 "
+            alt=""
+          />
         </div>
         <div className="absolute bottom-0 right-[20%] hidden h-[70vh] w-[300px] lg:inline-flex ">
           <Image
@@ -46,25 +64,27 @@ const Hero = () => {
             alt=""
           />
         </div>
-        <div className="relative z-40 h-[40vh] w-[200px] md:hidden">
-          <Image
-            src="/phones/phone1.png"
-            width={150}
-            height={150}
-            className=" absolute bottom-20 right-20 z-40 object-contain object-bottom "
-            alt=""
-          />
-          <Image
-            src="/phones/phone2.png"
-            width={150}
-            height={150}
-            className="absolute bottom-20 left-20 z-30 object-contain "
-            alt=""
-          />
-        </div>
-      </section>
+        <Link
+          href="https://calendly.com/devinksolutions/30min"
+          target="_blank"
+          className=" mt-2 mt-6 flex w-fit rounded-full
+           border border-[#6fffe9] bg-transparent px-4 py-2 text-lg font-medium text-[#6FFFE9] md:hidden  md:px-8 md:text-xl"
+        >
+          {h('hero-bottom')}
+        </Link>
 
-      <figure className="absolute bottom-0 right-0 h-full w-[40%] overflow-hidden">
+      </section>
+      <figure className="absolute bottom-0 left-10 block h-full w-full overflow-hidden md:hidden">
+        <Image
+          src="/Vector.png"
+          width={1280}
+          height={1280}
+          className="absolute right-0 top-0 z-10"
+          alt=""
+        />
+      </figure>
+
+      <figure className="absolute bottom-0 right-0 hidden h-full w-[40%] overflow-hidden md:block">
         <Image
           src="/Vector.png"
           width={680}

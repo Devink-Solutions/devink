@@ -45,8 +45,8 @@ const ContactForm = () => {
       >
 
         <div className="flex flex-col items-center justify-center text-white md:w-1/2">
-          <h2 className="mb-6 items-center text-center text-4xl font-semibold">{t('title')}</h2>
-          <p className="mb-10 pt-4 text-center text-xl font-normal">{t('paragraph')}</p>
+          <h2 className="mb-6 items-center text-center text-2xl font-semibold md:text-4xl">{t('title')}</h2>
+          <p className="mb-10 text-pretty pt-4 text-center text-base font-normal md:text-xl">{t('paragraph')}</p>
         </div>
         <div className="w-full max-w-lg  bg-transparent sm:p-8 lg:w-1/2">
           <form onSubmit={sendEmail} className="flex flex-col gap-4">
