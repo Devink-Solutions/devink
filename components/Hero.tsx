@@ -44,7 +44,7 @@ const Hero = () => {
             src="/phones/phone2xs.png"
             width={320}
             height={320}
-            className="relative -left-12 bottom-0 z-30 object-contain sm:-left-2 sm:left-0 md:-left-12 "
+            className="relative -left-12 bottom-0 z-30 object-contain sm:-left-2  md:-left-12 "
             alt=""
           />
         </div>
@@ -67,7 +67,7 @@ const Hero = () => {
         <Link
           href="https://calendly.com/devinksolutions/30min"
           target="_blank"
-          className=" mt-2 mt-6 flex w-fit rounded-full
+          className=" mt-2  flex w-fit rounded-full
            border border-[#6fffe9] bg-transparent px-4 py-2 text-lg font-medium text-[#6FFFE9] md:hidden  md:px-8 md:text-xl"
         >
           {h('hero-bottom')}
