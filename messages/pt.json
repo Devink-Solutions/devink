@@ -27,7 +27,7 @@
     "content": "{content}"
   },
   "OurServices": {
-    "section1": "Estratégia personalizada",
+    "section1": "soluções digitais integradas",
     "title1": "Estratégia personalizada",
     "description1": "Desde o primeiro contato, nos concentramos em entender suas necessidades para elaborar um plano que se ajuste aos seus objetivos empresariais.",
     "section2": "Desenvolvimento",
@@ -43,15 +43,21 @@
     "callToAction": "Agende uma reunião conosco hoje e comece a transformar suas ideias em realidade."
   },
   "OurServicesScreen": {
+    "title": "Nossos serviços",
+    "description": "Oferecemos uma ampla gama de serviços de desenvolvimento web e móvel, incluindo design de interface, desenvolvimento de aplicativos, comércio eletrônico e muito mais. Nosso foco está em qualidade, desempenho e segurança.",
     "question": "{title}",
     "content": "{content}"
   },
   "Contact": {
-   "title": "Transforme suas ideias em realidade. Contate-nos!",
-   "paragraph": "Compartilhe mais detalhes sobre sua ideia, projeto ou desafio. Quanto mais informações você nos fornecer, melhor poderemos trabalhar para encontrar a solução mais adequada para você.",
-   "placeholderName": "Nome",
-   "placeholderMail": "E-mail",
-   "placeholderAffair": "Assunto",
-   "placeholderMessage": "Mensagem..." 
+    "title": "Transforme suas ideias em realidade. Contate-nos!",
+    "paragraph": "Compartilhe mais detalhes sobre sua ideia, projeto ou desafio. Quanto mais informações você nos fornecer, melhor poderemos trabalhar para encontrar a solução mais adequada para você.",
+    "placeholderName": "Nome",
+    "placeholderMail": "E-mail",
+    "placeholderAffair": "Assunto",
+    "placeholderMessage": "Mensagem..."
+  },
+  "SuccessCasesScreen": {
+    "title": "Histórias de sucesso",
+    "callToAction": "continuar lendo"
   }
 }

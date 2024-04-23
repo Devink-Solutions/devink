@@ -21,10 +21,10 @@ const carouselItems = [
 
 const InfiniteSlider = () => {
   // Duplica los elementos para crear la ilusión de flujo infinito
-  const slidingItems = [...carouselItems, ...carouselItems]
+  const slidingItems = [...carouselItems, ...carouselItems, ...carouselItems, ...carouselItems, ...carouselItems]
 
   // Ajusta la duración según la velocidad deseada
-  const duration = 100
+  const duration = 300
 
   const slide = {
     animate: {

@@ -27,7 +27,7 @@
     "content": "{content}"
   },
   "OurServices": {
-    "section1": "Customized Strategy",
+    "section1": "integrated digital solutions",
     "title1": "Customized Strategy",
     "description1": "From the first contact, we focus on understanding your needs to develop a plan that fits your business objectives.",
     "section2": "Development",
@@ -43,15 +43,21 @@
     "callToAction": "Schedule a meeting with us today and start transforming your ideas into reality."
   },
   "OurServicesScreen": {
+    "title": "Our services",
+    "description": "We offer a wide range of web and mobile development services, including interface design, application development, e-commerce, and more. Our focus is on quality, performance, and security.",
     "question": "{title}",
     "content": "{content}"
   },
   "Contact": {
-   "title": "Transform your ideas into reality. Contact us!",
-   "paragraph": "Share more details about your idea, project or challenge. The more information you provide us, the better we can work to find the most suitable solution for you.",
-   "placeholderName": "Name",
-   "placeholderMail": "Email",
-   "placeholderAffair": "Affair",
-   "placeholderMessage": "Message..."
+    "title": "Transform your ideas into reality. Contact us!",
+    "paragraph": "Share more details about your idea, project or challenge. The more information you provide us, the better we can work to find the most suitable solution for you.",
+    "placeholderName": "Name",
+    "placeholderMail": "Email",
+    "placeholderAffair": "Affair",
+    "placeholderMessage": "Message..."
+  },
+  "SuccessCasesScreen": {
+    "title": "Success Stories",
+    "callToAction": "continue reading"
   }
 }

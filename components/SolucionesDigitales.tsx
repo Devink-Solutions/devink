@@ -10,7 +10,7 @@ export default function SolucionesDigitales() {
   return (
     <div className="relative mt-12 flex h-full w-full items-center justify-center bg-bg-dark text-white">
       <div className=" flex  w-full max-w-[1440px] flex-col items-center justify-between">
-        <h2 className="mb-6 px-4  text-center text-3xl font-semibold text-cyan-bright md:text-4xl">Soluciones digitales integradas</h2>
+        <h2 className="mb-6 px-4  text-center text-3xl font-semibold text-cyan-bright md:text-4xl">{t('section1')}</h2>
         {/* Todo traduction */}
 
         <div className="mt-8 flex w-[80%] items-center justify-between gap-12">

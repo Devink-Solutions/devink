@@ -27,7 +27,7 @@
     "content": "{content}"
   },
   "OurServices": {
-    "section1": "Estrategia personalizada",
+    "section1": "Soluciones digitales integradas",
     "title1": "Estrategia personalizada",
     "description1": "Desde el primer contacto, nos centramos en entender tus necesidades para elaborar un plan que se ajuste a tus objetivos empresariales.",
     "section2": "Desarrollo",
@@ -37,21 +37,27 @@
     "title3": "Soporte integral",
     "description3": "Tras el lanzamiento, proporcionamos mantenimiento y apoyo continuo para garantizar el correcto funcionamiento."
   },
-    "SuccessCases": {
+  "SuccessCases": {
     "title": "Creatividad y energía en cada idea",
     "description": "Somos una empresa emergente en el sector IT, comprometida en marcar una diferencia. Nuestro equipo de profesionales combina creatividad y experiencia, ofreciéndote soluciones innovadoras que superan las expectativas. ¿Estás listo para llevar tu negocio al siguiente nivel con soluciones tecnológicas a medida?",
     "callToAction": "Agenda una reunion con nosotros hoy y comienza a transformar tus ideas en realidad."
   },
   "OurServicesScreen": {
+    "title": "Nuestros servicios",
+    "description": "Ofrecemos una amplia gama de servicios de desarrollo web y móvil, incluyendo diseño de interfaces, desarrollo de aplicaciones, e-commerce, y más. Nuestro enfoque se centra en la calidad, el rendimiento y la seguridad.",
     "question": "{title}",
     "content": "{content}"
   },
   "Contact": {
-   "title": "Transforma tus ideas en realidad. ¡Contáctanos!",
-   "paragraph": "Comparte más detalles sobre tu idea, proyecto o desafío. Cuanta más información nos proporciones, mejor podremos trabajar para encontrar la solución más adecuada para ti.",
-   "placeholderName": "Nombre",
-   "placeholderMail": "Email",
-   "placeholderAffair": "Asunto",
-   "placeholderMessage": "Mensaje..." 
+    "title": "Transforma tus ideas en realidad. ¡Contáctanos!",
+    "paragraph": "Comparte más detalles sobre tu idea, proyecto o desafío. Cuanta más información nos proporciones, mejor podremos trabajar para encontrar la solución más adecuada para ti.",
+    "placeholderName": "Nombre",
+    "placeholderMail": "Email",
+    "placeholderAffair": "Asunto",
+    "placeholderMessage": "Mensaje..."
+  },
+  "SuccessCasesScreen": {
+    "title": "Casos de éxito",
+    "callToAction": "continuar leyendo"
   }
 }
