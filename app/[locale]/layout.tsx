@@ -30,6 +30,9 @@ export default async function RootLayout({ children, params: { locale } }: { chi
 
   return (
     <html lang={locale}>
+      <head>
+        <script defer data-domain="devink.tech" src="http://plausible.cap.devink.site/js/script.js" />
+      </head>
       <body className={`${RedHatDisplay.className} flex flex-col overflow-x-hidden bg-blue-dark`}>
         <AmplitudeProvider>
           <NextIntlProvider
@@ -45,7 +48,6 @@ export default async function RootLayout({ children, params: { locale } }: { chi
             <Footer />
           </NextIntlProvider>
         </AmplitudeProvider>
-        <script defer data-domain="devink.tech" src="http://plausible.cap.devink.site/js/script.js"></script>
       </body>
     </html>
   )
