@@ -45,6 +45,7 @@ export default async function RootLayout({ children, params: { locale } }: { chi
             <Footer />
           </NextIntlProvider>
         </AmplitudeProvider>
+        <script defer data-domain="devink.tech" src="http://plausible.cap.devink.site/js/script.js"></script>
       </body>
     </html>
   )
