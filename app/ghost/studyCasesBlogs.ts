@@ -33,7 +33,6 @@ export async function getStudyCasesBlog(locale: string) {
 export async function getPosts() {
   const languages = [{ locale: 'es' }, { locale: 'en' }, { locale: 'pt' }];
   const query = await Promise.all(languages.map((lang) => getStudyCasesBlog(lang.locale)));
-  console.log(query)
   const formattedPosts = query.map((posts, index) => {
     const language = languages[index].locale;
     return posts?.map((post) => {
