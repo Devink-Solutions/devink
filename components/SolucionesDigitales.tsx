@@ -20,10 +20,10 @@ export default function SolucionesDigitales() {
             {/* Estrategia personalizada */}
             <div className="mb-6 flex sm:items-center">
               <Image
-                src="/Frame 428.png"
+                src="/Frame428.png"
                 width={130}
                 height={130}
-                alt=""
+                alt="description icon"
                 className="h-12 w-12"
               />
               <div className="ml-4">
@@ -37,10 +37,10 @@ export default function SolucionesDigitales() {
             {/* Desarrollo */}
             <div className="mb-6 flex sm:items-center">
               <Image
-                src="/Frame 429.png"
+                src="/Frame429.png"
                 width={150}
                 height={150}
-                alt=""
+                alt="description icon"
                 className="h-12 w-12 "
               />
               <div className="ml-4">
@@ -54,10 +54,10 @@ export default function SolucionesDigitales() {
             {/* Soporte integral */}
             <div className="mb-6 flex sm:items-center">
               <Image
-                src="/Frame 430.png"
+                src="/Frame430.png"
                 width={100}
                 height={100}
-                alt=""
+                alt="description icon"
                 className="h-12 w-12"
               />
               <div className="ml-4">
