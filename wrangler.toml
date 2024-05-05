@@ -1,0 +1,5 @@
+name = "devink-new"
+
+compatibility_flags = ["nodejs_compat"]
+zone_id = "81474a2d08caddb13593c8ac7223fffa"
+account_id = "b9f069e924e15d594f4a4c48430e4293"
