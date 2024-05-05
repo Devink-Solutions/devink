@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { getGhostBlogsBySlug } from '@/app/ghost/blogBySlug';
 import { getPosts } from '@/app/ghost/studyCasesBlogs';
 
+export const runtime = 'edge';
+
 export async function generateStaticParams() {
   const posts = await getPosts();
   return posts;

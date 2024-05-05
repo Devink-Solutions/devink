@@ -7,6 +7,8 @@ import SuccessCases from '@/components/SuccessCases'
 import { FaqsAccordion } from '@/components/FaqsAccordion'
 import ServicesCard from '@/components/ServicesCard'
 
+export const runtime = 'edge';
+
 export async function generateStaticParams() {
   return [{ locale: 'es' }, { locale: 'en' }, { locale: 'pt' }]
 }
