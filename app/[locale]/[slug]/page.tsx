@@ -1,14 +1,18 @@
-/* eslint-disable react/no-danger */
-import Image from 'next/image'
-import { getGhostBlogsBySlug } from '@/app/ghost/blogBySlug'
+import Image from 'next/image';
+import { getGhostBlogsBySlug } from '@/app/ghost/blogBySlug';
+import { getPosts } from '@/app/ghost/studyCasesBlogs';
 
+export async function generateStaticParams() {
+  const posts = await getPosts();
+  return posts;
+}
 const Blog = async ({ params }: { params: { locale: string, slug: string } }) => {
-  const { slug, locale } = params
-  const blogArr = await getGhostBlogsBySlug(slug, locale)
+  const { slug, locale } = params;
+  const blogArr = await getGhostBlogsBySlug(slug, locale);
 
-  if (blogArr?.length === undefined) return null
+  if (blogArr?.length === undefined) return null;
 
-  const blog = blogArr[0]
+  const blog = blogArr[0];
 
   return (
     <main className="flex h-full flex-col items-center justify-center bg-blue-dark">
@@ -36,7 +40,7 @@ const Blog = async ({ params }: { params: { locale: string, slug: string } }) =>
         </article>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

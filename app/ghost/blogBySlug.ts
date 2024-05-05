@@ -1,4 +1,4 @@
-import GhostContentAPI from '@tryghost/content-api'
+import GhostContentAPI from '@tryghost/content-api';
 
 const api = new GhostContentAPI(
   {
@@ -8,29 +8,29 @@ const api = new GhostContentAPI(
     makeRequest: async ({
       url, method, params, headers,
     }) => {
-      const apiUrl = new URL(url)
-      Object.keys(params).map((key) => apiUrl.searchParams.set(key, params[key]))
+      const apiUrl = new URL(url);
+      Object.keys(params).map((key) => apiUrl.searchParams.set(key, params[key]));
 
       return fetch(apiUrl.toString(), { method, headers })
         .then(async (res) => {
           if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}, response data: ${await res.text()}`)
+            throw new Error(`HTTP error! status: ${res.status}, response data: ${await res.text()}`);
           }
 
-          return { data: await res.json() }
+          return { data: await res.json() };
         })
         .catch((error) => {
-          console.error('Fetch error:', error)
-        })
+          console.error('Fetch error:', error);
+        });
     },
 
   },
-)
+);
 
 export async function getGhostBlogsBySlug(slug: string, locale: string) {
   return api.posts.browse({
     filter: `slug:${slug}+tag:${locale}`,
     limit: 1,
     formats: ['html'],
-  }).catch((e) => { console.log(e) })
+  }).catch((e) => { console.log(e); });
 }
