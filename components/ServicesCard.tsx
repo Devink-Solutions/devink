@@ -32,15 +32,15 @@ export default async function ServicesCard({ locale }: { locale: string }) {
                   <div className="mx-auto w-[360px]">
                     <div className="mb-4 flex h-72 items-center justify-center rounded-lg lg:h-96 lg:max-h-96">
                       {blog.feature_image
-                      && (
-                        <Image
-                          src={blog?.feature_image}
-                          width={1440}
-                          height={1440}
-                          alt="featured image"
-                          className=" h-full w-full rounded-xl object-contain object-center"
-                        />
-                      )}
+                        && (
+                          <Image
+                            src={blog?.feature_image}
+                            width={1440}
+                            height={1440}
+                            alt="featured image"
+                            className=" h-full w-full rounded-xl object-contain object-center"
+                          />
+                        )}
                     </div>
                     <h3 className="text-lg font-medium leading-6 text-white">{blog.title}</h3>
                     <p className="mt-2 line-clamp-3 text-base text-white">{blog.excerpt}</p>
@@ -57,8 +57,8 @@ export default async function ServicesCard({ locale }: { locale: string }) {
                       11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673a
                        3.64036 5.95694 3.32394 6.1584 3.13508Z"
                             fill="white"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                           />
                         </svg>
                       </div>
