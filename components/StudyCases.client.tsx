@@ -1,22 +1,25 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getStudyCasesBlog } from '@/app/ghost/studyCasesBlogs'
 import {
   Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious,
 } from './ui/carousel'
+import { useTranslations } from 'next-intl'
+import { PostsOrPages } from '@tryghost/content-api'
 
-export default async function ServicesCard({ locale }: { locale: string }) {
-  const blogPosts = await getStudyCasesBlog(locale)
+export default function StudyCases({ blogPosts, locale }: { blogPosts: PostsOrPages, locale: string }) {
+  const s = useTranslations("Success-cases")
 
   if (!blogPosts?.length) return null
 
   return (
-    <section id="cases" className="flex w-full bg-bg-dark">
+    <section id="cases" style={{ scrollMarginTop: "140px" }}
+      className="flex w-full bg-bg-dark">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-semibold leading-9 text-white">
-            Casos de éxito
+            {s('title')}
           </h2>
         </div>
         <div className="mt-10 xl:max-w-[1440px]">
@@ -63,7 +66,7 @@ export default async function ServicesCard({ locale }: { locale: string }) {
                         </svg>
                       </div>
 
-                      <span className="font-normal text-white hover:underline">Continuar leyendo</span>
+                      <span className="font-normal text-white hover:underline">{s("button")}</span>
                     </Link>
                   </div>
                 </CarouselItem>
@@ -77,6 +80,5 @@ export default async function ServicesCard({ locale }: { locale: string }) {
         </div>
       </div>
     </section>
-
   )
 }

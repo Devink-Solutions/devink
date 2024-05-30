@@ -21,12 +21,17 @@
     "services-subtitle": "Ofrecemos una amplia gama de servicios de desarrollo web y móvil, incluyendo diseño de interfaces, desarrollo de aplicaciones, e-commerce, y más. Nuestro enfoque se centra en la calidad, el rendimiento y la seguridad.",
     "services-bottom": "ver todos los servicios"
   },
+  "Success-cases": {
+    "title": "Casos de éxito",
+    "button": "Saber más"
+  },
   "Faqs": {
     "accordion": "Preguntas frecuentes",
     "question": "{title}",
     "content": "{content}"
   },
   "OurServices": {
+    "title": "Soluciones Digitales para tu Empresa",
     "section1": "Estrategia personalizada",
     "title1": "Estrategia personalizada",
     "description1": "Desde el primer contacto, nos centramos en entender tus necesidades para elaborar un plan que se ajuste a tus objetivos empresariales.",
@@ -37,21 +42,33 @@
     "title3": "Soporte integral",
     "description3": "Tras el lanzamiento, proporcionamos mantenimiento y apoyo continuo para garantizar el correcto funcionamiento."
   },
-    "SuccessCases": {
+  "SuccessCases": {
     "title": "Creatividad y energía en cada idea",
     "description": "Somos una empresa emergente en el sector IT, comprometida en marcar una diferencia. Nuestro equipo de profesionales combina creatividad y experiencia, ofreciéndote soluciones innovadoras que superan las expectativas. ¿Estás listo para llevar tu negocio al siguiente nivel con soluciones tecnológicas a medida?",
-    "callToAction": "Agenda una reunion con nosotros hoy y comienza a transformar tus ideas en realidad."
+    "callToAction": "Agenda una reunion con nosotros hoy y comienza a transformar tus ideas en realidad.",
+    "button": "Empezar"
   },
   "OurServicesScreen": {
     "question": "{title}",
     "content": "{content}"
   },
   "Contact": {
-   "title": "Transforma tus ideas en realidad. ¡Contáctanos!",
-   "paragraph": "Comparte más detalles sobre tu idea, proyecto o desafío. Cuanta más información nos proporciones, mejor podremos trabajar para encontrar la solución más adecuada para ti.",
-   "placeholderName": "Nombre",
-   "placeholderMail": "Email",
-   "placeholderAffair": "Asunto",
-   "placeholderMessage": "Mensaje..." 
+    "title": "Transforma tus ideas en realidad. ¡Contáctanos!",
+    "paragraph": "Comparte más detalles sobre tu idea, proyecto o desafío. Cuanta más información nos proporciones, mejor podremos trabajar para encontrar la solución más adecuada para ti.",
+    "placeholderName": "Nombre",
+    "placeholderMail": "Email",
+    "placeholderAffair": "Asunto",
+    "placeholderMessage": "Mensaje...",
+    "alert": "Tu mensaje ha sido enviado con éxito",
+    "button": "Enviar"
+  },
+  "Footer": {
+    "logo": "logo",
+    "tagline": "Desde la web para el mundo",
+    "contact_us": "Contáctanos:",
+    "email": "info@devink.tech",
+    "follow_us": "Síguenos:",
+    "copyright": "© 2024, Este sitio web está hecho con",
+    "by": "por Devink"
   }
 }

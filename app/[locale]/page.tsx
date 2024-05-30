@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm'
 import SolucionesDigitales from '@/components/SolucionesDigitales'
 import SuccessCases from '@/components/SuccessCases'
 import { FaqsAccordion } from '@/components/FaqsAccordion'
-import ServicesCard from '@/components/ServicesCard'
+import ServicesCard from '@/components/StudyCases'
 
 export const runtime = 'edge';
 

@@ -21,12 +21,17 @@
     "services-subtitle": "We offer a wide range of web and mobile development services, including interface design, application development, e-commerce, and more. Our focus is on quality, performance, and security.",
     "services-bottom": "view all services"
   },
+  "Success-cases": {
+    "title": "Study cases",
+    "button": "Know more"
+  },
   "Faqs": {
     "accordion": "Frequently Asked Questions",
     "question": "{title}",
     "content": "{content}"
   },
   "OurServices": {
+    "title": "Digital Solutions for Your Business",
     "section1": "Customized Strategy",
     "title1": "Customized Strategy",
     "description1": "From the first contact, we focus on understanding your needs to develop a plan that fits your business objectives.",
@@ -40,18 +45,30 @@
   "SuccessCases": {
     "title": "Creativity and Energy in Every Idea",
     "description": "We are an emerging company in the IT sector, committed to making a difference. Our team of professionals combines creativity and experience, offering you innovative solutions that exceed expectations. Are you ready to take your business to the next level with tailor-made technological solutions?",
-    "callToAction": "Schedule a meeting with us today and start transforming your ideas into reality."
+    "callToAction": "Schedule a meeting with us today and start transforming your ideas into reality.",
+    "button": "Book a meeting"
   },
   "OurServicesScreen": {
     "question": "{title}",
     "content": "{content}"
   },
   "Contact": {
-   "title": "Transform your ideas into reality. Contact us!",
-   "paragraph": "Share more details about your idea, project or challenge. The more information you provide us, the better we can work to find the most suitable solution for you.",
-   "placeholderName": "Name",
-   "placeholderMail": "Email",
-   "placeholderAffair": "Affair",
-   "placeholderMessage": "Message..."
+    "title": "Transform your ideas into reality. Contact us!",
+    "paragraph": "Share more details about your idea, project or challenge. The more information you provide us, the better we can work to find the most suitable solution for you.",
+    "placeholderName": "Name",
+    "placeholderMail": "Email",
+    "placeholderAffair": "Affair",
+    "placeholderMessage": "Message...",
+    "alert": "Your message has been sent successfully!",
+    "button": "Send"
+  },
+  "Footer": {
+    "logo": "logo",
+    "tagline": "From the web to the world",
+    "contact_us": "Contact us:",
+    "email": "info@devink.tech",
+    "follow_us": "Follow us:",
+    "copyright": "© 2024, This website is made with",
+    "by": "by Devink"
   }
 }

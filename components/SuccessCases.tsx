@@ -8,7 +8,7 @@ export default function SuccessCases() {
   const s = useTranslations('SuccessCases')
   return (
     <div className="relative w-full bg-bg-dark text-white ">
-      <div className=" mx-auto flex h-full w-[90%] max-w-[1440px] items-center justify-between gap-20">
+      <div className=" mx-auto flex h-full w-[90%] max-w-[1340px] items-center justify-between gap-20">
         <div className="relative hidden  md:block">
           <Image
             src="/creativity.png"
@@ -40,7 +40,7 @@ export default function SuccessCases() {
                text-cyan transition duration-150 ease-in hover:bg-cyan-bright hover:text-bg-dark
                focus:outline-none focus:ring-2 focus:ring-cyan-bright focus:ring-offset-2"
           >
-            Empezar
+            {s('button')}
           </Link>
         </div>
       </div>

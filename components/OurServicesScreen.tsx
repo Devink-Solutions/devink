@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { spanishServicesData } from '@/data/spanishServicesData'
 import { portugueseServicesData } from '@/data/portugueseServicesData'
 import { englishServicesData } from '@/data/englishServicesData'
+import { useTranslations } from 'next-intl'
 
 function ServiceCard({ Icon, title, description }: { Icon: any, title: string, description: string }) {
   return (
@@ -20,6 +21,8 @@ function ServiceCard({ Icon, title, description }: { Icon: any, title: string, d
 
 export default function OurServicesScreen({ locale }: { locale: string }) {
   const [localeData, setLocaleData] = useState(spanishServicesData)
+  const t = useTranslations('Services')
+
 
   useEffect(() => {
     if (locale === 'es') {
@@ -32,12 +35,15 @@ export default function OurServicesScreen({ locale }: { locale: string }) {
       setLocaleData(portugueseServicesData)
     }
   }, [locale])
+
   return (
-    <div id="services" className="relative w-full">
+    <div id="services"
+      style={{ scrollMarginTop: "140px" }}
+      className="relative w-full">
       <div className="mx-auto flex w-[90%] max-w-[1440px] flex-col items-center bg-bg-dark text-white ">
-        <h2 className="mb-8 text-4xl font-semibold">Nuestros servicios</h2>
-        <p className="mb-8 text-center text-gray-400">
-          Ofrecemos una amplia gama de servicios para ayudarte a alcanzar tus objetivos empresariales.
+        <h2 className="mb-4 text-4xl font-semibold">{t("services-title")}</h2>
+        <p className="mb-8 max-w-[800px] text-center text-gray-400">
+          {t("services-subtitle")}
         </p>
         <div className="grid max-w-[1440px] grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 ">
           {localeData.map((service) => (

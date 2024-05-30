@@ -21,12 +21,17 @@
     "services-subtitle": "Oferecemos uma ampla gama de serviços de desenvolvimento web e móvel, incluindo design de interface, desenvolvimento de aplicativos, e-commerce e muito mais. Nosso foco está na qualidade, desempenho e segurança.",
     "services-bottom": "ver todos os serviços"
   },
+  "Success-cases": {
+    "title": "Casos de sucesso",
+    "button": "Conheça mais"
+  },
   "Faqs": {
     "accordion": "Perguntas frequentes",
     "question": "{title}",
     "content": "{content}"
   },
   "OurServices": {
+    "title": "Soluções digitais para sua empresa",
     "section1": "Estratégia personalizada",
     "title1": "Estratégia personalizada",
     "description1": "Desde o primeiro contato, nos concentramos em entender suas necessidades para elaborar um plano que se ajuste aos seus objetivos empresariais.",
@@ -40,18 +45,30 @@
   "SuccessCases": {
     "title": "Criatividade e energia em cada ideia",
     "description": "Somos uma empresa emergente no setor de TI, comprometida em fazer a diferença. Nossa equipe de profissionais combina criatividade e experiência, oferecendo-lhe soluções inovadoras que superam as expectativas. Você está pronto para levar seu negócio ao próximo nível com soluções tecnológicas sob medida?",
-    "callToAction": "Agende uma reunião conosco hoje e comece a transformar suas ideias em realidade."
+    "callToAction": "Agende uma reunião conosco hoje e comece a transformar suas ideias em realidade.",
+    "button": "Agendar uma reunião"
   },
   "OurServicesScreen": {
     "question": "{title}",
     "content": "{content}"
   },
   "Contact": {
-   "title": "Transforme suas ideias em realidade. Contate-nos!",
-   "paragraph": "Compartilhe mais detalhes sobre sua ideia, projeto ou desafio. Quanto mais informações você nos fornecer, melhor poderemos trabalhar para encontrar a solução mais adequada para você.",
-   "placeholderName": "Nome",
-   "placeholderMail": "E-mail",
-   "placeholderAffair": "Assunto",
-   "placeholderMessage": "Mensagem..." 
+    "title": "Transforme suas ideias em realidade. Contate-nos!",
+    "paragraph": "Compartilhe mais detalhes sobre sua ideia, projeto ou desafio. Quanto mais informações você nos fornecer, melhor poderemos trabalhar para encontrar a solução mais adequada para você.",
+    "placeholderName": "Nome",
+    "placeholderMail": "E-mail",
+    "placeholderAffair": "Assunto",
+    "placeholderMessage": "Mensagem...",
+    "alert": "Sua mensagem foi enviada com sucesso!",
+    "button": "Enviar mensagem"
+  },
+  "Footer": {
+    "logo": "logo",
+    "tagline": "Da web para o mundo",
+    "contact_us": "Contate-nos:",
+    "email": "info@devink.tech",
+    "follow_us": "Siga-nos:",
+    "copyright": "© 2024, Este site é feito com",
+    "by": "por Devink"
   }
 }

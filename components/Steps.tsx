@@ -24,6 +24,7 @@ const cards = [
 const Steps = () => (
   <section
     id="about"
+    style={{ scrollMarginTop: "140px" }}
     className="relative flex w-full items-center justify-center bg-white py-4"
   >
     <div className="flex w-11/12 max-w-[1200px]  items-center justify-between gap-12 py-12 2xl:max-w-[1440px] ">

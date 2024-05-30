@@ -81,7 +81,7 @@ const ContactForm = () => {
               {send
                 ? (
                   <span className="text-cyan-bright">
-                    ¡El formulario ha sido enviado correctamente! Pronto nuestro equipo te contactará :)
+                    {t("alert")}
                   </span>
                 )
                 : (
@@ -89,7 +89,7 @@ const ContactForm = () => {
                     type="submit"
                     className="hover:bg-cyan-light rounded-full bg-cyan-bright px-12 py-4 text-lg font-medium text-blue-dark"
                   >
-                    Enviar
+                    {t('button')}
                   </Button>
                 )}
             </div>
