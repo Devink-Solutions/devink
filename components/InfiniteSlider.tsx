@@ -10,8 +10,6 @@ const carouselItems = [
   { IconComponent: FaPalette, text: 'UX/UI Design' },
   { IconComponent: FaChartLine, text: 'Analytics' },
   { IconComponent: FaDesktop, text: 'Web Design' },
-  { IconComponent: FaReact, text: 'More Development' },
-  { IconComponent: FaCode, text: 'Coding' },
   { IconComponent: FaMobileAlt, text: 'Mobile Apps' },
   { IconComponent: FaDatabase, text: 'Database Management' },
   { IconComponent: FaCloud, text: 'Cloud Services' },
@@ -20,20 +18,18 @@ const carouselItems = [
 ]
 
 const InfiniteSlider = () => {
-  // Duplica los elementos para crear la ilusión de flujo infinito
-  const slidingItems = [...carouselItems, ...carouselItems]
+  const slidingItems = [...carouselItems, ...carouselItems, ...carouselItems]
 
-  // Ajusta la duración según la velocidad deseada
   const duration = 100
 
   const slide = {
     animate: {
-      x: ['0%', '-100%'], // Desplazamiento del 0% al 100% del ancho del contenedor
+      x: ['0%', '-80%'],
     },
     transition: {
       duration,
-      repeat: Infinity, // Repetición infinita
-      ease: 'linear', // Movimiento constante
+      repeat: Infinity,
+      ease: 'linear',
     },
   }
 
