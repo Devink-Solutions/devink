@@ -12,17 +12,19 @@ const Hero = () => {
   return (
     <header className="relative z-20  flex  h-[82vh] w-full bg-bg-dark">
       <section className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center px-0 sm:px-6 md:flex-row md:justify-between">
-        <div className="mx-auto flex w-[375px] flex-col items-start justify-center gap-6 text-left sm:w-[400px]  md:ml-10 md:mr-0 md:w-[50%] ">
+        <div className="mx-auto mt-8 flex w-[90%] flex-col items-start justify-center gap-6 text-left md:ml-10  md:mr-0 md:mt-0 md:w-[50%] ">
           <div className="flex w-full flex-row items-center justify-center text-center md:text-start">
-            <h1 className=" text-pretty text-2xl  font-medium text-white  md:text-3xl xl:text-5xl">
+            <h1 className="flex flex-col text-pretty text-2xl font-medium  text-white  md:text-3xl xl:text-5xl">
               <span className=" text-cyan-bright">{h('special-word')}</span>
               {' '}
               {h('hero-title')}
             </h1>
           </div>
-          <h4 className="text-center text-base text-white md:text-start md:text-lg xl:text-xl">
+
+          <h4 className=" flex flex-col text-center text-base text-white md:text-start md:text-lg xl:text-xl">
             {h('about-subtitle')}
           </h4>
+
           <Link
             href="https://calendly.com/devinksolutions/30min"
             target="_blank"
@@ -32,23 +34,24 @@ const Hero = () => {
             {h('hero-bottom')}
           </Link>
         </div>
-        <div className="mt-6 flex h-[60%] w-[60%]  lg:hidden">
+        
+        <div className="relative z-30 mt-6 flex h-[400px] w-[300px] items-center justify-center sm:w-[400px] lg:hidden">
           <Image
             src="/phones/phone1xs.png"
-            width={320}
-            height={320}
-            className=" relative -left-10 bottom-0 z-40 object-contain object-bottom sm:left-4 md:left-8 "
+            width={171}
+            height={349}
+            className="absolute left-[10%] rounded-xl object-contain "
             alt=""
           />
           <Image
             src="/phones/phone2xs.png"
-            width={320}
-            height={320}
-            className="relative -left-12 bottom-0 z-30 object-contain sm:-left-2  md:-left-12 "
+            width={151}
+            height={372}
+            className="absolute left-[45%] rounded-xl object-contain "
             alt=""
           />
         </div>
-        <div className="absolute bottom-0 right-[20%] hidden h-[70vh] w-[300px] lg:inline-flex ">
+        <div className="absolute bottom-0 right-[25%] hidden h-[70vh] w-[300px] lg:inline-flex  ">
           <Image
             src="/phones/phone1.png"
             width={320}
