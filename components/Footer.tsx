@@ -34,15 +34,13 @@ const Footer = () => {
         <div className=" flex flex-col items-center  ">
           <div className="flex flex-col  items-center gap-3">
             <h3 className="text-lg font-medium">{t('contact_us')}</h3>
-            <Link
-              href="mailto:info@devink.tech"
+            <a
+              href="mailto:team@devink.tech"
               className="flex items-center justify-center gap-4 text-base font-semibold transition-colors duration-200 hover:text-blue-400"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <IoIosMail />
               {t('email')}
-            </Link>
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
